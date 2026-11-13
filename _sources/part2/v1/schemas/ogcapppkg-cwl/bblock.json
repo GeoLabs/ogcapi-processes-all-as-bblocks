@@ -1,0 +1,31 @@
+{
+  "name": "CWL Encoding for Process Deployment",
+  "abstract": "Common Workflow Language (CWL) document encoding for Deploy/Replace operations. The request body is a complete CWL document (Workflow, CommandLineTool, or ExpressionTool).",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-18T22:00:00Z",
+  "dateOfLastChange": "2025-11-19",
+  "register": "ogc-api-processes-part2",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy - CWL Encoding",
+      "link": "https://docs.ogc.org/DRAFTS/20-044.html#_2016252b-e710-0f32-a102-1c4635e52f7c"
+    },
+    {
+      "title": "Common Workflow Language Specification",
+      "link": "https://www.commonwl.org/v1.0/"
+    }
+  ],
+  "tags": [
+    "ogc",
+    "processes",
+    "cwl",
+    "workflow",
+    "encoding",
+    "part2"
+  ],
+  "itemClass": "schema",
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWL"
+  ]
+}
