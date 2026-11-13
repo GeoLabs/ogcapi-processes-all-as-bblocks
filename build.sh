@@ -10,6 +10,6 @@ if [ -f '.volumes' ]; then
   done < .volumes)
 fi
 docker run --platform linux/amd64 -it --pull=always --rm --entrypoint /venv/bin/python --workdir /workspace -v "$(pwd):/workspace" ${VOLUMES} \
-  ghcr.io/opengeospatial/bblocks-postprocess \
+  ghcr.io/opengeospatial/bblocks-postprocess:${BBP_IMAGE_TAG:-latest} \
   /workspace/scripts/build_official_sources.py \
   --clean true --base-url http://localhost:9090/register/ "$@"

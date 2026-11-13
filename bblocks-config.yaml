@@ -1,32 +1,56 @@
 # A short, descriptive name of this building block collection
-name: OGC API Processes - Part 1 versions 1.0 and 2.0 draft
-# Short abstract for this collection (optional)
+name: OGC API – Processes Building Blocks
+
 abstract: |
-  Part 1 version 1.0 (OGC 18-062r2) and the GeoLabs version 2.0 draft fork
-  (OGC 18-062r3), hosted as independent part1.v1 and part1.v2 definitions.
-  Namespace isolation is not a claim of full draft conformance.
-# Description for this collection (optional)
+  Building Blocks for OGC API – Processes Part 1: Core (version 1.0, OGC 18-062r2,
+  and version 2.0 draft, OGC 18-062r3) and Part 2: Deploy, Replace, Undeploy
+  (OGC 20-044, draft), together with the requirements, clauses and annexes from
+  which the standards documents are generated.
+
 description: |
-  Adds a flexible, JSON schema version agnostic documentation to the OGC API Processes standard, supporting further profiling by combining with other Building Blocks.
-# Customize the following prefix (will be prepended to the path of the building blocks):
+  This repository brings together, in a single register, the technical and
+  normative Building Blocks of OGC API – Processes that were previously spread
+  across three repositories:
+
+  - GeoLabs/bblocks-ogcapi-processes: Part 1 schemas, parameters, responses and paths
+  - GeoLabs/bblock-ogcapi-processes-part2: Part 2 schemas and responses (OGC Application
+    Package, execution units, CWL encoding)
+  - GeoLabs/ogcapi-processes-standard-as-bblocks: requirements classes, clauses and
+    annexes, used to generate the standards documents with bblocks-specgen
+
+  Part 2 is still a draft standard and has not been adopted by OGC.
+
+# Prefix prepended to the path of the building blocks.
+# Part and standard version are independent namespace segments:
+#   _sources/part1/v1/schemas/process/    → ogc.api.processes.part1.v1.schemas.process
+#   _sources/part1/v2/requirements/core/  → ogc.api.processes.part1.v2.requirements.core
+#   _sources/part2/v1/requirements/dru/   → ogc.api.processes.part2.v1.requirements.dru
 identifier-prefix: ogc.api.processes.
-# List of imports ("default" is an alias for the main OGC Building Blocks Register)
+
+# "default" is an alias for the main OGC Building Blocks Register.
+# Part 1, Part 2 and the standards documents are local to this register:
+# the former GeoLabs register imports are no longer needed.
 imports:
   - default
-# Whether to enable the (highly experimental) downcompiling of JSON schemas to an OpenAPI 3.0-compatible
-# version
+  - https://ogcincubator.github.io/bblocks-cwl/build/register.json
+
+# Whether to enable the (highly experimental) downcompiling of JSON schemas to an
+# OpenAPI 3.0-compatible version
 schema-oas30-downcompile: False
-sparql:
-  push: https://defs-dev.opengis.net/fuseki/data
-  query: https://defs-dev.opengis.net/fuseki/query
-# SPARQL configuration (optional)
-#   Authentication can be set through the sparql_username and sparql_password GitHub Workflow inputs
-#   (see .github/workflow/process-bblocks.yml)
-#
+
+# SPARQL upload (inherited from GeoLabs/bblocks-ogcapi-processes), disabled until the
+# sparql_username / sparql_password secrets are configured for this repository.
 # sparql:
-#   push: https://example.com/gsp           # SPARQL Graph Store Protocol endpoint for uploading data
-#   graph: https://my.bblocks.example.com/  # SPARQL Graph where data will be uploaded
-#                                           #  if left empty, the base URL for the publication will be used
-#   query: https://example.com/sparql       # SPARQL query endpoint where data will be available
-#   resources:                              # Additional resources to upload apart from building block metadata
-#      ontologies: true                     #   Whether to upload ontology files to the triplestore
+#   push: https://defs-dev.opengis.net/fuseki/data
+#   query: https://defs-dev.opengis.net/fuseki/query
+
+# Automatic standards generation; feature/update snapshot tracked in
+# https://github.com/ogcincubator/bblocks-specgen/pull/2
+plugins:
+  build:
+    - classes: [standard_gen.plugin.SpecgenBuildPlugin]
+      pip: ['bblocks-specgen @ git+https://github.com/JFarduino/bblocks-specgen@c8b79dc91bca45a592f0eca66fd1df12c39da970']
+      url: https://github.com/JFarduino/bblocks-specgen
+      config:
+        standards-file: standards.yaml
+        build-dir: build/standards
