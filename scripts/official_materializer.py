@@ -16,6 +16,18 @@ from schema_annotations import JSONLD_KEYS, child_context
 PREFIX = 'bblocks://ogc.api.processes.part1.'
 METHODS = {'get', 'put', 'post', 'delete', 'options', 'head', 'patch', 'trace'}
 DRAFT4 = 'http://json-schema.org/draft-04/schema#'
+# Standards-document blocks (clauses, requirements classes, annexes) share
+# _sources/part1 with the API components; they have no official API source.
+DOCUMENT_ITEM_CLASSES = {'clause', 'references', 'terms', 'requirements-class'}
+
+
+def is_document_block(metadata):
+    return json.loads(metadata.read_text()).get('itemClass') in DOCUMENT_ITEM_CLASSES
+
+
+def document_block_dirs(root=ROOT):
+    return {metadata.parent for metadata in (root / '_sources/part1').rglob('bblock.json')
+            if is_document_block(metadata)}
 
 
 def has_boolean_exclusive_bound(schema):
@@ -48,6 +60,8 @@ def identifier(version, relative):
 def inventory(root=ROOT):
     plans = []
     for metadata in sorted((root / '_sources/part1').rglob('bblock.json')):
+        if is_document_block(metadata):
+            continue
         version, *parts = metadata.parent.relative_to(root / '_sources/part1').parts
         relative = '/'.join(parts)
         source, classification = source_for(version, relative)

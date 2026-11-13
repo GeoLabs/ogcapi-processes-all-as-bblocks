@@ -14,11 +14,16 @@ import yaml
 
 from audit_official_sources import ROOT
 from check_embedded_sources import check
-from official_materializer import artifact, discover, inventory
+from official_materializer import artifact, discover, document_block_dirs, inventory
 
 
 def validate(ancillary_before=None):
     plans = inventory()
+    document_dirs = document_block_dirs()
+
+    def api_source(path):
+        return not any(directory in path.parents for directory in document_dirs)
+
     errors, graphs = check(plans)
     represented = {p['id'] for p in plans}
     missing = {p['id'] for p in discover(plans)} - represented
@@ -26,7 +31,7 @@ def validate(ancillary_before=None):
                   for ident in sorted(missing))
     expected = {artifact(p) for p in plans}
     actual = {f for name in ('schema.yaml', 'openapi.yaml')
-              for f in (ROOT / '_sources/part1').rglob(name)}
+              for f in (ROOT / '_sources/part1').rglob(name) if api_source(f)}
     # Parse every artifact, including an orphan not represented by inventory.
     for target in sorted(actual):
         try:
@@ -52,7 +57,7 @@ def validate(ancillary_before=None):
             if not target.is_file() or hashlib.sha256(target.read_bytes()).hexdigest() != digest:
                 errors.append({'file': relative, 'error': 'Ancillary hash changed'})
         current = {str(f.relative_to(ROOT)) for f in (ROOT / '_sources/part1').rglob('*')
-                   if f.is_file() and (f.name in ('context.jsonld', 'examples.yaml')
+                   if f.is_file() and api_source(f) and (f.name in ('context.jsonld', 'examples.yaml')
                                        or 'tests' in f.relative_to(ROOT).parts)}
         for relative in sorted(current - baseline.keys()):
             errors.append({'file': relative, 'error': 'New ancillary file absent from baseline'})

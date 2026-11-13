@@ -17,7 +17,7 @@ import yaml
 
 import check_embedded_sources as audit
 from audit_official_sources import ROOT, V1, V2, source_for
-from official_materializer import (DRAFT4, artifact, discover, embedded,
+from official_materializer import (DRAFT4, artifact, discover, document_block_dirs, embedded,
                                    canonical_index, has_boolean_exclusive_bound,
                                    inventory, mapped_reference, rendered_files, rewrite,
                                    canonical_name)
@@ -267,8 +267,13 @@ class EmbeddedSourcesTests(unittest.TestCase):
 
     def test_all_actual_artifacts_match_producer_without_local_self_refs(self):
         files = rendered_files(self.plans)
-        for target in sorted((ROOT / '_sources').rglob('*.yaml')):
+        # Part 1 API components only: Part 2 and standards-document blocks are
+        # not produced from official Part 1 sources.
+        document_dirs = document_block_dirs()
+        for target in sorted((ROOT / '_sources/part1').rglob('*.yaml')):
             if target.name not in ('schema.yaml', 'openapi.yaml'):
+                continue
+            if any(directory in target.parents for directory in document_dirs):
                 continue
             with self.subTest(artifact=str(target.relative_to(ROOT))):
                 actual = yaml.safe_load(target.read_text())
