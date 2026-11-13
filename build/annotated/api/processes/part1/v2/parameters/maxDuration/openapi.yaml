@@ -1,5 +1,0 @@
-name: maxDuration
-in: query
-required: false
-schema:
-  type: integer
