@@ -1,0 +1,363 @@
+standards:
+
+  - id: part1
+    # Source of truth: OGC 18-062r3 draft, https://docs.ogc.org/DRAFTS/18-062r3.html (retrieved 2026-11-09)
+    prefix: ogc.api.processes.part1.v2.
+    title: "OGC API - Processes - Part 1: Core"
+    doc-number: 18-062r3
+    type: Standard
+    status: Draft
+    version: "2.0"
+    submission-date: "2026-01-01"
+    approval-date: "2026-02-17"
+    pub-date: "2026-01-01"
+    external-id: http://www.opengis.net/doc/IS/ogcapi-processes-1/2.0
+    base-uri: https://www.opengis.net/spec/ogcapi-processes-1/2.0
+
+    # Rendered like the published OGC document: ModSpec tables, statements numbered
+    # document-wide (Requirement 1..137, Recommendation 1..42, Permission 1..38, A.1 in
+    # Annex A), numbered subclauses, roman-numbered preface.
+    layout: ogc
+    modspec:
+      statement-label: Statement
+      singular-labels: true
+      obligation-row: false
+
+    # Identifiers as in the draft: /req/<class>/<name>, /rec/..., /per/..., /conf/...
+    req-uri-template:  "{base-uri}/req/{id}"
+    rec-uri-template:  "{base-uri}/rec/{id}"
+    per-uri-template:  "{base-uri}/per/{id}"
+    conf-uri-template: "{base-uri}/conf/{id}"
+    ats-uri-template:  "{base-uri}/conf/{id}"
+
+    editors:
+      - name: Benjamin Pross
+        affiliation: 52°North GmbH
+      - name: Panagiotis (Peter) A. Vretanos
+        affiliation: CubeWerx Inc.
+
+    keywords:
+      - ogcdoc
+      - OGC document
+      - OGC API
+      - Geospatial API
+      - processes
+      - Web Processing Service
+      - WPS
+      - JSON
+      - HTML
+      - geoprocessing
+      - API
+      - OpenAPI
+
+    abstract: |
+      The OGC API — Processes Standard is a resource-oriented API that allows for the execution of computing processes and the retrieval of metadata describing those processes. It is the modern, RESTful successor to the older [Web Processing Service (WPS) 2.0 Interface Standard](https://docs.ogc.org/is/14-065/14-065r2.html). It utilizes OpenAPI, JSON and modern web architectural patterns to make geospatial processing more accessible to web developers.
+
+      The key benefits of the Standard are:
+
+      - **Developer friendly:** By default, the Standard uses JSON and integrates easily with modern web frameworks and tools like Swagger/ReDoc.
+      - **Scalable:** The Standard is designed to work well with cloud-native architectures, microservices and containerized environments.
+      - **Modular:** The “building-blocks” approach allows servers to implement only what they need (e.g. a server might support process execution but not dynamic process deployment).
+      - **Interoperable:** Standardizing how parameters are passed to algorithms ensures that process execution can be triggered on any compliant server regardless of the underlying programming language (e.g. C, Python, Java, etc.)
+
+      Like other OGC APIs (such as Features or Records), OGC API Processes uses a common core for landing pages, conformance declarations, and API definitions. This consistency allows developers to use similar patterns across different types of geospatial web services.
+
+    preface:
+      - auto: abstract
+      - auto: keywords
+      - bblock: ogc.api.processes.part1.v2.clauses.preface
+      - bblock: ogc.api.processes.part1.v2.clauses.securityConsiderations
+      - bblock: ogc.api.processes.part1.v2.clauses.submittingOrganizations
+      - bblock: ogc.api.processes.part1.v2.clauses.submitters
+      - bblock: ogc.api.processes.part1.v2.clauses.acknowledgements
+
+    clauses:
+      - bblock: ogc.api.processes.part1.v2.clauses.scope
+      - bblock: ogc.api.processes.part1.v2.clauses.conformance
+      - bblock: ogc.api.processes.part1.v2.clauses.references
+        title: Normative references
+      - bblock: ogc.api.processes.part1.v2.clauses.terms
+        title: Terms, definitions and abbreviated terms
+      - bblock: ogc.api.processes.part1.v2.clauses.conventions
+      - bblock: ogc.api.processes.part1.v2.clauses.overview
+      - bblock: ogc.api.processes.part1.v2.requirements.core
+        title: Requirements Class “Core”
+      - bblock: ogc.api.processes.part1.v2.clauses.collections
+        subclauses:
+          - bblock: ogc.api.processes.part1.v2.requirements.collectionInput
+            title: REQUIREMENTS CLASS “COLLECTION INPUT”
+          - bblock: ogc.api.processes.part1.v2.requirements.remoteCollections
+            title: REQUIREMENTS CLASS “REMOTE COLLECTIONS”
+          - bblock: ogc.api.processes.part1.v2.requirements.collectionOutput
+            title: REQUIREMENTS CLASS “COLLECTION OUTPUT”
+          - bblock: ogc.api.processes.part1.v2.requirements.localFiltering
+            title: REQUIREMENTS CLASS “LOCAL FILTERING”
+      - bblock: ogc.api.processes.part1.v2.requirements.ogcProcessDescription
+        title: Requirements Class “OGC Process Description”
+      - bblock: ogc.api.processes.part1.v2.clauses.encodings
+        subclauses:
+          - bblock: ogc.api.processes.part1.v2.requirements.json
+            title: Requirement Class “JSON”
+          - bblock: ogc.api.processes.part1.v2.requirements.html
+            title: Requirement Class “HTML”
+      - bblock: ogc.api.processes.part1.v2.clauses.openapi
+        subclauses:
+          - bblock: ogc.api.processes.part1.v2.requirements.oas
+            title: Requirements Class “OpenAPI Specification”
+          - bblock: ogc.api.processes.part1.v2.requirements.oas30
+            title: Requirements Class “OpenAPI Specification 3.0”
+          - bblock: ogc.api.processes.part1.v2.requirements.oas31
+            title: Requirements Class “OpenAPI Specification 3.1”
+      - bblock: ogc.api.processes.part1.v2.requirements.jobList
+        title: Requirements Class “Job list”
+      - bblock: ogc.api.processes.part1.v2.requirements.callback
+        title: Requirements Class “Callback”
+      - bblock: ogc.api.processes.part1.v2.requirements.dismiss
+        title: Requirements Class “Dismiss”
+      - bblock: ogc.api.processes.part1.v2.requirements.kvpExecute
+        title: Requirements Class “KVP-encoded Execute”
+      - bblock: ogc.api.processes.part1.v2.clauses.mediaTypes
+      - bblock: ogc.api.processes.part1.v2.requirements.queryParamProfile
+        title: Requirements Class “Profile query parameter”
+      - bblock: ogc.api.processes.part1.v2.clauses.additionalBuildingBlocks
+      - auto: annex-a
+        bblock: ogc.api.processes.part1.v2.annexes.ats
+      - bblock: ogc.api.processes.part1.v2.annexes.revisionHistory
+      - bblock: ogc.api.processes.part1.v2.annexes.bibliography
+        numbered: false
+
+    boilerplate:
+      copyright-year: 2026
+      notices:
+        - title: Notice for Drafts
+          text: |
+            This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.
+
+            Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
+
+            | | |
+            |---|---|
+            | Document number: | 18-062r3 |
+            | Document type: | OGC Standard |
+            | Document subtype: | Implementation |
+            | Document stage: | Draft |
+            | Document language: | English |
+        - title: Copyright notice
+          text: |
+            Copyright © 2026 Open Geospatial Consortium<br>
+            To obtain additional rights of use, visit <https://www.ogc.org/legal>
+        - title: Note
+          text: |
+            Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+
+            Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
+        - title: License Agreement
+          text: |
+            Use of this document is subject to the license agreement at <https://www.ogc.org/license>
+
+            Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <http://ogc.standardstracker.org/>
+
+  - id: part2
+    # Source of truth: OGC 20-044 draft, https://docs.ogc.org/DRAFTS/20-044.html (retrieved 2026-11-05)
+    prefix: ogc.api.processes.part2.v1.
+    title: "OGC API - Processes - Part 2: Deploy, Replace, Undeploy"
+    doc-number: "20-044"
+    type: Standard
+    doc-subtype: Implementation
+    status: Draft
+    version: "1.0"
+    submission-date: yyyy-mm-dd
+    approval-date: yyyy-mm-dd
+    pub-date: yyyy-mm-dd
+    external-id: https://www.opengis.net/doc/IS/ogcapi-processes-2/1.0
+    base-uri: https://www.opengis.net/spec/ogcapi-processes-2/1.0
+
+    # Rendered like the published OGC document: ModSpec tables, statements numbered
+    # document-wide (Requirement 1..41, Permission 1..6, Recommendation 1..5), numbered
+    # subclauses, roman-numbered preface.
+    layout: ogc
+
+    # Identifiers as in the draft: /req/<class>/<name>, /rec/..., /per/..., /conf/...
+    req-uri-template:  "{base-uri}/req/{id}"
+    rec-uri-template:  "{base-uri}/rec/{id}"
+    per-uri-template:  "{base-uri}/per/{id}"
+    conf-uri-template: "{base-uri}/conf/{id}"
+    ats-uri-template:  "{base-uri}/conf/{id}"
+
+    editors:
+      - name: Panagiotis (Peter) A. Vretanos
+        affiliation: CubeWerx Inc.
+      - name: Gérald Fenoy
+        affiliation: GeoLabs
+      - name: Francis Charette-Migneault
+        affiliation: Technologies Luqia, Centre de Recherche Informatique de Montréal (CRIM)
+
+    keywords:
+      - process
+      - collection
+      - instance
+      - spatial
+      - data
+      - openapi
+      - transactions
+      - insert
+      - update
+      - delete
+      - add
+      - remove
+      - deploy
+      - undeploy
+      - REST
+      - PUT
+      - POST
+      - DELETE
+
+    abstract: |
+      OGC API Standards define modular API building blocks to spatially enable Web APIs in a consistent way. The [OpenAPI specification](https://spec.openapis.org/oas/) is used to define the API building blocks.
+
+      The OGC API Processes Standard (aka Processes API) defines API building blocks to describe, execute, monitor and retrieve results of Web-accessible processes. OGC API Processes is comprised of multiple parts, each of them is a separate OGC Standard.
+
+      OGC API — Processes — Part 2: Deploy, Replace, Undeploy extends the core capabilities specified in OGC API — Processes — Part 1: Core \[[OGC 18-062r2](#OAProc-1)\] with the ability to dynamically add, modify and/or delete individual processes using an implementation (endpoint) of the OGC API — Processes Standard.
+
+      <div class="admonition">
+
+      **CAUTION**
+
+      This is a DRAFT version of the 2nd part of the OGC API — Processes standards. This draft is not complete and there are open issues that are still under discussion.
+
+      </div>
+
+    preface:
+      - auto: abstract
+      - auto: keywords
+      - bblock: ogc.api.processes.part2.v1.clauses.securityConsiderations
+      - bblock: ogc.api.processes.part2.v1.clauses.submittingOrganizations
+      - bblock: ogc.api.processes.part2.v1.clauses.submitters
+
+    clauses:
+      - bblock: ogc.api.processes.part2.v1.clauses.scope
+      - bblock: ogc.api.processes.part2.v1.clauses.conformance
+      - bblock: ogc.api.processes.part2.v1.clauses.references
+        title: Normative references
+      - bblock: ogc.api.processes.part2.v1.clauses.terms
+        title: Terms, definitions and abbreviated terms
+      - bblock: ogc.api.processes.part2.v1.clauses.conventions
+      - bblock: ogc.api.processes.part2.v1.requirements.dru
+        title: Requirements Class “Deploy, Replace, Undeploy (DRU)”
+      - bblock: ogc.api.processes.part2.v1.requirements.ogcapppkg
+        title: Requirements Class “OGC Application Package”
+      - bblock: ogc.api.processes.part2.v1.requirements.docker
+        title: Requirements Class “Docker”
+      - bblock: ogc.api.processes.part2.v1.requirements.cwl
+        title: Requirements Class “CWL”
+      - bblock: ogc.api.processes.part2.v1.clauses.openapi
+      - bblock: ogc.api.processes.part2.v1.clauses.mediaTypes
+      - auto: annex-a
+        bblock: ogc.api.processes.part2.v1.annexes.ats
+      - bblock: ogc.api.processes.part2.v1.annexes.revisionHistory
+      - bblock: ogc.api.processes.part2.v1.annexes.bibliography
+        numbered: false
+
+    boilerplate:
+      copyright-year: 2019
+      notices:
+        - title: Notice for Drafts
+          text: |
+            This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.
+
+            Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
+
+            | | |
+            |---|---|
+            | Document number: | 20-044 |
+            | Document type: | OGC Standard |
+            | Document subtype: | Implementation |
+            | Document stage: | Draft |
+            | Document language: | English |
+        - title: Copyright notice
+          text: |
+            Copyright © 2019 Open Geospatial Consortium<br>
+            To obtain additional rights of use, visit <https://www.ogc.org/legal>
+        - title: Note
+          text: |
+            Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+
+            Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
+        - title: License Agreement
+          text: |
+            Use of this document is subject to the license agreement at <https://www.ogc.org/license>
+
+            Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <http://ogc.standardstracker.org/>
+
+  # Independent published edition: do not rename or replace part1 (v2) / part2 (v1).
+  # Reproducible definition: provenance/part1-v1/standard.yaml.
+  - id: part1-v1
+    prefix: ogc.api.processes.part1.v1.
+    title: 'OGC API - Processes - Part 1: Core'
+    doc-number: 18-062r2
+    type: Standard
+    doc-subtype: Implementation
+    status: Draft
+    version: 1.0.0
+    submission-date: '2021-06-18'
+    approval-date: '2021-08-23'
+    pub-date: '2021-12-20'
+    external-id: http://www.opengis.net/doc/IS/ogcapi-processes-1/1.0
+    base-uri: http://www.opengis.net/spec/ogcapi-processes-1/1.0
+    layout: ogc
+    modspec:
+      statement-label: Statement
+      singular-labels: true
+      obligation-row: false
+    req-uri-template: '{base-uri}/req/{id}'
+    rec-uri-template: '{base-uri}/rec/{id}'
+    per-uri-template: '{base-uri}/per/{id}'
+    conf-uri-template: '{base-uri}/conf/{id}'
+    ats-uri-template: '{base-uri}/conf/{id}'
+    editors:
+      - name: Benjamin Pross
+        affiliation: 52°North GmbH
+      - name: Panagiotis (Peter) A. Vretanos
+        affiliation: CubeWerx Inc.
+    preface:
+      - bblock: ogc.api.processes.part1.v1.clauses.abstract
+      - bblock: ogc.api.processes.part1.v1.clauses.keywords
+      - bblock: ogc.api.processes.part1.v1.clauses.securityConsiderations
+      - bblock: ogc.api.processes.part1.v1.clauses.submittingOrganizations
+      - bblock: ogc.api.processes.part1.v1.clauses.submitters
+    clauses:
+      - bblock: ogc.api.processes.part1.v1.clauses.scope
+      - bblock: ogc.api.processes.part1.v1.clauses.conformance
+      - bblock: ogc.api.processes.part1.v1.clauses.references
+      - bblock: ogc.api.processes.part1.v1.clauses.terms
+      - bblock: ogc.api.processes.part1.v1.clauses.conventions
+      - bblock: ogc.api.processes.part1.v1.clauses.overview
+      - bblock: ogc.api.processes.part1.v1.requirements.core
+      - bblock: ogc.api.processes.part1.v1.requirements.ogcProcessDescription
+      - bblock: ogc.api.processes.part1.v1.clauses.encodings
+        subclauses:
+          - bblock: ogc.api.processes.part1.v1.clauses.encodingOverview
+          - bblock: ogc.api.processes.part1.v1.requirements.json
+          - bblock: ogc.api.processes.part1.v1.requirements.html
+      - bblock: ogc.api.processes.part1.v1.requirements.oas30
+      - bblock: ogc.api.processes.part1.v1.requirements.jobList
+      - bblock: ogc.api.processes.part1.v1.requirements.callback
+      - bblock: ogc.api.processes.part1.v1.requirements.dismiss
+      - bblock: ogc.api.processes.part1.v1.clauses.mediaTypes
+      - bblock: ogc.api.processes.part1.v1.clauses.additionalBuildingBlocks
+      - bblock: ogc.api.processes.part1.v1.annexes.ats
+        auto: annex-a
+      - bblock: ogc.api.processes.part1.v1.annexes.revisionHistory
+      - bblock: ogc.api.processes.part1.v1.annexes.bibliography
+        numbered: false
+    boilerplate:
+      copyright-year: 2021
+      notices:
+        - title: Notice
+          text: <p class="adaptation-note">Building Blocks adaptation of OGC 18-062r2 (2021). This Intellectual Property includes modifications that have not been approved or adopted by the Open Geospatial Consortium (LICENSOR).</p><div class="published-source-notice"><p><strong>Published source notice (OGC 18-062r2):</strong></p><p id="_a156d1c4-313c-340a-8480-366345e3e0d2">This document is an OGC Member approved international standard. This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation. </p></div>
+        - title: Copyright notice
+          text: <p id="_069f3758-6dbc-dc52-d5cb-1139ba9b6741" style="text-align:center;">Copyright © 2021 Open Geospatial Consortium<br/> To obtain additional rights of use, visit <a href="http://www.ogc.org/legal/">http://www.ogc.org/legal/</a></p>
+        - title: Note
+          text: <p id="_11e88dba-9912-1a89-a82d-7291bf232191" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p> <p id="_15067213-c07b-cba0-7e18-395ab2e00ab3" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+        - title: License Agreement
+          text: '<div class="boilerplate-license"> <div> <p id="_e8566381-218f-c22d-320d-4d0371bfd58f">Permission is hereby granted by the Open Geospatial Consortium, (“Licensor”), free of charge and subject to the terms set forth below, to any person obtaining a copy of this Intellectual Property and any associated documentation, to deal in the Intellectual Property without restriction (except as set forth below), including without limitation the rights to implement, use, copy, modify, merge, publish, distribute, and/or sublicense copies of the Intellectual Property, and to permit persons to whom the Intellectual Property is furnished to do so, provided that all copyright notices on the intellectual property are retained intact and that each person to whom the Intellectual Property is furnished agrees to the terms of this Agreement.</p> <p id="_52ebb386-d365-27d0-d76d-a59ac165fc4d">If you modify the Intellectual Property, all copies of the modified Intellectual Property must include, in addition to the above copyright notice, a notice that the Intellectual Property includes modifications that have not been approved or adopted by LICENSOR.</p> <p id="_178f14b4-0718-a5b8-09cd-84f8f4b756ed">THIS LICENSE IS A COPYRIGHT LICENSE ONLY, AND DOES NOT CONVEY ANY RIGHTS UNDER ANY PATENTS THAT MAY BE IN FORCE ANYWHERE IN THE WORLD. THE INTELLECTUAL PROPERTY IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE INTELLECTUAL PROPERTY WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE INTELLECTUAL PROPERTY WILL BE UNINTERRUPTED OR ERROR FREE. ANY USE OF THE INTELLECTUAL PROPERTY SHALL BE MADE ENTIRELY AT THE USER’S OWN RISK. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR OF INTELLECTUAL PROPERTY RIGHTS TO THE INTELLECTUAL PROPERTY BE LIABLE FOR ANY CLAIM, OR ANY DIRECT, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM ANY ALLEGED INFRINGEMENT OR ANY LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR UNDER ANY OTHER LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH THE IMPLEMENTATION, USE, COMMERCIALIZATION OR PERFORMANCE OF THIS INTELLECTUAL PROPERTY.</p> <p id="_2ad7fe27-9ae4-52c5-9dd9-faa4004247fb">This license is effective until terminated. You may terminate it at any time by destroying the Intellectual Property together with all copies in any form. The license will also terminate if you fail to comply with any term or condition of this Agreement. Except as provided in the following sentence, no such termination of this license shall require the termination of any third party end-user sublicense to the Intellectual Property which is in force as of the date of notice of such termination. In addition, should the Intellectual Property, or the operation of the Intellectual Property, infringe, or in LICENSOR’s sole opinion be likely to infringe, any patent, copyright, trademark or other right of a third party, you agree that LICENSOR, in its sole discretion, may terminate this license without any compensation or liability to you, your licensees or any other party. You agree upon termination of any kind to destroy or cause to be destroyed the Intellectual Property together with all copies in any form, whether held by you or by any third party.</p> <p id="_3254c815-179c-5f54-9a01-b8e964837171">Except as contained in this notice, the name of LICENSOR or of any other holder of a copyright in all or part of the Intellectual Property shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Intellectual Property without prior written authorization of LICENSOR or such copyright holder. LICENSOR is and shall at all times be the sole entity that may authorize you or any third party to use certification marks, trademarks or other special designations to indicate compliance with any LICENSOR standards or specifications. This Agreement is governed by the laws of the Commonwealth of Massachusetts. The application to this Agreement of the United Nations Convention on Contracts for the International Sale of Goods is hereby expressly excluded. In the event any provision of this Agreement shall be deemed unenforceable, void or invalid, such provision shall be modified so as to make it valid and enforceable, and as so modified the entire Agreement shall remain in full force and effect. No decision, action or inaction by LICENSOR shall be construed to be a waiver of any rights or remedies available to it.</p> <p id="_4fa1ef5b-3dd5-7a05-3c68-bca93a0f14bb">None of the Intellectual Property or underlying information or technology may be downloaded or otherwise exported or reexported in violation of U.S. export laws and regulations. In addition, you are responsible for complying with any local laws in your jurisdiction which may impact your right to import, export or use the Intellectual Property, and you represent that you have complied with any regulations or registration procedures required by applicable law to make this license enforceable.</p> </div> </div> <div class="boilerplate-feedback"> <div id="boilerplate-standard-feedback"> <p id="_bbc1a653-f270-135d-9455-af930feb3587">Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <a href="http://portal.opengeospatial.org/public_ogc/change_request.php">http://portal.opengeospatial.org/public_ogc/change_request.php</a></p> </div> </div>'
