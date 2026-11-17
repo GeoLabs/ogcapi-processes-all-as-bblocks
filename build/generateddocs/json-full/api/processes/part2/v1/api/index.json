@@ -1,0 +1,55 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.part2.v1.api",
+  "name": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy",
+  "abstract": "API definition for OGC API - Processes Part 2 extending Part 1 with process lifecycle management",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-18T21:00:00Z",
+  "dateOfLastChange": "2026-11-13",
+  "itemClass": "api",
+  "register": "ogc-api-processes-part2",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy",
+      "link": "http://docs.ogc.org/DRAFTS/20-044.html"
+    }
+  ],
+  "tags": [
+    "ogc",
+    "processes",
+    "deploy",
+    "replace",
+    "undeploy",
+    "part2",
+    "api"
+  ],
+  "highlighted": true,
+  "dependsOn": [
+    "ogc.api.processes.part1.v1.parameters.processIdPathParam",
+    "ogc.api.processes.part1.v1.responses.InvalidParameter",
+    "ogc.api.processes.part1.v1.responses.NotFound",
+    "ogc.api.processes.part1.v1.responses.ServerError",
+    "ogc.api.processes.part2.v1.parameters.w",
+    "ogc.api.processes.part2.v1.responses.deploySuccess",
+    "ogc.api.processes.part2.v1.responses.duplicateProcess",
+    "ogc.api.processes.part2.v1.responses.immutableProcess",
+    "ogc.api.processes.part2.v1.responses.replaceSuccess",
+    "ogc.api.processes.part2.v1.responses.undeploySuccess",
+    "ogc.api.processes.part2.v1.schemas.ogcapppkg",
+    "ogc.api.processes.part2.v1.schemas.ogcapppkg-cwl"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+  },
+  "sourceOpenAPIDocument": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/api/openapi.yaml",
+  "openAPIDocument": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/api/openapi.yaml",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/api/",
+  "validationPassed": true,
+  "description": "# OGC API - Processes - Part 2: Deploy, Replace, Undeploy\n\nThis API extends OGC API - Processes - Part 1: Core with dynamic process lifecycle management capabilities.\n\n## Conformance Classes\n\nThis API supports the following conformance classes:\n\n- **Deploy, Replace, Undeploy (DRU)**: Core process lifecycle management\n- **OGC Application Package**: Standardized format for process deployment packages\n- **Docker**: Container-based execution units using Docker/OCI images\n- **CWL Encoding**: Support for Common Workflow Language as process description format\n\n## Operations\n\n### Deploy Process (POST /processes)\n\nDeploy a new process to the server using an OGC Application Package. The deployed process becomes immediately available for execution.\n\n### Replace Process (PUT /processes/{processId})\n\nReplace an existing process with a new version. The process definition is updated atomically.\n\n### Undeploy Process (DELETE /processes/{processId})\n\nRemove a deployed process from the server. The process will no longer be available for new executions.\n\n## Key Concepts\n\n### OGC Application Package\n\nThe OGC Application Package (ogcapppkg) is a standardized format for describing deployable processes. It includes:\n\n- **Process Description**: Metadata, inputs, and outputs definition\n- **Execution Unit**: Container specification (Docker/OCI) with resource requirements or a CWL (by value encoded as a JSON object or by reference).\n\n### Execution Units\n\nExecution units specify how processes are executed using containerization:\n\n- **Type**: `docker` or `oci`\n- **Image**: Container image reference\n- **Deployment**: Target environment (local, remote, HPC, cloud)\n- **Config**: Resource requirements (CPU, memory, storage, timeout)\n\n#### CWL as Execution Unit\n\nAn Execution Unit can also be a CWL document, provided either by reference (via `href`) or by value (inline):\n\n- **By reference**: Use `href` pointing to a CWL file with `type: \"application/cwl\"`\n  ```json\n  {\n    \"executionUnit\": {\n      \"href\": \"https://example.com/workflow.cwl\",\n      \"type\": \"application/cwl\"\n    }\n  }\n  ```\n  \n- **By value**: Embed the CWL document directly with `value` (JSON object) and `mediaType: \"application/cwl+json\"`\n  ```json\n  {\n    \"executionUnit\": {\n      \"value\": { \"cwlVersion\": \"v1.0\", ... },\n      \"mediaType\": \"application/cwl+json\"\n    }\n  }\n  ```\n\nWhen using CWL as the execution unit within an OGC Application Package:\n- The `processDescription` property becomes **optional**, as CWL documents already contain all necessary metadata (inputs, outputs, documentation)\n- If provided, `processDescription` can **override** specific process metadata defined in the CWL (e.g., custom title, description, or additional metadata)\n\n### Process Mutability\n\nProcesses deployed via Part 2 are mutable by default, indicated by the `mutable: true` property in the process summary. This distinguishes them from static processes that cannot be modified through the API.\n\n## CWL Support\n\nThe API supports Common Workflow Language (CWL) as an encoding format for process descriptions and execution units:\n\n- **Content Types**: `application/cwl+yaml`,`application/cwl`\n- **CWL Types**: Workflow (inside a `$graph`)\n- **Benefits**: Workflow portability, rich composition, tool reusability\n\n### Multi-Workflow CWL Documents\n\nWhen deploying CWL documents containing multiple workflows (using the `$graph` pattern), you can specify which workflow to deploy using the `w` query parameter:\n\n- **With `w` parameter**: Explicitly select a workflow by its identifier (e.g., `POST /processes?w=my-workflow`)\n- **Without `w` parameter**: The first workflow in the `$graph` will be automatically selected\n- **Process ID mapping**: A one-to-one relationship exists between the CWL workflow identifier and the resulting `processId`\n\nThis allows deploying multiple processes from a single CWL document by making multiple POST requests with different `w` parameter values.\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitPath": "_sources/part2/v1/api"
+}

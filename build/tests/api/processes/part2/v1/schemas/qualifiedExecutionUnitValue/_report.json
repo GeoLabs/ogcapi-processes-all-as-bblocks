@@ -1,0 +1,134 @@
+{
+  "title": "Validation report for ogc.api.processes.part2.v1.schemas.qualifiedExecutionUnitValue - Qualified execution unit value",
+  "bblockName": "Qualified execution unit value",
+  "bblockId": "ogc.api.processes.part2.v1.schemas.qualifiedExecutionUnitValue",
+  "generated": "2026-11-17T16:03:13.511184+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/missing-value-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/missing-value-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using missing-value-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'value' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'value' is a required property\n\nFailed validating 'required' in schema['allOf'][1]:\n    {'type': 'object', 'required': ['value'], 'properties': {'value': {}}}\n\nOn instance:\n    {'mediaType': 'text/plain'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/numeric.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/numeric.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using numeric.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/string.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/string.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using string.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0
+  }
+}

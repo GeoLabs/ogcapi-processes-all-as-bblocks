@@ -1,0 +1,5 @@
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+[] proc:processDescription "{\"process\":{\"id\":\"ndvi\",\"version\":\"1.0.0\"}}"^^rdf:JSON .
+

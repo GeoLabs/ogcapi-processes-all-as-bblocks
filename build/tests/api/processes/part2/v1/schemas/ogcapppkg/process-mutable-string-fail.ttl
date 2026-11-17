@@ -1,0 +1,6 @@
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+[] proc:executionUnit "{\"type\":\"python\",\"value\":{}}"^^rdf:JSON ;
+    proc:processDescription "{\"process\":{\"id\":\"echo\",\"mutable\":\"true\",\"version\":\"1.0.0\"}}"^^rdf:JSON .
+

@@ -1,0 +1,151 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.part2.v1.schemas.ogcapppkg",
+  "name": "OGC Application Package schema",
+  "abstract": "OGC Application Package with canonical single-or-array executionUnitValue or a backwards-compatible legacy flat executionUnit",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-18T21:00:00Z",
+  "dateOfLastChange": "2026-11-13",
+  "register": "ogc-api-processes-part2",
+  "version": "0.2",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy",
+      "link": "https://docs.ogc.org/DRAFTS/20-044.html"
+    }
+  ],
+  "tags": [
+    "ogc",
+    "processes",
+    "deploy",
+    "application-package",
+    "part2",
+    "schema"
+  ],
+  "itemClass": "schema",
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.processes.part1.v1.schemas.process",
+    "ogc.api.processes.part2.v1.schemas.executionUnit",
+    "ogc.api.processes.part2.v1.schemas.executionUnitValue",
+    "ogc.api.processes.part2.v1.schemas.staticIndicator"
+  ],
+  "license": {
+    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+  },
+  "ldContext": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
+  "schema": {
+    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.yaml",
+    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.json"
+  },
+  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/schema.yaml",
+  "sourceLdContext": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/context.jsonld",
+  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/resolvedProperties.json",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/JFarduino/ogcapi-processes-bblocks/blob/main/build/tests/api/processes/part2/v1/schemas/ogcapppkg/",
+  "description": "Schema of an OGC Application Package document (Requirement /req/ogcapppkg/schema).\n\nThe source is the fragment quoted in the OGC 20-044 draft, with its references\nreplaced by building block references.\n\nThe `docker-example` test is the example from the draft with a top-level `title` added.\nThe local JSON-LD context preserves `executionUnit` and `processDescription` as\nopaque JSON literals, including links, arrays and custom executable documents.\nTheir contents are validated by JSON Schema, not interpreted as RDF classes.\n\n## Local compatibility and composition\n\nThe draft `executionUnit` reference maps to\n`ogc.api.processes.part2.v1.schemas.executionUnitValue`, the canonical single-or-array\nproperty-value contract. An `anyOf` additionally accepts the existing public\n`ogc.api.processes.part2.v1.schemas.executionUnit` legacy flat container contract.\nOnly this package's legacy branch excludes `value`; the global legacy schema\nis unchanged. Thus an invalid qualified Docker payload cannot escape validation\nby also carrying a top-level `image`.\n\nThe former direct Part 1 `link` and `qualifiedValue` alternatives are removed:\nlinks and custom qualified values remain supported through `executionUnitBase`,\nwith Docker/CWL payload validation enforced there. An untyped qualified value\nis not an execution unit.\n\nWhen present, `processDescription.process` composes Part 1 `process` with\n`staticIndicator` to retain the full process structure and validate the optional\nDRU `mutable` flag. These compatibility/composition rules are local fixes, not\nan amendment of the official draft. Draft limitations in the container and\nbinding schemas remain documented on those blocks.",
+  "examples": [
+    {
+      "title": "OGC Application Package with CWL reference",
+      "description": "Example of an OGC Application Package that references an external CWL\nworkflow via href. This demonstrates deployment of the Terradue water bodies\ndetection workflow.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/example.json",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_1_1.json",
+          "sizeBytes": 201,
+          "code": "{\n  \"executionUnit\": {\n    \"href\": \"https://github.com/Terradue/ogc-eo-application-package-hands-on/releases/download/1.5.0/app-water-bodies-cloud-native.1.5.0.cwl\",\n    \"type\": \"application/cwl\"\n  }\n}"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_1_1.jsonld",
+          "sizeBytes": 343,
+          "code": "{\n  \"@context\": \"https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld\",\n  \"executionUnit\": {\n    \"href\": \"https://github.com/Terradue/ogc-eo-application-package-hands-on/releases/download/1.5.0/app-water-bodies-cloud-native.1.5.0.cwl\",\n    \"type\": \"application/cwl\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_1_1.ttl",
+          "sizeBytes": 325,
+          "code": "@prefix proc: <https://w3id.org/ogc/api/processes/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n[] proc:executionUnit \"{\\\"href\\\":\\\"https://github.com/Terradue/ogc-eo-application-package-hands-on/releases/download/1.5.0/app-water-bodies-cloud-native.1.5.0.cwl\\\",\\\"type\\\":\\\"application/cwl\\\"}\"^^rdf:JSON .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Canonical Docker application package",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/docker-example.json",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_2_1.json",
+          "sizeBytes": 622,
+          "code": "{\n  \"title\": \"NDVI application package\",\n  \"executionUnit\": {\n    \"type\": \"docker\",\n    \"value\": {\n      \"image\": \"mydocker/ndvi:latest\",\n      \"bindings\": {\n        \"inputBindings\": {\n          \"inputImage\": {\n            \"prefix\": \"inputsImages=\",\n            \"inputSeparator\": \",\"\n          }\n        },\n        \"outputBindings\": {\n          \"outputImage\": {\n            \"glob\": \"$(\\\"/outputs/ndvi_\\\" + inputs.inputImage.basename)\"\n          }\n        }\n      },\n      \"deployment\": \"local\",\n      \"config\": {\n        \"cpuMin\": 2,\n        \"cpuMax\": 5,\n        \"memoryMin\": 1,\n        \"memoryMax\": 3\n      }\n    }\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_2_1.jsonld",
+          "sizeBytes": 763,
+          "code": "{\n  \"@context\": \"https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld\",\n  \"title\": \"NDVI application package\",\n  \"executionUnit\": {\n    \"type\": \"docker\",\n    \"value\": {\n      \"image\": \"mydocker/ndvi:latest\",\n      \"bindings\": {\n        \"inputBindings\": {\n          \"inputImage\": {\n            \"prefix\": \"inputsImages=\",\n            \"inputSeparator\": \",\"\n          }\n        },\n        \"outputBindings\": {\n          \"outputImage\": {\n            \"glob\": \"$(\\\"/outputs/ndvi_\\\" + inputs.inputImage.basename)\"\n          }\n        }\n      },\n      \"deployment\": \"local\",\n      \"config\": {\n        \"cpuMin\": 2,\n        \"cpuMax\": 5,\n        \"memoryMin\": 1,\n        \"memoryMax\": 3\n      }\n    }\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_2_1.ttl",
+          "sizeBytes": 617,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix proc: <https://w3id.org/ogc/api/processes/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n[] dct:title \"NDVI application package\" ;\n    proc:executionUnit \"{\\\"type\\\":\\\"docker\\\",\\\"value\\\":{\\\"bindings\\\":{\\\"inputBindings\\\":{\\\"inputImage\\\":{\\\"inputSeparator\\\":\\\",\\\",\\\"prefix\\\":\\\"inputsImages=\\\"}},\\\"outputBindings\\\":{\\\"outputImage\\\":{\\\"glob\\\":\\\"$(\\\\\\\"/outputs/ndvi_\\\\\\\" + inputs.inputImage.basename)\\\"}}},\\\"config\\\":{\\\"cpuMax\\\":5,\\\"cpuMin\\\":2,\\\"memoryMax\\\":3,\\\"memoryMin\\\":1},\\\"deployment\\\":\\\"local\\\",\\\"image\\\":\\\"mydocker/ndvi:latest\\\"}}\"^^rdf:JSON .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Canonical execution unit array",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/array.json",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_3_1.json",
+          "sizeBytes": 162,
+          "code": "{\n  \"executionUnit\": [\n    {\"type\": \"docker\", \"value\": {\"image\": \"example/echo:1\"}},\n    {\"href\": \"https://example.com/echo.cwl\", \"type\": \"application/cwl\"}\n  ]\n}"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_3_1.jsonld",
+          "sizeBytes": 356,
+          "code": "{\n  \"@context\": \"https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld\",\n  \"executionUnit\": [\n    {\n      \"type\": \"docker\",\n      \"value\": {\n        \"image\": \"example/echo:1\"\n      }\n    },\n    {\n      \"href\": \"https://example.com/echo.cwl\",\n      \"type\": \"application/cwl\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_3_1.ttl",
+          "sizeBytes": 291,
+          "code": "@prefix proc: <https://w3id.org/ogc/api/processes/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n[] proc:executionUnit \"[{\\\"type\\\":\\\"docker\\\",\\\"value\\\":{\\\"image\\\":\\\"example/echo:1\\\"}},{\\\"href\\\":\\\"https://example.com/echo.cwl\\\",\\\"type\\\":\\\"application/cwl\\\"}]\"^^rdf:JSON .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Legacy flat container application package",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/legacy-flat.json",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_4_1.json",
+          "sizeBytes": 64,
+          "code": "{\"executionUnit\": {\"type\": \"docker\", \"image\": \"example/echo:1\"}}"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_4_1.jsonld",
+          "sizeBytes": 222,
+          "code": "{\n  \"@context\": \"https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld\",\n  \"executionUnit\": {\n    \"type\": \"docker\",\n    \"image\": \"example/echo:1\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_4_1.ttl",
+          "sizeBytes": 204,
+          "code": "@prefix proc: <https://w3id.org/ogc/api/processes/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n[] proc:executionUnit \"{\\\"image\\\":\\\"example/echo:1\\\",\\\"type\\\":\\\"docker\\\"}\"^^rdf:JSON .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "type: object\nrequired:\n- executionUnit\nproperties:\n  processDescription:\n    type: object\n    required:\n    - process\n    properties:\n      process:\n        allOf:\n        - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/process/schema.yaml\n        - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.yaml\n    x-jsonld-id: https://w3id.org/ogc/api/processes/processDescription\n    x-jsonld-type: '@json'\n  executionUnit:\n    anyOf:\n    - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitValue/schema.yaml\n    - allOf:\n      - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnit/schema.yaml\n      - not:\n          required:\n          - value\n    x-jsonld-id: https://w3id.org/ogc/api/processes/executionUnit\n    x-jsonld-type: '@json'\nx-jsonld-prefixes:\n  proc: https://w3id.org/ogc/api/processes/\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.ogcapppkg\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-11-13'\n",
+  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitPath": "_sources/part2/v1/schemas/ogcapppkg"
+}

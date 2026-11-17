@@ -1,0 +1,9 @@
+{
+  "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWL/schema.json",
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.api.processes.part2.v1.schemas.ogcapppkg-cwl",
+    "register": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-11-13"
+  }
+}

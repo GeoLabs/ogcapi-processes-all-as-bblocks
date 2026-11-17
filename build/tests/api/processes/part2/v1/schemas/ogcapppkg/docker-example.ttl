@@ -1,0 +1,7 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+[] dct:title "NDVI application package" ;
+    proc:executionUnit "{\"type\":\"docker\",\"value\":{\"bindings\":{\"inputBindings\":{\"inputImage\":{\"inputSeparator\":\",\",\"prefix\":\"inputsImages=\"}},\"outputBindings\":{\"outputImage\":{\"glob\":\"$(\\\"/outputs/ndvi_\\\" + inputs.inputImage.basename)\"}}},\"config\":{\"cpuMax\":5,\"cpuMin\":2,\"memoryMax\":3,\"memoryMin\":1},\"deployment\":\"local\",\"image\":\"mydocker/ndvi:latest\"}}"^^rdf:JSON .
+

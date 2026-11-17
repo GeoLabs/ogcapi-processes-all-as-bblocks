@@ -1,0 +1,73 @@
+Validation report for ogc.api.processes.part2.v1.schemas.executionUnitBase - Execution unit base schema
+Generated 2026-11-17T16:03:14.117829+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using missing-value-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: {'type': 'docker'} is not valid under any of the given schemas
+
+Failed validating 'oneOf' in schema:
+    {'oneOf': [{'allOf': [{'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml'},
+                          {'not': {'required': ['value']}}]},
+               {'allOf': [{'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/qualifiedExecutionUnitValue/schema.yaml'},
+                          {'type': 'object',
+                           'required': ['value'],
+                           'if': {'required': ['type'],
+                                  'properties': {'type': {'enum': ['docker',
+                                                                   'oci']}}},
+                           'then': {'description': 'The execution unit is '
+                                                   'a container image.',
+                                    'properties': {'value': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitContainer/schema.yaml'}}},
+                           'else': {'if': {'required': ['mediaType'],
+                                           'properties': {'mediaType': {'const': 'application/cwl'}}},
+                                    'then': {'description': 'The execution '
+                                                            'unit is CWL '
+                                                            'script.',
+                                             'properties': {'value': {'$ref': 'https://raw.githubusercontent.com/common-workflow-language/cwl-v1.2/main/json-schema/cwl.yaml'}}},
+                                    'else': {'description': 'The execution '
+                                                            'unit is not '
+                                                            'Docker/OCI or '
+                                                            'CWL and '
+                                                            'cannot be '
+                                                            'properly '
+                                                            'described '
+                                                            'via\n'
+                                                            'the '
+                                                            '"mediaType" '
+                                                            'property of a '
+                                                            'qualified '
+                                                            'value using '
+                                                            'an RFC 2046 '
+                                                            'media type '
+                                                            '(e.g.\n'
+                                                            'an "R" or '
+                                                            '"Python" '
+                                                            'script). In '
+                                                            'this case a '
+                                                            'community-defined '
+                                                            'or custom '
+                                                            'token may\n'
+                                                            'be used with '
+                                                            'the "type" '
+                                                            'property.',
+                                             'required': ['type'],
+                                             'properties': {'type': {'type': 'string',
+                                                                     'not': {'enum': ['docker',
+                                                                                      'oci']}}}}}}]}],
+     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitBase',
+                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',
+                            'version': '1.1.0',
+                            'dateOfLastChange': '2026-11-13'},
+     '$id': 'file:///github/workspace/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.yaml'}
+
+On instance:
+    {'type': 'docker'}
+=== End JSON Schema ===
+

@@ -1,0 +1,966 @@
+{
+  "title": "Validation report for ogc.api.processes.part2.v1.schemas.ogcapppkg - OGC Application Package schema",
+  "bblockName": "OGC Application Package schema",
+  "bblockId": "ogc.api.processes.part2.v1.schemas.ogcapppkg",
+  "generated": "2026-11-17T16:03:14.345432+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/array.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/array.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using array.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "array.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD array.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "array.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle array.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/custom-qualified.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/custom-qualified.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using custom-qualified.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "custom-qualified.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD custom-qualified.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "custom-qualified.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle custom-qualified.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/docker-example.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/docker-example.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using docker-example.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "docker-example.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD docker-example.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "docker-example.ttl",
+              "size": 2,
+              "isError": false,
+              "message": "Output Turtle docker-example.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/invalid-array-item-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/invalid-array-item-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-array-item-fail.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "invalid-array-item-fail.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD invalid-array-item-fail.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "invalid-array-item-fail.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle invalid-array-item-fail.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'image' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'image' is a required property\n\nFailed validating 'required' in schema[1]['allOf'][1]['then']['properties']['value']:\n    {'type': 'object',\n     'required': ['image'],\n     'properties': {'image': {'description': 'Container image reference '\n                                             'for the execution unit.',\n                              'type': 'string'},\n                    'deployment': {'description': 'Deployment information '\n                                                  'for the execution unit.',\n                                   'type': 'string',\n                                   'anyOf': [{'type': 'string'},\n                                             {'enum': ['local',\n                                                       'remote',\n                                                       'hpc',\n                                                       'cloud']}]},\n                    'config': {'type': 'object',\n                               'description': 'Hardware requirements and '\n                                              'configuration properties '\n                                              'for executing the\\n'\n                                              'process.',\n                               'properties': {'cpuMin': {'description': 'Minimum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPUs '\n                                                                        'required '\n                                                                        'to '\n                                                                        'run '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core).',\n                                                         'type': 'number',\n                                                         'minimum': 1},\n                                              'cpuMax': {'description': 'Maximum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPU '\n                                                                        'dedicated '\n                                                                        'to '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core)',\n                                                         'type': 'number'},\n                                              'memoryMin': {'description': 'Minimum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'required '\n                                                                           'to '\n                                                                           'run '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'memoryMax': {'description': 'Maximum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'dedicated '\n                                                                           'to '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'storageTempMin': {'description': 'Minimum '\n                                                                                'required '\n                                                                                'temporary '\n                                                                                'storage '\n                                                                                'size '\n                                                                                '(unit '\n                                                                                'is '\n                                                                                'GB)',\n                                                                 'type': 'number'},\n                                              'storageOutputsMin': {'description': 'Minimum '\n                                                                                   'required '\n                                                                                   'output '\n                                                                                   'storage '\n                                                                                   'size '\n                                                                                   '(unit '\n                                                                                   'is '\n                                                                                   'GB)',\n                                                                    'type': 'number'},\n                                              'jobTimeout': {'description': 'Timeout '\n                                                                            'delay '\n                                                                            'for '\n                                                                            'a '\n                                                                            'job '\n                                                                            'execution '\n                                                                            '(in '\n                                                                            'seconds)',\n                                                             'type': 'number'}},\n                               'additionalProperties': True},\n                    'bindings': {'type': 'object',\n                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},\n                                                'outputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},\n     'additionalProperties': True,\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitContainer',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.0.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance['value']:\n    {}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/invalid-docker-value-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/invalid-docker-value-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-docker-value-fail.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "invalid-docker-value-fail.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD invalid-docker-value-fail.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "invalid-docker-value-fail.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle invalid-docker-value-fail.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'image' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'image' is a required property\n\nFailed validating 'required' in schema[1]['allOf'][1]['then']['properties']['value']:\n    {'type': 'object',\n     'required': ['image'],\n     'properties': {'image': {'description': 'Container image reference '\n                                             'for the execution unit.',\n                              'type': 'string'},\n                    'deployment': {'description': 'Deployment information '\n                                                  'for the execution unit.',\n                                   'type': 'string',\n                                   'anyOf': [{'type': 'string'},\n                                             {'enum': ['local',\n                                                       'remote',\n                                                       'hpc',\n                                                       'cloud']}]},\n                    'config': {'type': 'object',\n                               'description': 'Hardware requirements and '\n                                              'configuration properties '\n                                              'for executing the\\n'\n                                              'process.',\n                               'properties': {'cpuMin': {'description': 'Minimum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPUs '\n                                                                        'required '\n                                                                        'to '\n                                                                        'run '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core).',\n                                                         'type': 'number',\n                                                         'minimum': 1},\n                                              'cpuMax': {'description': 'Maximum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPU '\n                                                                        'dedicated '\n                                                                        'to '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core)',\n                                                         'type': 'number'},\n                                              'memoryMin': {'description': 'Minimum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'required '\n                                                                           'to '\n                                                                           'run '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'memoryMax': {'description': 'Maximum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'dedicated '\n                                                                           'to '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'storageTempMin': {'description': 'Minimum '\n                                                                                'required '\n                                                                                'temporary '\n                                                                                'storage '\n                                                                                'size '\n                                                                                '(unit '\n                                                                                'is '\n                                                                                'GB)',\n                                                                 'type': 'number'},\n                                              'storageOutputsMin': {'description': 'Minimum '\n                                                                                   'required '\n                                                                                   'output '\n                                                                                   'storage '\n                                                                                   'size '\n                                                                                   '(unit '\n                                                                                   'is '\n                                                                                   'GB)',\n                                                                    'type': 'number'},\n                                              'jobTimeout': {'description': 'Timeout '\n                                                                            'delay '\n                                                                            'for '\n                                                                            'a '\n                                                                            'job '\n                                                                            'execution '\n                                                                            '(in '\n                                                                            'seconds)',\n                                                             'type': 'number'}},\n                               'additionalProperties': True},\n                    'bindings': {'type': 'object',\n                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},\n                                                'outputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},\n     'additionalProperties': True,\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitContainer',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.0.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance['value']:\n    {}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/legacy-flat.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/legacy-flat.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using legacy-flat.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "legacy-flat.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD legacy-flat.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "legacy-flat.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle legacy-flat.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/legacy-value-bypass-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/legacy-value-bypass-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using legacy-value-bypass-fail.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "legacy-value-bypass-fail.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD legacy-value-bypass-fail.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "legacy-value-bypass-fail.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle legacy-value-bypass-fail.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'image' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'image' is a required property\n\nFailed validating 'required' in schema[1]['allOf'][1]['then']['properties']['value']:\n    {'type': 'object',\n     'required': ['image'],\n     'properties': {'image': {'description': 'Container image reference '\n                                             'for the execution unit.',\n                              'type': 'string'},\n                    'deployment': {'description': 'Deployment information '\n                                                  'for the execution unit.',\n                                   'type': 'string',\n                                   'anyOf': [{'type': 'string'},\n                                             {'enum': ['local',\n                                                       'remote',\n                                                       'hpc',\n                                                       'cloud']}]},\n                    'config': {'type': 'object',\n                               'description': 'Hardware requirements and '\n                                              'configuration properties '\n                                              'for executing the\\n'\n                                              'process.',\n                               'properties': {'cpuMin': {'description': 'Minimum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPUs '\n                                                                        'required '\n                                                                        'to '\n                                                                        'run '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core).',\n                                                         'type': 'number',\n                                                         'minimum': 1},\n                                              'cpuMax': {'description': 'Maximum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPU '\n                                                                        'dedicated '\n                                                                        'to '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core)',\n                                                         'type': 'number'},\n                                              'memoryMin': {'description': 'Minimum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'required '\n                                                                           'to '\n                                                                           'run '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'memoryMax': {'description': 'Maximum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'dedicated '\n                                                                           'to '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'storageTempMin': {'description': 'Minimum '\n                                                                                'required '\n                                                                                'temporary '\n                                                                                'storage '\n                                                                                'size '\n                                                                                '(unit '\n                                                                                'is '\n                                                                                'GB)',\n                                                                 'type': 'number'},\n                                              'storageOutputsMin': {'description': 'Minimum '\n                                                                                   'required '\n                                                                                   'output '\n                                                                                   'storage '\n                                                                                   'size '\n                                                                                   '(unit '\n                                                                                   'is '\n                                                                                   'GB)',\n                                                                    'type': 'number'},\n                                              'jobTimeout': {'description': 'Timeout '\n                                                                            'delay '\n                                                                            'for '\n                                                                            'a '\n                                                                            'job '\n                                                                            'execution '\n                                                                            '(in '\n                                                                            'seconds)',\n                                                             'type': 'number'}},\n                               'additionalProperties': True},\n                    'bindings': {'type': 'object',\n                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},\n                                                'outputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},\n     'additionalProperties': True,\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitContainer',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.0.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance['value']:\n    {}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/link.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/link.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using link.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "link.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD link.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "link.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle link.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/missing-execution-unit-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/missing-execution-unit-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using missing-execution-unit-fail.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "missing-execution-unit-fail.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD missing-execution-unit-fail.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "missing-execution-unit-fail.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle missing-execution-unit-fail.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'executionUnit' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'executionUnit' is a required property\n\nFailed validating 'required' in schema:\n    {'type': 'object',\n     'required': ['executionUnit'],\n     'properties': {'processDescription': {'type': 'object',\n                                           'required': ['process'],\n                                           'properties': {'process': {'allOf': [{'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/process/schema.yaml'},\n                                                                                {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.yaml'}]}},\n                                           'x-jsonld-id': 'https://w3id.org/ogc/api/processes/processDescription',\n                                           'x-jsonld-type': '@json'},\n                    'executionUnit': {'anyOf': [{'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitValue/schema.yaml'},\n                                                {'allOf': [{'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnit/schema.yaml'},\n                                                           {'not': {'required': ['value']}}]}],\n                                      'x-jsonld-id': 'https://w3id.org/ogc/api/processes/executionUnit',\n                                      'x-jsonld-type': '@json'}},\n     'x-jsonld-prefixes': {'proc': 'https://w3id.org/ogc/api/processes/'},\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.ogcapppkg',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '0.2',\n                            'dateOfLastChange': '2026-11-13'},\n     '$id': 'file:///github/workspace/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.yaml'}\n\nOn instance:\n    {'processDescription': {'process': {'id': 'ndvi', 'version': '1.0.0'}}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/process-mutable-false.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/process-mutable-false.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using process-mutable-false.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "process-mutable-false.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD process-mutable-false.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "process-mutable-false.ttl",
+              "size": 2,
+              "isError": false,
+              "message": "Output Turtle process-mutable-false.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/process-mutable-string-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/process-mutable-string-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using process-mutable-string-fail.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "process-mutable-string-fail.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD process-mutable-string-fail.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "process-mutable-string-fail.ttl",
+              "size": 2,
+              "isError": false,
+              "message": "Output Turtle process-mutable-string-fail.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'true' is not of type 'boolean'",
+              "isError": true,
+              "message": "ValidationError: 'true' is not of type 'boolean'\n\nFailed validating 'type' in schema['properties']['processDescription']['properties']['process']['allOf'][1]['allOf'][1]['properties']['mutable']:\n    {'type': 'boolean',\n     'default': True,\n     'description': 'Indicates whether the process can be modified via '\n                    'Deploy, Replace, Undeploy operations'}\n\nOn instance['processDescription']['process']['mutable']:\n    'true'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/ogcapppkg/tests/untyped-qualified-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/ogcapppkg/tests/untyped-qualified-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using untyped-qualified-fail.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "untyped-qualified-fail.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD untyped-qualified-fail.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "untyped-qualified-fail.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle untyped-qualified-fail.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'href' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'href' is a required property\n\nFailed validating 'required' in schema[0]['allOf'][0]:\n    {'type': 'object',\n     'required': ['href'],\n     'properties': {'href': {'type': 'string'},\n                    'rel': {'type': 'string', 'example': 'service'},\n                    'type': {'type': 'string',\n                             'example': 'application/json'},\n                    'hreflang': {'type': 'string', 'example': 'en'},\n                    'title': {'type': 'string'}},\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v1.schemas.link',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance:\n    {'value': {}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_1_1.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_2_1.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_2_1.json",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using tests/docker-example.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_2_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_2_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_2_1.ttl",
+              "size": 2,
+              "isError": false,
+              "message": "Output Turtle example_2_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_3_1.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_3_1.json",
+        "exampleIndex": 3,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using tests/array.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_3_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_3_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_3_1.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle example_3_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_4_1.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg/example_4_1.json",
+        "exampleIndex": 4,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using tests/legacy-flat.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_4_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_4_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_4_1.ttl",
+              "size": 1,
+              "isError": false,
+              "message": "Output Turtle example_4_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0
+  }
+}

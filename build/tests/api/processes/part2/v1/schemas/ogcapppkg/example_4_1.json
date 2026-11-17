@@ -1,0 +1,6 @@
+{
+  "executionUnit": {
+    "type": "docker",
+    "image": "example/echo:1"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "oneOf": [
+    {
+      "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.json"
+    },
+    {
+      "type": "array",
+      "items": {
+        "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.json"
+      }
+    }
+  ],
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.api.processes.part2.v1.schemas.executionUnitValue",
+    "register": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json",
+    "version": "1.0.0",
+    "dateOfLastChange": "2026-11-13"
+  }
+}

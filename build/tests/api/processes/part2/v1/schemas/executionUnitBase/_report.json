@@ -1,0 +1,983 @@
+{
+  "title": "Validation report for ogc.api.processes.part2.v1.schemas.executionUnitBase - Execution unit base schema",
+  "bblockName": "Execution unit base schema",
+  "bblockId": "ogc.api.processes.part2.v1.schemas.executionUnitBase",
+  "generated": "2026-11-17T16:03:14.127375+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/custom-cwl-bypass-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/custom-cwl-bypass-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using custom-cwl-bypass-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "{} is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: {} is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema[1]['allOf'][1]['else']['then']['properties']['value']:\n    {'oneOf': [{'$ref': '#/$defs/CWLAtomic'},\n               {'$ref': '#/$defs/CWLGraph'},\n               {'$ref': '#/$defs/CWLWorkflow'}]}\n\nOn instance['value']:\n    {}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/custom-empty-object.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/custom-empty-object.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using custom-empty-object.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/custom-numeric.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/custom-numeric.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using custom-numeric.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/custom-script.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/custom-script.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using custom-script.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/custom-string.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/custom-string.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using custom-string.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/cwl-inline.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/cwl-inline.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using cwl-inline.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/docker-cwl-bypass-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/docker-cwl-bypass-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using docker-cwl-bypass-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'image' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'image' is a required property\n\nFailed validating 'required' in schema[1]['allOf'][1]['then']['properties']['value']:\n    {'type': 'object',\n     'required': ['image'],\n     'properties': {'image': {'description': 'Container image reference '\n                                             'for the execution unit.',\n                              'type': 'string'},\n                    'deployment': {'description': 'Deployment information '\n                                                  'for the execution unit.',\n                                   'type': 'string',\n                                   'anyOf': [{'type': 'string'},\n                                             {'enum': ['local',\n                                                       'remote',\n                                                       'hpc',\n                                                       'cloud']}]},\n                    'config': {'type': 'object',\n                               'description': 'Hardware requirements and '\n                                              'configuration properties '\n                                              'for executing the\\n'\n                                              'process.',\n                               'properties': {'cpuMin': {'description': 'Minimum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPUs '\n                                                                        'required '\n                                                                        'to '\n                                                                        'run '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core).',\n                                                         'type': 'number',\n                                                         'minimum': 1},\n                                              'cpuMax': {'description': 'Maximum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPU '\n                                                                        'dedicated '\n                                                                        'to '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core)',\n                                                         'type': 'number'},\n                                              'memoryMin': {'description': 'Minimum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'required '\n                                                                           'to '\n                                                                           'run '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'memoryMax': {'description': 'Maximum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'dedicated '\n                                                                           'to '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'storageTempMin': {'description': 'Minimum '\n                                                                                'required '\n                                                                                'temporary '\n                                                                                'storage '\n                                                                                'size '\n                                                                                '(unit '\n                                                                                'is '\n                                                                                'GB)',\n                                                                 'type': 'number'},\n                                              'storageOutputsMin': {'description': 'Minimum '\n                                                                                   'required '\n                                                                                   'output '\n                                                                                   'storage '\n                                                                                   'size '\n                                                                                   '(unit '\n                                                                                   'is '\n                                                                                   'GB)',\n                                                                    'type': 'number'},\n                                              'jobTimeout': {'description': 'Timeout '\n                                                                            'delay '\n                                                                            'for '\n                                                                            'a '\n                                                                            'job '\n                                                                            'execution '\n                                                                            '(in '\n                                                                            'seconds)',\n                                                             'type': 'number'}},\n                               'additionalProperties': True},\n                    'bindings': {'type': 'object',\n                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},\n                                                'outputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},\n     'additionalProperties': True,\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitContainer',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.0.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance['value']:\n    {}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/docker-scalar-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/docker-scalar-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using docker-scalar-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'not-a-container' is not of type 'object'",
+              "isError": true,
+              "message": "ValidationError: 'not-a-container' is not of type 'object'\n\nFailed validating 'type' in schema[1]['allOf'][1]['then']['properties']['value']:\n    {'type': 'object',\n     'required': ['image'],\n     'properties': {'image': {'description': 'Container image reference '\n                                             'for the execution unit.',\n                              'type': 'string'},\n                    'deployment': {'description': 'Deployment information '\n                                                  'for the execution unit.',\n                                   'type': 'string',\n                                   'anyOf': [{'type': 'string'},\n                                             {'enum': ['local',\n                                                       'remote',\n                                                       'hpc',\n                                                       'cloud']}]},\n                    'config': {'type': 'object',\n                               'description': 'Hardware requirements and '\n                                              'configuration properties '\n                                              'for executing the\\n'\n                                              'process.',\n                               'properties': {'cpuMin': {'description': 'Minimum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPUs '\n                                                                        'required '\n                                                                        'to '\n                                                                        'run '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core).',\n                                                         'type': 'number',\n                                                         'minimum': 1},\n                                              'cpuMax': {'description': 'Maximum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPU '\n                                                                        'dedicated '\n                                                                        'to '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core)',\n                                                         'type': 'number'},\n                                              'memoryMin': {'description': 'Minimum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'required '\n                                                                           'to '\n                                                                           'run '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'memoryMax': {'description': 'Maximum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'dedicated '\n                                                                           'to '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'storageTempMin': {'description': 'Minimum '\n                                                                                'required '\n                                                                                'temporary '\n                                                                                'storage '\n                                                                                'size '\n                                                                                '(unit '\n                                                                                'is '\n                                                                                'GB)',\n                                                                 'type': 'number'},\n                                              'storageOutputsMin': {'description': 'Minimum '\n                                                                                   'required '\n                                                                                   'output '\n                                                                                   'storage '\n                                                                                   'size '\n                                                                                   '(unit '\n                                                                                   'is '\n                                                                                   'GB)',\n                                                                    'type': 'number'},\n                                              'jobTimeout': {'description': 'Timeout '\n                                                                            'delay '\n                                                                            'for '\n                                                                            'a '\n                                                                            'job '\n                                                                            'execution '\n                                                                            '(in '\n                                                                            'seconds)',\n                                                             'type': 'number'}},\n                               'additionalProperties': True},\n                    'bindings': {'type': 'object',\n                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},\n                                                'outputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},\n     'additionalProperties': True,\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitContainer',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.0.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance['value']:\n    'not-a-container'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/docker.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/docker.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using docker.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/invalid-config-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/invalid-config-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-config-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "0 is less than the minimum of 1",
+              "isError": true,
+              "message": "ValidationError: 0 is less than the minimum of 1\n\nFailed validating 'minimum' in schema[1]['allOf'][1]['then']['properties']['value']['properties']['config']['properties']['cpuMin']:\n    {'description': 'Minimum number of CPUs required to run the process '\n                    '(unit is CPU core).',\n     'type': 'number',\n     'minimum': 1}\n\nOn instance['value']['config']['cpuMin']:\n    0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/invalid-cwl-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/invalid-cwl-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-cwl-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "{} is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: {} is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema[1]['allOf'][1]['else']['then']['properties']['value']:\n    {'oneOf': [{'$ref': '#/$defs/CWLAtomic'},\n               {'$ref': '#/$defs/CWLGraph'},\n               {'$ref': '#/$defs/CWLWorkflow'}]}\n\nOn instance['value']:\n    {}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/invalid-input-binding-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/invalid-input-binding-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-input-binding-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "True is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: True is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema[1]['allOf'][1]['then']['properties']['value']['properties']['bindings']['properties']['inputBindings']['additionalProperties']['properties']['position']:\n    {'description': '. The zero-based sorting key.\\n'\n                    '. The value can be an integer or a string.\\n'\n                    '. If the value is a string then it should be an '\n                    'expression that evaluates\\n'\n                    '  to a single integer value or null.',\n     'oneOf': [{'type': 'integer'}, {'type': 'string'}]}\n\nOn instance['value']['bindings']['inputBindings']['input']['position']:\n    True"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/invalid-output-binding-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/invalid-output-binding-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-output-binding-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "3 is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: 3 is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema[1]['allOf'][1]['then']['properties']['value']['properties']['bindings']['properties']['outputBindings']['additionalProperties']['properties']['glob']:\n    {'description': '. Wildcard pattern to find the output on disk or '\n                    'mounted volume.\\n'\n                    '. Uses UNIX \"glob\" wildcard patterns (see: \"man 7 '\n                    'glob\").\\n'\n                    '. See inputBinding.yaml for referencing input values '\n                    'in an output\\n'\n                    '  binding \"glob\" expression.',\n     'oneOf': [{'type': 'string'},\n               {'type': 'array', 'items': {'type': 'string'}}]}\n\nOn instance['value']['bindings']['outputBindings']['output']['glob']:\n    3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/link-value-bypass-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/link-value-bypass-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using link-value-bypass-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'image' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'image' is a required property\n\nFailed validating 'required' in schema[1]['allOf'][1]['then']['properties']['value']:\n    {'type': 'object',\n     'required': ['image'],\n     'properties': {'image': {'description': 'Container image reference '\n                                             'for the execution unit.',\n                              'type': 'string'},\n                    'deployment': {'description': 'Deployment information '\n                                                  'for the execution unit.',\n                                   'type': 'string',\n                                   'anyOf': [{'type': 'string'},\n                                             {'enum': ['local',\n                                                       'remote',\n                                                       'hpc',\n                                                       'cloud']}]},\n                    'config': {'type': 'object',\n                               'description': 'Hardware requirements and '\n                                              'configuration properties '\n                                              'for executing the\\n'\n                                              'process.',\n                               'properties': {'cpuMin': {'description': 'Minimum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPUs '\n                                                                        'required '\n                                                                        'to '\n                                                                        'run '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core).',\n                                                         'type': 'number',\n                                                         'minimum': 1},\n                                              'cpuMax': {'description': 'Maximum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPU '\n                                                                        'dedicated '\n                                                                        'to '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core)',\n                                                         'type': 'number'},\n                                              'memoryMin': {'description': 'Minimum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'required '\n                                                                           'to '\n                                                                           'run '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'memoryMax': {'description': 'Maximum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'dedicated '\n                                                                           'to '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'storageTempMin': {'description': 'Minimum '\n                                                                                'required '\n                                                                                'temporary '\n                                                                                'storage '\n                                                                                'size '\n                                                                                '(unit '\n                                                                                'is '\n                                                                                'GB)',\n                                                                 'type': 'number'},\n                                              'storageOutputsMin': {'description': 'Minimum '\n                                                                                   'required '\n                                                                                   'output '\n                                                                                   'storage '\n                                                                                   'size '\n                                                                                   '(unit '\n                                                                                   'is '\n                                                                                   'GB)',\n                                                                    'type': 'number'},\n                                              'jobTimeout': {'description': 'Timeout '\n                                                                            'delay '\n                                                                            'for '\n                                                                            'a '\n                                                                            'job '\n                                                                            'execution '\n                                                                            '(in '\n                                                                            'seconds)',\n                                                             'type': 'number'}},\n                               'additionalProperties': True},\n                    'bindings': {'type': 'object',\n                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},\n                                                'outputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},\n     'additionalProperties': True,\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitContainer',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.0.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance['value']:\n    {}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/link.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/link.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using link.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/missing-image-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/missing-image-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using missing-image-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'image' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'image' is a required property\n\nFailed validating 'required' in schema[1]['allOf'][1]['then']['properties']['value']:\n    {'type': 'object',\n     'required': ['image'],\n     'properties': {'image': {'description': 'Container image reference '\n                                             'for the execution unit.',\n                              'type': 'string'},\n                    'deployment': {'description': 'Deployment information '\n                                                  'for the execution unit.',\n                                   'type': 'string',\n                                   'anyOf': [{'type': 'string'},\n                                             {'enum': ['local',\n                                                       'remote',\n                                                       'hpc',\n                                                       'cloud']}]},\n                    'config': {'type': 'object',\n                               'description': 'Hardware requirements and '\n                                              'configuration properties '\n                                              'for executing the\\n'\n                                              'process.',\n                               'properties': {'cpuMin': {'description': 'Minimum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPUs '\n                                                                        'required '\n                                                                        'to '\n                                                                        'run '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core).',\n                                                         'type': 'number',\n                                                         'minimum': 1},\n                                              'cpuMax': {'description': 'Maximum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPU '\n                                                                        'dedicated '\n                                                                        'to '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core)',\n                                                         'type': 'number'},\n                                              'memoryMin': {'description': 'Minimum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'required '\n                                                                           'to '\n                                                                           'run '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'memoryMax': {'description': 'Maximum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'dedicated '\n                                                                           'to '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'storageTempMin': {'description': 'Minimum '\n                                                                                'required '\n                                                                                'temporary '\n                                                                                'storage '\n                                                                                'size '\n                                                                                '(unit '\n                                                                                'is '\n                                                                                'GB)',\n                                                                 'type': 'number'},\n                                              'storageOutputsMin': {'description': 'Minimum '\n                                                                                   'required '\n                                                                                   'output '\n                                                                                   'storage '\n                                                                                   'size '\n                                                                                   '(unit '\n                                                                                   'is '\n                                                                                   'GB)',\n                                                                    'type': 'number'},\n                                              'jobTimeout': {'description': 'Timeout '\n                                                                            'delay '\n                                                                            'for '\n                                                                            'a '\n                                                                            'job '\n                                                                            'execution '\n                                                                            '(in '\n                                                                            'seconds)',\n                                                             'type': 'number'}},\n                               'additionalProperties': True},\n                    'bindings': {'type': 'object',\n                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},\n                                                'outputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},\n     'additionalProperties': True,\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitContainer',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.0.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance['value']:\n    {}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/missing-value-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/missing-value-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using missing-value-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "{'type': 'docker'} is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: {'type': 'docker'} is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema:\n    {'oneOf': [{'allOf': [{'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml'},\n                          {'not': {'required': ['value']}}]},\n               {'allOf': [{'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/qualifiedExecutionUnitValue/schema.yaml'},\n                          {'type': 'object',\n                           'required': ['value'],\n                           'if': {'required': ['type'],\n                                  'properties': {'type': {'enum': ['docker',\n                                                                   'oci']}}},\n                           'then': {'description': 'The execution unit is '\n                                                   'a container image.',\n                                    'properties': {'value': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitContainer/schema.yaml'}}},\n                           'else': {'if': {'required': ['mediaType'],\n                                           'properties': {'mediaType': {'const': 'application/cwl'}}},\n                                    'then': {'description': 'The execution '\n                                                            'unit is CWL '\n                                                            'script.',\n                                             'properties': {'value': {'$ref': 'https://raw.githubusercontent.com/common-workflow-language/cwl-v1.2/main/json-schema/cwl.yaml'}}},\n                                    'else': {'description': 'The execution '\n                                                            'unit is not '\n                                                            'Docker/OCI or '\n                                                            'CWL and '\n                                                            'cannot be '\n                                                            'properly '\n                                                            'described '\n                                                            'via\\n'\n                                                            'the '\n                                                            '\"mediaType\" '\n                                                            'property of a '\n                                                            'qualified '\n                                                            'value using '\n                                                            'an RFC 2046 '\n                                                            'media type '\n                                                            '(e.g.\\n'\n                                                            'an \"R\" or '\n                                                            '\"Python\" '\n                                                            'script). In '\n                                                            'this case a '\n                                                            'community-defined '\n                                                            'or custom '\n                                                            'token may\\n'\n                                                            'be used with '\n                                                            'the \"type\" '\n                                                            'property.',\n                                             'required': ['type'],\n                                             'properties': {'type': {'type': 'string',\n                                                                     'not': {'enum': ['docker',\n                                                                                      'oci']}}}}}}]}],\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitBase',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.1.0',\n                            'dateOfLastChange': '2026-11-13'},\n     '$id': 'file:///github/workspace/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.yaml'}\n\nOn instance:\n    {'type': 'docker'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/no-type-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/no-type-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using no-type-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'href' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'href' is a required property\n\nFailed validating 'required' in schema[0]['allOf'][0]:\n    {'type': 'object',\n     'required': ['href'],\n     'properties': {'href': {'type': 'string'},\n                    'rel': {'type': 'string', 'example': 'service'},\n                    'type': {'type': 'string',\n                             'example': 'application/json'},\n                    'hreflang': {'type': 'string', 'example': 'en'},\n                    'title': {'type': 'string'}},\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v1.schemas.link',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance:\n    {'value': 'not a typed execution unit'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/oci-missing-image-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/oci-missing-image-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using oci-missing-image-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'image' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'image' is a required property\n\nFailed validating 'required' in schema[1]['allOf'][1]['then']['properties']['value']:\n    {'type': 'object',\n     'required': ['image'],\n     'properties': {'image': {'description': 'Container image reference '\n                                             'for the execution unit.',\n                              'type': 'string'},\n                    'deployment': {'description': 'Deployment information '\n                                                  'for the execution unit.',\n                                   'type': 'string',\n                                   'anyOf': [{'type': 'string'},\n                                             {'enum': ['local',\n                                                       'remote',\n                                                       'hpc',\n                                                       'cloud']}]},\n                    'config': {'type': 'object',\n                               'description': 'Hardware requirements and '\n                                              'configuration properties '\n                                              'for executing the\\n'\n                                              'process.',\n                               'properties': {'cpuMin': {'description': 'Minimum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPUs '\n                                                                        'required '\n                                                                        'to '\n                                                                        'run '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core).',\n                                                         'type': 'number',\n                                                         'minimum': 1},\n                                              'cpuMax': {'description': 'Maximum '\n                                                                        'number '\n                                                                        'of '\n                                                                        'CPU '\n                                                                        'dedicated '\n                                                                        'to '\n                                                                        'the '\n                                                                        'process '\n                                                                        '(unit '\n                                                                        'is '\n                                                                        'CPU '\n                                                                        'core)',\n                                                         'type': 'number'},\n                                              'memoryMin': {'description': 'Minimum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'required '\n                                                                           'to '\n                                                                           'run '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'memoryMax': {'description': 'Maximum '\n                                                                           'RAM '\n                                                                           'memory '\n                                                                           'dedicated '\n                                                                           'to '\n                                                                           'the '\n                                                                           'application '\n                                                                           '(unit '\n                                                                           'is '\n                                                                           'GB)',\n                                                            'type': 'number'},\n                                              'storageTempMin': {'description': 'Minimum '\n                                                                                'required '\n                                                                                'temporary '\n                                                                                'storage '\n                                                                                'size '\n                                                                                '(unit '\n                                                                                'is '\n                                                                                'GB)',\n                                                                 'type': 'number'},\n                                              'storageOutputsMin': {'description': 'Minimum '\n                                                                                   'required '\n                                                                                   'output '\n                                                                                   'storage '\n                                                                                   'size '\n                                                                                   '(unit '\n                                                                                   'is '\n                                                                                   'GB)',\n                                                                    'type': 'number'},\n                                              'jobTimeout': {'description': 'Timeout '\n                                                                            'delay '\n                                                                            'for '\n                                                                            'a '\n                                                                            'job '\n                                                                            'execution '\n                                                                            '(in '\n                                                                            'seconds)',\n                                                             'type': 'number'}},\n                               'additionalProperties': True},\n                    'bindings': {'type': 'object',\n                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},\n                                                'outputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},\n     'additionalProperties': True,\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitContainer',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.0.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance['value']:\n    {}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/executionUnitBase/tests/oci.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/oci.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using oci.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_1_1.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using tests/docker.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_2_1.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_2_1.json",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using tests/link.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_3_1.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_3_1.json",
+        "exampleIndex": 3,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using tests/custom-empty-object.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 23,
+    "passed": 23,
+    "failed": 0
+  }
+}

@@ -1,0 +1,10 @@
+Validation report for ogc.api.processes.part2.v1.schemas.staticIndicator - Process summary with mutability indicator
+Generated 2026-11-17T16:03:14.164134+00:00
+=== Files ===
+Using mutable-true.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

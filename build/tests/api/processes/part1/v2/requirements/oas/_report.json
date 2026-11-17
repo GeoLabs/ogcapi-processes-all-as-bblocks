@@ -1,0 +1,15 @@
+{
+  "title": "Validation report for ogc.api.processes.part1.v2.requirements.oas - OpenAPI Specification",
+  "bblockName": "OpenAPI Specification",
+  "bblockId": "ogc.api.processes.part1.v2.requirements.oas",
+  "generated": "2026-11-17T16:03:13.275010+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

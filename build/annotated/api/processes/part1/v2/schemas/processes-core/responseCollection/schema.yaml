@@ -1,0 +1,11 @@
+type: object
+properties:
+  response:
+    type: string
+    enum:
+    - collection
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.processes.part1.v2.schemas.processes-core.responseCollection
+  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json
+  version: '2.0'
+  dateOfLastChange: '2026-11-13'

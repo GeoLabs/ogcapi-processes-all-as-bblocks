@@ -1,0 +1,11 @@
+type: object
+properties:
+  dataAccessAPIs:
+    type: array
+    items:
+      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/apis/schema.yaml
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.processes.part1.v2.schemas.processes-core.dataAccessAPIs
+  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json
+  version: '2.0'
+  dateOfLastChange: '2026-11-13'

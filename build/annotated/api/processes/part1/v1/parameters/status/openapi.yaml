@@ -1,0 +1,7 @@
+name: status
+in: query
+required: false
+schema:
+  type: array
+  items:
+    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/statusCode/schema.yaml

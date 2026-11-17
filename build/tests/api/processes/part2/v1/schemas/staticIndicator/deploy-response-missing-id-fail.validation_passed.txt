@@ -1,0 +1,37 @@
+Validation report for ogc.api.processes.part2.v1.schemas.staticIndicator - Process summary with mutability indicator
+Generated 2026-11-17T16:03:14.158832+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using deploy-response-missing-id-fail.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'id' is a required property
+
+Failed validating 'required' in schema['allOf'][0]['allOf'][1]:
+    {'type': 'object',
+     'required': ['id', 'version'],
+     'properties': {'id': {'type': 'string'},
+                    'version': {'type': 'string'},
+                    'jobControlOptions': {'type': 'array',
+                                          'items': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/jobControlOptions/schema.yaml'}},
+                    'outputTransmission': {'type': 'array',
+                                           'items': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/transmissionMode/schema.yaml'}},
+                    'links': {'type': 'array',
+                              'items': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml'}}}}
+
+On instance:
+    {'title': 'EchoProcess',
+     'version': '1.0.0',
+     'jobControlOptions': ['sync-execute'],
+     'links': [{'href': 'https://processing.example.org/processes/EchoProcess',
+                'rel': 'self',
+                'type': 'application/json',
+                'title': 'Process description'}]}
+=== End JSON Schema ===
+

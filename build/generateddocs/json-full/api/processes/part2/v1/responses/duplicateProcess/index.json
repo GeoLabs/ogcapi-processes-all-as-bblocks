@@ -1,0 +1,45 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.part2.v1.responses.duplicateProcess",
+  "name": "Duplicate Process Error Response",
+  "abstract": "Error response when attempting to deploy a process that already exists",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-18T00:00:00Z",
+  "itemClass": "response",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2026-11-13",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy (Draft)",
+      "link": "https://docs.ogc.org/DRAFTS/20-044.html"
+    }
+  ],
+  "scope": "dev",
+  "tags": [
+    "ogcapi-processes",
+    "processes",
+    "part2",
+    "deploy",
+    "error",
+    "response"
+  ],
+  "dependsOn": [
+    "ogc.api.processes.part1.v1.schemas.exception"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+  },
+  "schema": {
+    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/responses/duplicateProcess/schema.yaml",
+    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/responses/duplicateProcess/schema.json"
+  },
+  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/responses/duplicateProcess/schema.yaml",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/responses/duplicateProcess/",
+  "validationPassed": true,
+  "annotatedSchema": "description: the process being added is already deployed (i.e. duplicate)\ncontent:\n  application/json:\n    schema:\n      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/exception/schema.yaml\n  text/html:\n    schema:\n      type: string\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.responses.duplicateProcess\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-13'\n",
+  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitPath": "_sources/part2/v1/responses/duplicateProcess"
+}

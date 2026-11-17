@@ -1,0 +1,13 @@
+Validation report for ogc.api.processes.part2.v1.schemas.ogcapppkg - OGC Application Package schema
+Generated 2026-11-17T16:03:14.324952+00:00
+=== Files ===
+Using process-mutable-false.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD process-mutable-false.jsonld created
+Output Turtle process-mutable-false.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

@@ -1,0 +1,10 @@
+Validation report for ogc.api.processes.part2.v1.schemas.executionUnitBase - Execution unit base schema
+Generated 2026-11-17T16:03:13.895391+00:00
+=== Files ===
+Using custom-string.json from test resources
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

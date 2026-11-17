@@ -1,0 +1,41 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.part1.v2.schemas.processes-core.values",
+  "name": "values",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "dateOfLastChange": "2026-11-13",
+  "itemClass": "schema",
+  "version": "2.0",
+  "register": "ogcapi-processes",
+  "sources": [
+    {
+      "title": "OGC API - Processes pinned official Core component",
+      "link": "https://raw.githubusercontent.com/opengeospatial/ogcapi-processes/0f9c3d88ccdb1802f6356fd39e7963df7b8dadae/openapi/schemas/processes-core/values.yaml"
+    }
+  ],
+  "tags": [
+    "ogcapi-processes",
+    "official",
+    "part1-v2"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.processes.part1.v2.schemas.inlineOrRefData"
+  ],
+  "license": {
+    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+  },
+  "schema": {
+    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/values/schema.yaml",
+    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/values/schema.json"
+  },
+  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/schemas/processes-core/values/schema.yaml",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/schemas/processes-core/values/",
+  "validationPassed": false,
+  "testOutputs": "https://github.com/JFarduino/ogcapi-processes-bblocks/blob/main/build/tests/api/processes/part1/v2/schemas/processes-core/values/",
+  "annotatedSchema": "anyOf:\n- $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/inlineOrRefData/schema.yaml\n- type: array\n  items:\n    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/inlineOrRefData/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.processes-core.values\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-13'\n",
+  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitPath": "_sources/part1/v2/schemas/processes-core/values"
+}

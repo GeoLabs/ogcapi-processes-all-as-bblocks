@@ -1,0 +1,14 @@
+allOf:
+- $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/processSummary/schema.yaml
+- type: object
+  properties:
+    mutable:
+      type: boolean
+      default: true
+      description: Indicates whether the process can be modified via Deploy, Replace,
+        Undeploy operations
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.processes.part2.v1.schemas.staticIndicator
+  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json
+  version: '0.2'
+  dateOfLastChange: '2026-11-13'

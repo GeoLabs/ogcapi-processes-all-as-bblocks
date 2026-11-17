@@ -1,0 +1,36 @@
+Validation report for ogc.api.processes.part2.v1.schemas.ogcapppkg - OGC Application Package schema
+Generated 2026-11-17T16:03:14.331926+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using untyped-qualified-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD untyped-qualified-fail.jsonld created
+Output Turtle untyped-qualified-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'href' is a required property
+
+Failed validating 'required' in schema[0]['allOf'][0]:
+    {'type': 'object',
+     'required': ['href'],
+     'properties': {'href': {'type': 'string'},
+                    'rel': {'type': 'string', 'example': 'service'},
+                    'type': {'type': 'string',
+                             'example': 'application/json'},
+                    'hreflang': {'type': 'string', 'example': 'en'},
+                    'title': {'type': 'string'}},
+     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v1.schemas.link',
+                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',
+                            'version': '1.0',
+                            'dateOfLastChange': '2026-11-13'}}
+
+On instance:
+    {'value': {}}
+=== End JSON Schema ===
+

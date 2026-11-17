@@ -1,0 +1,41 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.part1.v2.schemas.processes-core.dataAccessAPIs",
+  "name": "dataAccessAPIs",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "dateOfLastChange": "2026-11-13",
+  "itemClass": "schema",
+  "version": "2.0",
+  "register": "ogcapi-processes",
+  "sources": [
+    {
+      "title": "OGC API - Processes pinned official Core component",
+      "link": "https://raw.githubusercontent.com/opengeospatial/ogcapi-processes/0f9c3d88ccdb1802f6356fd39e7963df7b8dadae/openapi/schemas/processes-core/dataAccessAPIs.yaml"
+    }
+  ],
+  "tags": [
+    "ogcapi-processes",
+    "official",
+    "part1-v2"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.processes.part1.v2.schemas.processes-core.apis"
+  ],
+  "license": {
+    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+  },
+  "schema": {
+    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/dataAccessAPIs/schema.yaml",
+    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/dataAccessAPIs/schema.json"
+  },
+  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/schemas/processes-core/dataAccessAPIs/schema.yaml",
+  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/dataAccessAPIs/resolvedProperties.json",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/schemas/processes-core/dataAccessAPIs/",
+  "validationPassed": true,
+  "annotatedSchema": "type: object\nproperties:\n  dataAccessAPIs:\n    type: array\n    items:\n      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/apis/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.processes-core.dataAccessAPIs\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-13'\n",
+  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitPath": "_sources/part1/v2/schemas/processes-core/dataAccessAPIs"
+}

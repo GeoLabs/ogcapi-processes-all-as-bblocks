@@ -1,0 +1,28 @@
+type: object
+description: Successful process deployment response
+properties:
+  status:
+    type: string
+    enum:
+    - success
+  message:
+    type: string
+    description: Success message
+  processId:
+    type: string
+    description: ID of the deployed process
+  processSummary:
+    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.yaml
+  links:
+    type: array
+    items:
+      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml
+required:
+- status
+- processId
+- processSummary
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.processes.part2.v1.responses.deploySuccess
+  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-13'

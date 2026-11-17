@@ -1,0 +1,31 @@
+{
+  "oneOf": [
+    {
+      "type": "string"
+    },
+    {
+      "type": "number"
+    },
+    {
+      "type": "integer"
+    },
+    {
+      "type": "boolean"
+    },
+    {
+      "type": "array"
+    },
+    {
+      "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/binaryInputValue/schema.json"
+    },
+    {
+      "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/bbox/schema.json"
+    }
+  ],
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.api.processes.part1.v1.schemas.inputValueNoObject",
+    "register": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json",
+    "version": "1.0",
+    "dateOfLastChange": "2026-11-13"
+  }
+}

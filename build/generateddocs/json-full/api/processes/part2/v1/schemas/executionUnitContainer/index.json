@@ -1,0 +1,58 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.part2.v1.schemas.executionUnitContainer",
+  "name": "Docker execution unit value",
+  "abstract": "Value of the value field of a Docker execution unit (Requirement /req/docker/schema).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "dateOfLastChange": "2026-11-13",
+  "itemClass": "schema",
+  "version": "1.0.0",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy",
+      "link": "https://docs.ogc.org/DRAFTS/20-044.html"
+    }
+  ],
+  "tags": [
+    "ogcapi-processes",
+    "schema",
+    "draft"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.processes.part2.v1.schemas.inputBinding",
+    "ogc.api.processes.part2.v1.schemas.outputBinding"
+  ],
+  "license": {
+    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+  },
+  "schema": {
+    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitContainer/schema.yaml",
+    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitContainer/schema.json"
+  },
+  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitContainer/schema.yaml",
+  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitContainer/resolvedProperties.json",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitContainer/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/JFarduino/ogcapi-processes-bblocks/blob/main/build/tests/api/processes/part2/v1/schemas/executionUnitContainer/",
+  "description": "Value of the value field of a Docker execution unit (Requirement /req/docker/schema).\n\nThe schema is the fragment quoted in the OGC 20-044 draft, with its references replaced by building block references.\n\nDifferences from the draft:\n\n- `required` is a list here. The draft writes `required: image`, which is not a valid schema.\n\n## Draft limitations retained\n\nThe draft's `deployment` combines an unrestricted string branch with an enum,\nso strings outside `local`, `remote`, `hpc`, and `cloud` remain valid. This is\nnot silently tightened here. Likewise, the binding maps retain the draft's\n`additionalProperties` formulation without adding a missing `type: object`.\nBinding objects are checked against the canonical `inputBinding` and\n`outputBinding` schemas. The draft example's `inputSeparator` is preserved as an\nextension; the declared input binding property is `itemSeparator`.\n\nThe local discriminator fix belongs to `executionUnitBase`, not to an amendment\nof this draft fragment or a claim that the Docker conformance class is implemented.",
+  "examples": [
+    {
+      "title": "Container payload from the draft",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitContainer/tests/docker-example.json",
+          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/executionUnitContainer/example_1_1.json",
+          "sizeBytes": 431,
+          "code": "{\n  \"image\": \"mydocker/ndvi:latest\",\n  \"bindings\": {\n    \"inputBindings\": {\n      \"inputImage\": {\n        \"prefix\": \"inputsImages=\",\n        \"inputSeparator\": \",\"\n      }\n    },\n    \"outputBindings\": {\n      \"outputImage\": {\n        \"glob\": \"$(\\\"/outputs/ndvi_\\\" + inputs.inputImage.basename)\"\n      }\n    }\n  },\n  \"deployment\": \"local\",\n  \"config\": {\n    \"cpuMin\": 2,\n    \"cpuMax\": 5,\n    \"memoryMin\": 1,\n    \"memoryMax\": 3\n  }\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "type: object\nrequired:\n- image\nproperties:\n  image:\n    description: Container image reference for the execution unit.\n    type: string\n  deployment:\n    description: Deployment information for the execution unit.\n    type: string\n    anyOf:\n    - type: string\n    - enum:\n      - local\n      - remote\n      - hpc\n      - cloud\n  config:\n    type: object\n    description: 'Hardware requirements and configuration properties for executing\n      the\n\n      process.'\n    properties:\n      cpuMin:\n        description: Minimum number of CPUs required to run the process (unit is CPU\n          core).\n        type: number\n        minimum: 1\n      cpuMax:\n        description: Maximum number of CPU dedicated to the process (unit is CPU core)\n        type: number\n      memoryMin:\n        description: Minimum RAM memory required to run the application (unit is GB)\n        type: number\n      memoryMax:\n        description: Maximum RAM memory dedicated to the application (unit is GB)\n        type: number\n      storageTempMin:\n        description: Minimum required temporary storage size (unit is GB)\n        type: number\n      storageOutputsMin:\n        description: Minimum required output storage size (unit is GB)\n        type: number\n      jobTimeout:\n        description: Timeout delay for a job execution (in seconds)\n        type: number\n    additionalProperties: true\n  bindings:\n    type: object\n    properties:\n      inputBindings:\n        additionalProperties:\n          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml\n      outputBindings:\n        additionalProperties:\n          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml\nadditionalProperties: true\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.executionUnitContainer\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: 1.0.0\n  dateOfLastChange: '2026-11-13'\n",
+  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitPath": "_sources/part2/v1/schemas/executionUnitContainer"
+}

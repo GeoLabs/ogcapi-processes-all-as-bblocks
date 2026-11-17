@@ -1,0 +1,374 @@
+{
+  "title": "Validation report for ogc.api.processes.part2.v1.schemas.staticIndicator - Process summary with mutability indicator",
+  "bblockName": "Process summary with mutability indicator",
+  "bblockId": "ogc.api.processes.part2.v1.schemas.staticIndicator",
+  "generated": "2026-11-17T16:03:14.167033+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/staticIndicator/tests/deploy-response-missing-id-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/staticIndicator/tests/deploy-response-missing-id-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using deploy-response-missing-id-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'id' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'id' is a required property\n\nFailed validating 'required' in schema['allOf'][0]['allOf'][1]:\n    {'type': 'object',\n     'required': ['id', 'version'],\n     'properties': {'id': {'type': 'string'},\n                    'version': {'type': 'string'},\n                    'jobControlOptions': {'type': 'array',\n                                          'items': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/jobControlOptions/schema.yaml'}},\n                    'outputTransmission': {'type': 'array',\n                                           'items': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/transmissionMode/schema.yaml'}},\n                    'links': {'type': 'array',\n                              'items': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml'}}}}\n\nOn instance:\n    {'title': 'EchoProcess',\n     'version': '1.0.0',\n     'jobControlOptions': ['sync-execute'],\n     'links': [{'href': 'https://processing.example.org/processes/EchoProcess',\n                'rel': 'self',\n                'type': 'application/json',\n                'title': 'Process description'}]}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/staticIndicator/tests/deploy-success.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/staticIndicator/tests/deploy-success.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using deploy-success.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/staticIndicator/tests/invalid-output-transmission-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/staticIndicator/tests/invalid-output-transmission-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using invalid-output-transmission-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'invalid' is not one of ['value', 'reference']",
+              "isError": true,
+              "message": "ValidationError: 'invalid' is not one of ['value', 'reference']\n\nFailed validating 'enum' in schema['allOf'][0]['allOf'][1]['properties']['outputTransmission']['items']:\n    {'type': 'string',\n     'enum': ['value', 'reference'],\n     'default': ['value'],\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v1.schemas.transmissionMode',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '1.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance['outputTransmission'][0]:\n    'invalid'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/staticIndicator/tests/mutable-absent.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/staticIndicator/tests/mutable-absent.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using mutable-absent.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/staticIndicator/tests/mutable-false.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/staticIndicator/tests/mutable-false.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using mutable-false.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/part2/v1/schemas/staticIndicator/tests/mutable-string-fail.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/staticIndicator/tests/mutable-string-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using mutable-string-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'true' is not of type 'boolean'",
+              "isError": true,
+              "message": "ValidationError: 'true' is not of type 'boolean'\n\nFailed validating 'type' in schema['allOf'][1]['properties']['mutable']:\n    {'type': 'boolean',\n     'default': True,\n     'description': 'Indicates whether the process can be modified via '\n                    'Deploy, Replace, Undeploy operations'}\n\nOn instance['mutable']:\n    'true'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/part2/v1/schemas/staticIndicator/tests/mutable-true.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/staticIndicator/tests/mutable-true.json",
+        "language": "json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using mutable-true.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/api/processes/part2/v1/schemas/staticIndicator/example_1_1.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/staticIndicator/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/api/processes/part2/v1/schemas/staticIndicator/example_2_1.json",
+        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/staticIndicator/example_2_1.json",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "hasWarnings": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using tests/deploy-success.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 9,
+    "passed": 9,
+    "failed": 0
+  }
+}

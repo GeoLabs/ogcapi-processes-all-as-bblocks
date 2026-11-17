@@ -1,0 +1,10 @@
+Validation report for ogc.api.processes.part2.v1.schemas.inputBinding - Docker input binding
+Generated 2026-11-17T16:03:13.454685+00:00
+=== Files ===
+Using tests/prefix-position.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

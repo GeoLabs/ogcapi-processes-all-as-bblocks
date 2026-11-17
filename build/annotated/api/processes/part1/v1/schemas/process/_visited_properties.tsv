@@ -1,0 +1,64 @@
+path	@id	schema
+/title		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/descriptionType/schema.yaml
+/description		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/descriptionType/schema.yaml
+/keywords		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/descriptionType/schema.yaml
+/metadata		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/descriptionType/schema.yaml
+/metadata/title		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/metadata/schema.yaml
+/metadata/role		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/metadata/schema.yaml
+/metadata/href		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/metadata/schema.yaml
+/additionalParameters		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/descriptionType/schema.yaml
+/additionalParameters/parameters		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/descriptionType/schema.yaml
+/additionalParameters/parameters/name		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/additionalParameter/schema.yaml
+/additionalParameters/parameters/value		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/additionalParameter/schema.yaml
+/id		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/processSummary/schema.yaml
+/version		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/processSummary/schema.yaml
+/jobControlOptions		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/processSummary/schema.yaml
+/outputTransmission		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/processSummary/schema.yaml
+/links		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/processSummary/schema.yaml
+/links/href		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml
+/links/rel		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml
+/links/type		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml
+/links/hreflang		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml
+/links/title		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml
+/inputs		/github/workspace/build/annotated/api/processes/part1/v1/schemas/process/schema.yaml
+/inputs/minOccurs	https://w3id.org/ogc/api/processes/minOccurs	https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/inputDescription/schema.yaml
+/inputs/maxOccurs	https://w3id.org/ogc/api/processes/maxOccurs	https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/inputDescription/schema.yaml
+/inputs/schema	https://w3id.org/ogc/api/processes/schema	https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/inputDescription/schema.yaml
+/inputs/schema/_oneOf/0/$ref		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.yaml
+/inputs/schema/_oneOf/1/title		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/multipleOf		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/maximum		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/exclusiveMaximum		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/minimum		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/exclusiveMinimum		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/maxLength		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/minLength		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/pattern		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/maxItems		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/minItems		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/uniqueItems		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/maxProperties		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/minProperties		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/required		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/enum		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/type		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/not		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/allOf		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/oneOf		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/anyOf		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/items		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/properties		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/additionalProperties		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/description		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/format		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/default		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/nullable		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/readOnly		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/writeOnly		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/example		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/deprecated		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/contentMediaType		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/contentEncoding		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/inputs/schema/_oneOf/1/contentSchema		https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.yaml
+/outputs		/github/workspace/build/annotated/api/processes/part1/v1/schemas/process/schema.yaml
+/outputs/schema	https://w3id.org/ogc/api/processes/schema	https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/outputDescription/schema.yaml

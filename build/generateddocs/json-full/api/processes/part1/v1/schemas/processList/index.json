@@ -1,0 +1,41 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.part1.v1.schemas.processList",
+  "status": "under-development",
+  "dateTimeAddition": "2025-10-22T15:29:12.046535",
+  "register": "ogcapi-processes",
+  "version": "1.0",
+  "dateOfLastChange": "2026-11-13",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 1: Core (version 1.0, OGC 18-062r2)",
+      "link": "https://docs.ogc.org/is/18-062r2/18-062r2.html"
+    }
+  ],
+  "tags": [
+    "ogcapi-processes",
+    "schema"
+  ],
+  "name": "processList",
+  "itemClass": "schema",
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.processes.part1.v1.schemas.link",
+    "ogc.api.processes.part1.v1.schemas.processSummary"
+  ],
+  "license": {
+    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+  },
+  "schema": {
+    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/processList/schema.yaml",
+    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/processList/schema.json"
+  },
+  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v1/schemas/processList/schema.yaml",
+  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/processList/resolvedProperties.json",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v1/schemas/processList/",
+  "validationPassed": true,
+  "annotatedSchema": "type: object\nrequired:\n- processes\n- links\nproperties:\n  processes:\n    type: array\n    items:\n      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/processSummary/schema.yaml\n  links:\n    type: array\n    items:\n      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v1.schemas.processList\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-13'\n",
+  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitPath": "_sources/part1/v1/schemas/processList"
+}

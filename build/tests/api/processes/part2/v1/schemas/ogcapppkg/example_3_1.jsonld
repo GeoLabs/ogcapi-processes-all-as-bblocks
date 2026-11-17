@@ -1,0 +1,15 @@
+{
+  "@context": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
+  "executionUnit": [
+    {
+      "type": "docker",
+      "value": {
+        "image": "example/echo:1"
+      }
+    },
+    {
+      "href": "https://example.com/echo.cwl",
+      "type": "application/cwl"
+    }
+  ]
+}

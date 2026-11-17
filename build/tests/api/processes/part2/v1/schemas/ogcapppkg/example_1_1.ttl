@@ -1,0 +1,5 @@
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+[] proc:executionUnit "{\"href\":\"https://github.com/Terradue/ogc-eo-application-package-hands-on/releases/download/1.5.0/app-water-bodies-cloud-native.1.5.0.cwl\",\"type\":\"application/cwl\"}"^^rdf:JSON .
+

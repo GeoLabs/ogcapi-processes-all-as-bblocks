@@ -1,0 +1,12 @@
+allOf:
+- $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/format/schema.yaml
+- type: object
+  required:
+  - value
+  properties:
+    value: {}
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.processes.part2.v1.schemas.qualifiedExecutionUnitValue
+  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json
+  version: 1.0.0
+  dateOfLastChange: '2026-11-09'

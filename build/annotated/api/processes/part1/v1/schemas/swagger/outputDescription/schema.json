@@ -1,0 +1,24 @@
+{
+  "allOf": [
+    {
+      "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/descriptionType/schema.json"
+    },
+    {
+      "type": "object",
+      "required": [
+        "schema"
+      ],
+      "properties": {
+        "schema": {
+          "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/swagger/schema/schema.json"
+        }
+      }
+    }
+  ],
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.api.processes.part1.v1.schemas.swagger.outputDescription",
+    "register": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json",
+    "version": "1.0",
+    "dateOfLastChange": "2026-11-13"
+  }
+}

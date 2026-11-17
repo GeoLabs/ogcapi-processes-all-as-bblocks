@@ -1,0 +1,21 @@
+{
+  "description": "the process being added is already deployed (i.e. duplicate)",
+  "content": {
+    "application/json": {
+      "schema": {
+        "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/exception/schema.json"
+      }
+    },
+    "text/html": {
+      "schema": {
+        "type": "string"
+      }
+    }
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.api.processes.part2.v1.responses.duplicateProcess",
+    "register": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-11-13"
+  }
+}

@@ -1,0 +1,5 @@
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+[] proc:executionUnit "{\"image\":\"example/echo:1\",\"type\":\"docker\",\"value\":{}}"^^rdf:JSON .
+

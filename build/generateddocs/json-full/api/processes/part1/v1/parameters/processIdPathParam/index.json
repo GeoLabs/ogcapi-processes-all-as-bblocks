@@ -1,0 +1,33 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.part1.v1.parameters.processIdPathParam",
+  "status": "under-development",
+  "dateTimeAddition": "2025-10-22T15:29:12.178084",
+  "register": "ogcapi-processes",
+  "version": "1.0",
+  "dateOfLastChange": "2026-11-13",
+  "sources": [
+    {
+      "title": "OGC API - Processes - Part 1: Core (version 1.0, OGC 18-062r2)",
+      "link": "https://docs.ogc.org/is/18-062r2/18-062r2.html"
+    }
+  ],
+  "tags": [
+    "ogcapi-processes",
+    "parameter"
+  ],
+  "name": "processIdPathParam",
+  "itemClass": "parameter",
+  "shaclShapes": {},
+  "license": {
+    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+  },
+  "sourceOpenAPIDocument": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v1/parameters/processIdPathParam/openapi.yaml",
+  "openAPIDocument": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/parameters/processIdPathParam/openapi.yaml",
+  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v1/parameters/processIdPathParam/",
+  "validationPassed": true,
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitPath": "_sources/part1/v1/parameters/processIdPathParam"
+}
