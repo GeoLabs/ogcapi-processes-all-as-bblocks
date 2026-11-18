@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.part2.v1.schemas.outputBinding - Docker output binding",
   "bblockName": "Docker output binding",
   "bblockId": "ogc.api.processes.part2.v1.schemas.outputBinding",
-  "generated": "2026-11-17T16:03:13.462319+00:00",
+  "generated": "2026-11-18T14:13:55.520820+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": false,
         "filename": "_sources/part2/v1/schemas/outputBinding/tests/glob-array.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/outputBinding/tests/glob-array.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/outputBinding/tests/glob-array.json",
         "language": "json"
       },
       "result": true,
@@ -45,7 +45,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": false,
         "filename": "_sources/part2/v1/schemas/outputBinding/tests/glob-string.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/outputBinding/tests/glob-string.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/outputBinding/tests/glob-string.json",
         "language": "json"
       },
       "result": true,
@@ -80,7 +80,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/part2/v1/schemas/outputBinding/tests/invalid-glob-fail.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/outputBinding/tests/invalid-glob-fail.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/outputBinding/tests/invalid-glob-fail.json",
         "language": "json"
       },
       "result": true,
@@ -128,7 +128,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/api/processes/part2/v1/schemas/outputBinding/example_1_1.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/outputBinding/example_1_1.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part2/v1/schemas/outputBinding/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"
@@ -165,7 +165,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/api/processes/part2/v1/schemas/outputBinding/example_2_1.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/outputBinding/example_2_1.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part2/v1/schemas/outputBinding/example_2_1.json",
         "exampleIndex": 2,
         "snippetIndex": 1,
         "language": "application/json"

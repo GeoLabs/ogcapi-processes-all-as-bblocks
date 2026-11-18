@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-10-22T15:29:12.046535",
   "register": "ogcapi-processes",
   "version": "1.0",
-  "dateOfLastChange": "2026-11-13",
+  "dateOfLastChange": "2026-11-17",
   "sources": [
     {
       "title": "OGC API - Processes - Part 1: Core (version 1.0, OGC 18-062r2)",
@@ -26,17 +26,17 @@
     "ogc.api.processes.part1.v1.schemas.subscriber"
   ],
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
   "schema": {
-    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/execute/schema.yaml",
-    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/execute/schema.json"
+    "application/yaml": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/execute/schema.yaml",
+    "application/json": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/execute/schema.json"
   },
-  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v1/schemas/execute/schema.yaml",
-  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/execute/resolvedProperties.json",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v1/schemas/execute/",
+  "sourceSchema": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v1/schemas/execute/schema.yaml",
+  "resolvedSchemaProperties": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/execute/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v1/schemas/execute/",
   "validationPassed": true,
-  "annotatedSchema": "type: object\nproperties:\n  inputs:\n    additionalProperties:\n      oneOf:\n      - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/inlineOrRefData/schema.yaml\n      - type: array\n        items:\n          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/inlineOrRefData/schema.yaml\n  outputs:\n    additionalProperties:\n      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/output/schema.yaml\n  response:\n    type: string\n    enum:\n    - raw\n    - document\n    default:\n    - raw\n  subscriber:\n    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/subscriber/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v1.schemas.execute\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-13'\n",
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "annotatedSchema": "type: object\nproperties:\n  inputs:\n    additionalProperties:\n      oneOf:\n      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/inlineOrRefData/schema.yaml\n      - type: array\n        items:\n          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/inlineOrRefData/schema.yaml\n  outputs:\n    additionalProperties:\n      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/output/schema.yaml\n  response:\n    type: string\n    enum:\n    - raw\n    - document\n    default:\n    - raw\n  subscriber:\n    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/subscriber/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v1.schemas.execute\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-17'\n",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part1/v1/schemas/execute"
 }

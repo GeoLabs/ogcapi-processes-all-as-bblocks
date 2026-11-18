@@ -522,6 +522,6 @@ Whether a process is invoked using a [JSON-encoded request](#req-core-process-ex
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/JFarduino/ogcapi-processes-bblocks](https://github.com/JFarduino/ogcapi-processes-bblocks)
+* URL: [https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks](https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks)
 * Path: `_sources/part1/v2/requirements/kvpExecute`
 

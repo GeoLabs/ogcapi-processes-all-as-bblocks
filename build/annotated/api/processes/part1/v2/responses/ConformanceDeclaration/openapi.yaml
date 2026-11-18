@@ -12,7 +12,7 @@ content:
   application/json:
     schema:
       allOf:
-      - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/confClasses/schema.yaml
+      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/confClasses/schema.yaml
       example:
         conformsTo:
         - http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core

@@ -6,7 +6,7 @@ description: 'The landing page provides links to the API definition (link relati
 content:
   application/json:
     schema:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/landingPage/schema.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/landingPage/schema.yaml
   text/html:
     schema:
       type: string

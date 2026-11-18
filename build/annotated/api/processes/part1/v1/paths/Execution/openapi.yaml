@@ -10,23 +10,23 @@ post:
   tags:
   - Execute
   parameters:
-  - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/parameters/processIdPathParam/openapi.yaml
+  - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/parameters/processIdPathParam/openapi.yaml
   requestBody:
     description: Mandatory execute request JSON
     required: true
     content:
       application/json:
         schema:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/execute/schema.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/execute/schema.yaml
   responses:
     200:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/ExecuteSync/openapi.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/ExecuteSync/openapi.yaml
     201:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/ExecuteAsync/openapi.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/ExecuteAsync/openapi.yaml
     404:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/NotFound/openapi.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/NotFound/openapi.yaml
     500:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/ServerError/openapi.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/ServerError/openapi.yaml
   callbacks:
     jobCompleted:
       '{$request.body#/subscriber/successUri}':
@@ -35,7 +35,7 @@ post:
             content:
               application/json:
                 schema:
-                  $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/results/schema.yaml
+                  $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/results/schema.yaml
           responses:
             200:
               description: Results received successfully

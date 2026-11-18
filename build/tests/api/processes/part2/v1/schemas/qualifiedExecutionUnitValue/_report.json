@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.part2.v1.schemas.qualifiedExecutionUnitValue - Qualified execution unit value",
   "bblockName": "Qualified execution unit value",
   "bblockId": "ogc.api.processes.part2.v1.schemas.qualifiedExecutionUnitValue",
-  "generated": "2026-11-17T16:03:13.511184+00:00",
+  "generated": "2026-11-18T14:13:55.572316+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/missing-value-fail.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/missing-value-fail.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/missing-value-fail.json",
         "language": "json"
       },
       "result": true,
@@ -58,7 +58,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": false,
         "filename": "_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/numeric.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/numeric.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/numeric.json",
         "language": "json"
       },
       "result": true,
@@ -93,7 +93,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": false,
         "filename": "_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/string.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/string.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/qualifiedExecutionUnitValue/tests/string.json",
         "language": "json"
       },
       "result": true,

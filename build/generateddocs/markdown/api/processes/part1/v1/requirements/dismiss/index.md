@@ -37,6 +37,6 @@ response SHALL be <tt>404</tt> (see <a href="#req_core_job-exception-no-such-job
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/JFarduino/ogcapi-processes-bblocks](https://github.com/JFarduino/ogcapi-processes-bblocks)
+* URL: [https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks](https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks)
 * Path: `_sources/part1/v1/requirements/dismiss`
 

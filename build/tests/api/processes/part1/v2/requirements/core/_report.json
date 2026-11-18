@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.part1.v2.requirements.core - Core",
   "bblockName": "Core",
   "bblockId": "ogc.api.processes.part1.v2.requirements.core",
-  "generated": "2026-11-17T16:03:14.600908+00:00",
+  "generated": "2026-11-18T14:13:56.865301+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/part1/v2/requirements/core/tests/process-list-no-links-fail.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/requirements/core/tests/process-list-no-links-fail.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/requirements/core/tests/process-list-no-links-fail.json",
         "language": "json"
       },
       "result": true,
@@ -47,7 +47,7 @@
               "exception": "ValidationError",
               "errorMessage": "'links' is a required property",
               "isError": true,
-              "message": "ValidationError: 'links' is a required property\n\nFailed validating 'required' in schema:\n    {'type': 'object',\n     'required': ['processes', 'links'],\n     'properties': {'processes': {'type': 'array',\n                                  'items': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processSummary/schema.yaml'}},\n                    'links': {'type': 'array',\n                              'items': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/link/schema.yaml'}}},\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v2.schemas.processList',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '2.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance:\n    {'processes': [{'id': 'EchoProcess',\n                    'title': 'EchoProcess',\n                    'version': '1.0.0',\n                    'jobControlOptions': ['sync-execute']}]}"
+              "message": "ValidationError: 'links' is a required property\n\nFailed validating 'required' in schema:\n    {'type': 'object',\n     'required': ['processes', 'links'],\n     'properties': {'processes': {'type': 'array',\n                                  'items': {'$ref': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processSummary/schema.yaml'}},\n                    'links': {'type': 'array',\n                              'items': {'$ref': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/link/schema.yaml'}}},\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v2.schemas.processList',\n                            'register': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json',\n                            'version': '2.0',\n                            'dateOfLastChange': '2026-11-17'}}\n\nOn instance:\n    {'processes': [{'id': 'EchoProcess',\n                    'title': 'EchoProcess',\n                    'version': '1.0.0',\n                    'jobControlOptions': ['sync-execute']}]}"
             }
           ]
         }
@@ -58,7 +58,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": false,
         "filename": "_sources/part1/v2/requirements/core/tests/process-list-success.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/requirements/core/tests/process-list-success.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/requirements/core/tests/process-list-success.json",
         "language": "json"
       },
       "result": true,
@@ -93,7 +93,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": false,
         "filename": "_sources/part1/v2/requirements/core/tests/process-list-success.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/requirements/core/tests/process-list-success.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/requirements/core/tests/process-list-success.json",
         "language": "json"
       },
       "result": true,
@@ -128,7 +128,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/part1/v2/requirements/core/tests/process-list-no-links-fail.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/requirements/core/tests/process-list-no-links-fail.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/requirements/core/tests/process-list-no-links-fail.json",
         "language": "json"
       },
       "result": true,
@@ -165,7 +165,7 @@
               "exception": "ValidationError",
               "errorMessage": "'links' is a required property",
               "isError": true,
-              "message": "ValidationError: 'links' is a required property\n\nFailed validating 'required' in schema:\n    {'type': 'object',\n     'required': ['processes', 'links'],\n     'properties': {'processes': {'type': 'array',\n                                  'items': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processSummary/schema.yaml'}},\n                    'links': {'type': 'array',\n                              'items': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/link/schema.yaml'}}},\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v2.schemas.processList',\n                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',\n                            'version': '2.0',\n                            'dateOfLastChange': '2026-11-13'}}\n\nOn instance:\n    {'processes': [{'id': 'EchoProcess',\n                    'title': 'EchoProcess',\n                    'version': '1.0.0',\n                    'jobControlOptions': ['sync-execute']}]}"
+              "message": "ValidationError: 'links' is a required property\n\nFailed validating 'required' in schema:\n    {'type': 'object',\n     'required': ['processes', 'links'],\n     'properties': {'processes': {'type': 'array',\n                                  'items': {'$ref': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processSummary/schema.yaml'}},\n                    'links': {'type': 'array',\n                              'items': {'$ref': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/link/schema.yaml'}}},\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v2.schemas.processList',\n                            'register': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json',\n                            'version': '2.0',\n                            'dateOfLastChange': '2026-11-17'}}\n\nOn instance:\n    {'processes': [{'id': 'EchoProcess',\n                    'title': 'EchoProcess',\n                    'version': '1.0.0',\n                    'jobControlOptions': ['sync-execute']}]}"
             }
           ]
         }

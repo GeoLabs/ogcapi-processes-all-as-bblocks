@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.part1.v1.schemas.inputDescription - inputDescription",
   "bblockName": "inputDescription",
   "bblockId": "ogc.api.processes.part1.v1.schemas.inputDescription",
-  "generated": "2026-11-17T16:03:13.670538+00:00",
+  "generated": "2026-11-18T14:13:55.741856+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/api/processes/part1/v1/schemas/inputDescription/example_1_1.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part1/v1/schemas/inputDescription/example_1_1.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part1/v1/schemas/inputDescription/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"

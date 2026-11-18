@@ -4,12 +4,12 @@ allOf:
   properties:
     inputs:
       additionalProperties:
-        $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/swagger/inputDescription/schema.yaml
+        $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/swagger/inputDescription/schema.yaml
     outputs:
       additionalProperties:
-        $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/swagger/outputDescription/schema.yaml
+        $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/swagger/outputDescription/schema.yaml
 x-bblocks-metadata:
   itemIdentifier: ogc.api.processes.part1.v2.schemas.swagger.process
-  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json
+  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json
   version: '2.0'
-  dateOfLastChange: '2026-11-13'
+  dateOfLastChange: '2026-11-17'

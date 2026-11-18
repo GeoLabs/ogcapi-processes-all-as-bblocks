@@ -1,5 +1,5 @@
 Validation report for ogc.api.processes.part2.v1.schemas.executionUnitBase - Execution unit base schema
-Generated 2026-11-17T16:03:14.117829+00:00
+Generated 2026-11-18T14:13:56.365051+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -14,9 +14,9 @@ Using missing-value-fail.json from test resources
 ValidationError: {'type': 'docker'} is not valid under any of the given schemas
 
 Failed validating 'oneOf' in schema:
-    {'oneOf': [{'allOf': [{'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml'},
+    {'oneOf': [{'allOf': [{'$ref': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml'},
                           {'not': {'required': ['value']}}]},
-               {'allOf': [{'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/qualifiedExecutionUnitValue/schema.yaml'},
+               {'allOf': [{'$ref': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/qualifiedExecutionUnitValue/schema.yaml'},
                           {'type': 'object',
                            'required': ['value'],
                            'if': {'required': ['type'],
@@ -24,7 +24,7 @@ Failed validating 'oneOf' in schema:
                                                                    'oci']}}},
                            'then': {'description': 'The execution unit is '
                                                    'a container image.',
-                                    'properties': {'value': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitContainer/schema.yaml'}}},
+                                    'properties': {'value': {'$ref': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitContainer/schema.yaml'}}},
                            'else': {'if': {'required': ['mediaType'],
                                            'properties': {'mediaType': {'const': 'application/cwl'}}},
                                     'then': {'description': 'The execution '
@@ -62,9 +62,9 @@ Failed validating 'oneOf' in schema:
                                                                      'not': {'enum': ['docker',
                                                                                       'oci']}}}}}}]}],
      'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitBase',
-                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',
+                            'register': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json',
                             'version': '1.1.0',
-                            'dateOfLastChange': '2026-11-13'},
+                            'dateOfLastChange': '2026-11-17'},
      '$id': 'file:///github/workspace/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.yaml'}
 
 On instance:

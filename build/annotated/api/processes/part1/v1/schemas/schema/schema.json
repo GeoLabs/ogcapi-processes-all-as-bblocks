@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "oneOf": [
     {
-      "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
+      "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
     },
     {
       "type": "object",
@@ -92,10 +92,10 @@
         "not": {
           "oneOf": [
             {
-              "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
+              "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
             },
             {
-              "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
+              "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
             }
           ]
         },
@@ -104,10 +104,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
+                "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
               },
               {
-                "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
+                "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
               }
             ]
           }
@@ -117,10 +117,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
+                "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
               },
               {
-                "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
+                "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
               }
             ]
           }
@@ -130,10 +130,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
+                "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
               },
               {
-                "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
+                "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
               }
             ]
           }
@@ -141,10 +141,10 @@
         "items": {
           "oneOf": [
             {
-              "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
+              "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
             },
             {
-              "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
+              "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
             }
           ]
         },
@@ -153,10 +153,10 @@
           "additionalProperties": {
             "oneOf": [
               {
-                "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
+                "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
               },
               {
-                "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
+                "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
               }
             ]
           }
@@ -164,10 +164,10 @@
         "additionalProperties": {
           "oneOf": [
             {
-              "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
+              "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/schema/schema.json"
             },
             {
-              "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
+              "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/reference/schema.json"
             },
             {
               "type": "boolean"
@@ -215,8 +215,8 @@
   "x-jsonld-vocab": "https://w3id.org/ogc/api/schema/",
   "x-bblocks-metadata": {
     "itemIdentifier": "ogc.api.processes.part1.v1.schemas.schema",
-    "register": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json",
+    "register": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json",
     "version": "1.0",
-    "dateOfLastChange": "2026-11-13"
+    "dateOfLastChange": "2026-11-17"
   }
 }

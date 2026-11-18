@@ -17,24 +17,24 @@ servers:
   url: https://hirondelle.crim.ca/ogcapi/processes
 paths:
   /:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/paths/LandingPage/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/LandingPage/openapi.yaml
   /conformance:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/paths/Conformance/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/Conformance/openapi.yaml
   /processes:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/paths/ProcessList/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/ProcessList/openapi.yaml
   /processes/{processID}:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/paths/ProcessDescription/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/ProcessDescription/openapi.yaml
   /processes/{processID}/execution:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/paths/Execution/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/Execution/openapi.yaml
   /jobs:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/paths/JobList/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/JobList/openapi.yaml
   /jobs/{jobID}:
     get:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/paths/Job/openapi.yaml#/get
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/Job/openapi.yaml#/get
     delete:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/paths/DismissJob/openapi.yaml#/delete
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/DismissJob/openapi.yaml#/delete
   /jobs/{jobID}/results:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/paths/JobResult/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/JobResult/openapi.yaml
   /api:
     get:
       tags:
@@ -42,14 +42,14 @@ paths:
       operationId: getAPI
       summary: Retrieve this API definition.
       parameters:
-      - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/parameters/unspecified/f-metadata/openapi.yaml
+      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/parameters/unspecified/f-metadata/openapi.yaml
       responses:
         '200':
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/responses/common-core/rAPI/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/common-core/rAPI/openapi.yaml
         '406':
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/responses/common-core/rNotAcceptable/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/common-core/rNotAcceptable/openapi.yaml
         '500':
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/responses/ServerError/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/ServerError/openapi.yaml
 components: {}
 definitions:
   Context:

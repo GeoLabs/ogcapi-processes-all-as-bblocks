@@ -1,5 +1,5 @@
 {
-  "@context": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
+  "@context": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
   "executionUnit": {
     "href": "https://github.com/Terradue/ogc-eo-application-package-hands-on/releases/download/1.5.0/app-water-bodies-cloud-native.1.5.0.cwl",
     "type": "application/cwl"

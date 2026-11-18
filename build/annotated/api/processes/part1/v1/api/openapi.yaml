@@ -17,24 +17,24 @@ info:
     url: http://www.ogc.org/legal/
 paths:
   /:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/paths/LandingPage/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/paths/LandingPage/openapi.yaml
   /conformance:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/paths/Conformance/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/paths/Conformance/openapi.yaml
   /processes:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/paths/ProcessList/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/paths/ProcessList/openapi.yaml
   /processes/{processID}:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/paths/ProcessDescription/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/paths/ProcessDescription/openapi.yaml
   /jobs:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/paths/JobList/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/paths/JobList/openapi.yaml
   /processes/{processID}/execution:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/paths/Execution/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/paths/Execution/openapi.yaml
   /jobs/{jobId}:
     get:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/paths/Job/openapi.yaml#/get
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/paths/Job/openapi.yaml#/get
     delete:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/paths/DismissJob/openapi.yaml#/delete
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/paths/DismissJob/openapi.yaml#/delete
   /jobs/{jobId}/results:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/paths/JobResult/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/paths/JobResult/openapi.yaml
 servers:
 - description: Example server
   url: http://example.org/ogcapi

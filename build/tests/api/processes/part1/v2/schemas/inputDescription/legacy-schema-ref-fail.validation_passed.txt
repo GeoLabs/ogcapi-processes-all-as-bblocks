@@ -1,5 +1,5 @@
 Validation report for ogc.api.processes.part1.v2.schemas.inputDescription - inputDescription
-Generated 2026-11-17T16:03:14.386302+00:00
+Generated 2026-11-18T14:13:56.644297+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -62,9 +62,9 @@ Failed validating 'required' in schema['allOf'][4]['properties']['schema']:
                                                                            'x-ogc-unitLang': {'type': 'string'}}}}},
      'x-jsonld-vocab': 'https://w3id.org/ogc/api/schema/',
      'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v2.schemas.schema',
-                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',
+                            'register': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json',
                             'version': '2.0',
-                            'dateOfLastChange': '2026-11-13'}}
+                            'dateOfLastChange': '2026-11-17'}}
 
 On instance['schema']:
     {'$ref': 'bblocks://ogc.geo.common.parameters.bbox'}

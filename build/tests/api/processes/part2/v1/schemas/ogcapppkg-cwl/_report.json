@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.part2.v1.schemas.ogcapppkg-cwl - CWL Encoding for Process Deployment",
   "bblockName": "CWL Encoding for Process Deployment",
   "bblockId": "ogc.api.processes.part2.v1.schemas.ogcapppkg-cwl",
-  "generated": "2026-11-17T16:03:54.995482+00:00",
+  "generated": "2026-11-18T14:14:36.372889+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/api/processes/part2/v1/schemas/ogcapppkg-cwl/example_1_1.yaml",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg-cwl/example_1_1.yaml",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part2/v1/schemas/ogcapppkg-cwl/example_1_1.yaml",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/x-yaml"

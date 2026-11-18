@@ -1,6 +1,6 @@
 $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWL/schema.yaml
 x-bblocks-metadata:
   itemIdentifier: ogc.api.processes.part2.v1.schemas.ogcapppkg-cwl
-  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json
+  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-13'
+  dateOfLastChange: '2026-11-17'

@@ -176,6 +176,6 @@ Complete published section of OGC 18-062r2, 1.0.0; modified BB rendition, not an
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/JFarduino/ogcapi-processes-bblocks](https://github.com/JFarduino/ogcapi-processes-bblocks)
+* URL: [https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks](https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks)
 * Path: `_sources/part1/v1/clauses/securityConsiderations`
 

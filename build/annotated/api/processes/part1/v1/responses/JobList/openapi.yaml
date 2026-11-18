@@ -2,4 +2,4 @@ description: A list of jobs for this process.
 content:
   application/json:
     schema:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/jobList/schema.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/jobList/schema.yaml

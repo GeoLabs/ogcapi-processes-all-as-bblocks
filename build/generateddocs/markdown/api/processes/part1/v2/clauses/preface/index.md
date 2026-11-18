@@ -19,6 +19,6 @@ This Standard specifies how to “wrap” computational tasks into an executable
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/JFarduino/ogcapi-processes-bblocks](https://github.com/JFarduino/ogcapi-processes-bblocks)
+* URL: [https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks](https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks)
 * Path: `_sources/part1/v2/clauses/preface`
 

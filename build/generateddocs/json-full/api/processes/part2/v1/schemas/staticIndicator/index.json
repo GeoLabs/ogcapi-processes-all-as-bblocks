@@ -6,7 +6,7 @@
   "abstract": "Extension of Process Summary with mutability indicator for Deploy, Replace, Undeploy operations",
   "status": "under-development",
   "dateTimeAddition": "2025-11-18T21:00:00Z",
-  "dateOfLastChange": "2026-11-13",
+  "dateOfLastChange": "2026-11-17",
   "register": "ogc-api-processes-part2",
   "version": "0.2",
   "sources": [
@@ -30,17 +30,17 @@
     "ogc.api.processes.part1.v1.schemas.processSummary"
   ],
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
   "schema": {
-    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.yaml",
-    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.json"
+    "application/yaml": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.yaml",
+    "application/json": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.json"
   },
-  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/staticIndicator/schema.yaml",
-  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/resolvedProperties.json",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/staticIndicator/",
+  "sourceSchema": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/staticIndicator/schema.yaml",
+  "resolvedSchemaProperties": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/staticIndicator/",
   "validationPassed": true,
-  "testOutputs": "https://github.com/JFarduino/ogcapi-processes-bblocks/blob/main/build/tests/api/processes/part2/v1/schemas/staticIndicator/",
+  "testOutputs": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks/blob/main/build/tests/api/processes/part2/v1/schemas/staticIndicator/",
   "description": "Summary description of a deployed process, returned in the body of a Deploy response (Requirement /req/deploy-replace-undeploy/deploy-response-body).\n\nThe migrated draft `processSummary` maps to the existing public\n`ogc.api.processes.part2.v1.schemas.staticIndicator`; no duplicate summary schema is\nintroduced. Unlike the stripped local draft fragment, this block retains its\n`allOf` reference to the full Part 1 `processSummary`, including validation of\n`outputTransmission`, and the optional boolean `mutable` with `default: true`.\n\nThe schema itself is unchanged by consolidation. Tests and metadata are updated.\nA JSON Schema default is an annotation, not an instruction to insert a missing\nproperty. The added mutability contract is local DRU composition, not a claim\nthat the quoted draft summary fragment itself declares `mutable`.",
   "examples": [
     {
@@ -48,8 +48,8 @@
       "snippets": [
         {
           "language": "json",
-          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/staticIndicator/example.json",
-          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/staticIndicator/example_1_1.json",
+          "ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/staticIndicator/example.json",
+          "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part2/v1/schemas/staticIndicator/example_1_1.json",
           "sizeBytes": 463,
           "code": "{\n  \"id\": \"custom-classifier\",\n  \"title\": \"Custom Land Cover Classifier\", \n  \"description\": \"User-deployed classification algorithm\",\n  \"version\": \"2.0.0\",\n  \"jobControlOptions\": [\"async-execute\"],\n  \"outputTransmission\": [\"reference\"],\n  \"keywords\": [\"classification\", \"machine-learning\"],\n  \"links\": [\n    {\n      \"href\": \"https://api.example.org/processes/custom-classifier\",\n      \"rel\": \"self\",\n      \"type\": \"application/json\"\n    }\n  ],\n  \"mutable\": true\n}"
         }
@@ -60,15 +60,15 @@
       "snippets": [
         {
           "language": "json",
-          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/staticIndicator/tests/deploy-success.json",
-          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/staticIndicator/example_2_1.json",
+          "ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/staticIndicator/tests/deploy-success.json",
+          "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part2/v1/schemas/staticIndicator/example_2_1.json",
           "sizeBytes": 336,
           "code": "{\n  \"id\": \"EchoProcess\",\n  \"title\": \"EchoProcess\",\n  \"version\": \"1.0.0\",\n  \"jobControlOptions\": [\n    \"sync-execute\",\n    \"async-execute\"\n  ],\n  \"links\": [\n    {\n      \"href\": \"https://processing.example.org/processes/EchoProcess\",\n      \"rel\": \"self\",\n      \"type\": \"application/json\",\n      \"title\": \"Process description\"\n    }\n  ]\n}\n"
         }
       ]
     }
   ],
-  "annotatedSchema": "allOf:\n- $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/processSummary/schema.yaml\n- type: object\n  properties:\n    mutable:\n      type: boolean\n      default: true\n      description: Indicates whether the process can be modified via Deploy, Replace,\n        Undeploy operations\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.staticIndicator\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-11-13'\n",
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "annotatedSchema": "allOf:\n- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/processSummary/schema.yaml\n- type: object\n  properties:\n    mutable:\n      type: boolean\n      default: true\n      description: Indicates whether the process can be modified via Deploy, Replace,\n        Undeploy operations\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.staticIndicator\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-11-17'\n",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/schemas/staticIndicator"
 }

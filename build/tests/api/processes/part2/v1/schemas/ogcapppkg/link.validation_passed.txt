@@ -1,5 +1,5 @@
 Validation report for ogc.api.processes.part2.v1.schemas.ogcapppkg - OGC Application Package schema
-Generated 2026-11-17T16:03:14.317886+00:00
+Generated 2026-11-18T14:13:56.573063+00:00
 === Files ===
 Using link.json from test resources
 JSON-LD context is present - uplifting

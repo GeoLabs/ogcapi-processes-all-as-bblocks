@@ -5,7 +5,7 @@
   "name": "dataAccessAPIs",
   "status": "under-development",
   "dateTimeAddition": "2026-11-10T00:00:00Z",
-  "dateOfLastChange": "2026-11-13",
+  "dateOfLastChange": "2026-11-17",
   "itemClass": "schema",
   "version": "2.0",
   "register": "ogcapi-processes",
@@ -25,17 +25,17 @@
     "ogc.api.processes.part1.v2.schemas.processes-core.apis"
   ],
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
   "schema": {
-    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/dataAccessAPIs/schema.yaml",
-    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/dataAccessAPIs/schema.json"
+    "application/yaml": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/dataAccessAPIs/schema.yaml",
+    "application/json": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/dataAccessAPIs/schema.json"
   },
-  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/schemas/processes-core/dataAccessAPIs/schema.yaml",
-  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/dataAccessAPIs/resolvedProperties.json",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/schemas/processes-core/dataAccessAPIs/",
+  "sourceSchema": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/schemas/processes-core/dataAccessAPIs/schema.yaml",
+  "resolvedSchemaProperties": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/dataAccessAPIs/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/schemas/processes-core/dataAccessAPIs/",
   "validationPassed": true,
-  "annotatedSchema": "type: object\nproperties:\n  dataAccessAPIs:\n    type: array\n    items:\n      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/apis/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.processes-core.dataAccessAPIs\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-13'\n",
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "annotatedSchema": "type: object\nproperties:\n  dataAccessAPIs:\n    type: array\n    items:\n      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/apis/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.processes-core.dataAccessAPIs\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-17'\n",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part1/v2/schemas/processes-core/dataAccessAPIs"
 }

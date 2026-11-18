@@ -16,9 +16,9 @@ get:
   tags:
   - ProcessDescription
   parameters:
-  - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/parameters/processIdPathParam/openapi.yaml
+  - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/parameters/processIdPathParam/openapi.yaml
   responses:
     200:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/ProcessDescription/openapi.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/ProcessDescription/openapi.yaml
     404:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/NotFound/openapi.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/NotFound/openapi.yaml

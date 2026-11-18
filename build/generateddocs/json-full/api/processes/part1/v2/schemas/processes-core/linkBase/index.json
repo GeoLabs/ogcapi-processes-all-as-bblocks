@@ -5,7 +5,7 @@
   "name": "linkBase",
   "status": "under-development",
   "dateTimeAddition": "2026-11-10T00:00:00Z",
-  "dateOfLastChange": "2026-11-13",
+  "dateOfLastChange": "2026-11-17",
   "itemClass": "schema",
   "version": "2.0",
   "register": "ogcapi-processes",
@@ -22,17 +22,17 @@
   ],
   "shaclShapes": {},
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
   "schema": {
-    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/linkBase/schema.yaml",
-    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/linkBase/schema.json"
+    "application/yaml": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/linkBase/schema.yaml",
+    "application/json": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/linkBase/schema.json"
   },
-  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/schemas/processes-core/linkBase/schema.yaml",
-  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/linkBase/resolvedProperties.json",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/schemas/processes-core/linkBase/",
+  "sourceSchema": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/schemas/processes-core/linkBase/schema.yaml",
+  "resolvedSchemaProperties": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/linkBase/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/schemas/processes-core/linkBase/",
   "validationPassed": true,
-  "annotatedSchema": "type: object\nrequired:\n- rel\nproperties:\n  rel:\n    type: string\n  type:\n    type: string\n  hreflang:\n    type: string\n  title:\n    type: string\n  length:\n    type: integer\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.processes-core.linkBase\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-13'\n",
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "annotatedSchema": "type: object\nrequired:\n- rel\nproperties:\n  rel:\n    type: string\n  type:\n    type: string\n  hreflang:\n    type: string\n  title:\n    type: string\n  length:\n    type: integer\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.processes-core.linkBase\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-17'\n",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part1/v2/schemas/processes-core/linkBase"
 }

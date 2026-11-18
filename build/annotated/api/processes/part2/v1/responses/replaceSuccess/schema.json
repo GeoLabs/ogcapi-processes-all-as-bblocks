@@ -17,12 +17,12 @@
       "description": "ID of the replaced process"
     },
     "processSummary": {
-      "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.json"
+      "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.json"
     },
     "links": {
       "type": "array",
       "items": {
-        "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.json"
+        "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.json"
       }
     }
   },
@@ -33,8 +33,8 @@
   ],
   "x-bblocks-metadata": {
     "itemIdentifier": "ogc.api.processes.part2.v1.responses.replaceSuccess",
-    "register": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json",
+    "register": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json",
     "version": "0.1",
-    "dateOfLastChange": "2026-11-13"
+    "dateOfLastChange": "2026-11-17"
   }
 }

@@ -472,6 +472,6 @@ In the case where the OAProc server supports local filtering, the `passThroughPa
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/JFarduino/ogcapi-processes-bblocks](https://github.com/JFarduino/ogcapi-processes-bblocks)
+* URL: [https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks](https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks)
 * Path: `_sources/part1/v2/requirements/collectionInput`
 

@@ -13,10 +13,10 @@
         "process": {
           "allOf": [
             {
-              "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/process/schema.json"
+              "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/process/schema.json"
             },
             {
-              "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.json"
+              "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.json"
             }
           ]
         }
@@ -27,12 +27,12 @@
     "executionUnit": {
       "anyOf": [
         {
-          "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitValue/schema.json"
+          "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitValue/schema.json"
         },
         {
           "allOf": [
             {
-              "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnit/schema.json"
+              "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnit/schema.json"
             },
             {
               "not": {
@@ -53,8 +53,8 @@
   },
   "x-bblocks-metadata": {
     "itemIdentifier": "ogc.api.processes.part2.v1.schemas.ogcapppkg",
-    "register": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json",
+    "register": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json",
     "version": "0.2",
-    "dateOfLastChange": "2026-11-13"
+    "dateOfLastChange": "2026-11-17"
   }
 }

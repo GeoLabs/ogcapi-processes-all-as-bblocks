@@ -23,13 +23,13 @@
   ],
   "shaclShapes": {},
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
-  "dateOfLastChange": "2026-11-13",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/clauses/preface/",
+  "dateOfLastChange": "2026-11-17",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/clauses/preface/",
   "validationPassed": true,
   "description": "This Standard specifies how to \u201cwrap\u201d computational tasks into an executable process that can be invoked either locally or remotely via the Web using a standarized API. Examples of computational processes that can be supported by implementations of API Processes include raster algebra, geometry buffering, constructive area geometry, routing, imagery analysis, AI models, and others. Specifically, the OGC API\u2009\u2014\u2009Processes Standard defines the requirements for a server that supports the execution of a process via the Web, how the inputs to that process can be specified and how the output(s) from that process can be retrieved.\n",
   "annotatedSchema": null,
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part1/v2/clauses/preface"
 }

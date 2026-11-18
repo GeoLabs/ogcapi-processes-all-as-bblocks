@@ -1,5 +1,5 @@
 Validation report for ogc.api.processes.part2.v1.schemas.executionUnitBase - Execution unit base schema
-Generated 2026-11-17T16:03:14.115579+00:00
+Generated 2026-11-18T14:13:56.362819+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -112,13 +112,13 @@ Failed validating 'required' in schema[1]['allOf'][1]['then']['properties']['val
                                                              'type': 'number'}},
                                'additionalProperties': True},
                     'bindings': {'type': 'object',
-                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},
-                                                'outputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},
+                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},
+                                                'outputBindings': {'additionalProperties': {'$ref': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},
      'additionalProperties': True,
      'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitContainer',
-                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',
+                            'register': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json',
                             'version': '1.0.0',
-                            'dateOfLastChange': '2026-11-13'}}
+                            'dateOfLastChange': '2026-11-17'}}
 
 On instance['value']:
     {}

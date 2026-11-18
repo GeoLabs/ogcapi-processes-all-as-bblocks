@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-10-22T15:29:12.046535",
   "register": "ogcapi-processes",
   "version": "1.0",
-  "dateOfLastChange": "2026-11-13",
+  "dateOfLastChange": "2026-11-17",
   "sources": [
     {
       "title": "OGC API - Processes - Part 1: Core (version 1.0, OGC 18-062r2)",
@@ -21,17 +21,17 @@
   "itemClass": "schema",
   "shaclShapes": {},
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
   "schema": {
-    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/confClasses/schema.yaml",
-    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/confClasses/schema.json"
+    "application/yaml": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/confClasses/schema.yaml",
+    "application/json": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/confClasses/schema.json"
   },
-  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v1/schemas/confClasses/schema.yaml",
-  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/confClasses/resolvedProperties.json",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v1/schemas/confClasses/",
+  "sourceSchema": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v1/schemas/confClasses/schema.yaml",
+  "resolvedSchemaProperties": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/confClasses/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v1/schemas/confClasses/",
   "validationPassed": true,
-  "annotatedSchema": "type: object\nrequired:\n- conformsTo\nproperties:\n  conformsTo:\n    type: array\n    items:\n      type: string\n      example: http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/core\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v1.schemas.confClasses\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-13'\n",
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "annotatedSchema": "type: object\nrequired:\n- conformsTo\nproperties:\n  conformsTo:\n    type: array\n    items:\n      type: string\n      example: http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/core\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v1.schemas.confClasses\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-17'\n",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part1/v1/schemas/confClasses"
 }

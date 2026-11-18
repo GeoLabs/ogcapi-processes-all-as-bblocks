@@ -6,7 +6,7 @@
   "abstract": "Query parameter to specify the workflow identifier when deploying a CWL document containing multiple workflow definitions",
   "status": "under-development",
   "dateTimeAddition": "2025-11-19T00:00:00Z",
-  "dateOfLastChange": "2026-11-13",
+  "dateOfLastChange": "2026-11-17",
   "register": "ogc-api-processes-part2",
   "version": "0.1",
   "sources": [
@@ -26,14 +26,14 @@
   "itemClass": "parameter",
   "shaclShapes": {},
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
-  "sourceOpenAPIDocument": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/parameters/w/openapi.yaml",
-  "openAPIDocument": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/parameters/w/openapi.yaml",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/parameters/w/",
+  "sourceOpenAPIDocument": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/parameters/w/openapi.yaml",
+  "openAPIDocument": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/parameters/w/openapi.yaml",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/parameters/w/",
   "validationPassed": true,
   "description": "# Workflow Identifier Parameter (`w`)\n\nThis query parameter is used when deploying CWL documents that contain multiple workflow definitions using the `$graph` construct.\n\n## Purpose\n\nWhen a CWL file defines multiple workflows, the `w` parameter specifies which workflow should be used as the entry point for the deployed process.\n\n## Default Behavior\n\nIf the `w` parameter is not provided:\n- The server may use the first workflow in the `$graph`\n- Or return an error if the choice is ambiguous\n- Server-specific behavior should be documented\n\n## Example\n\nDeploy a workflow from a multi-workflow CWL file:\n\n```bash\ncurl -X POST \"https://api.example.org/processes?w=water_bodies\" \\\n  -H \"Content-Type: application/cwl+yaml\" \\\n  --data-binary @app-water-bodies.cwl\n```\n",
   "annotatedSchema": null,
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/parameters/w"
 }

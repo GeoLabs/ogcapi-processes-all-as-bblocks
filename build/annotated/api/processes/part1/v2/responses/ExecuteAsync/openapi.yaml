@@ -12,4 +12,4 @@ headers:
 content:
   application/json:
     schema:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/statusInfo/schema.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/statusInfo/schema.yaml

@@ -23,13 +23,13 @@
   ],
   "shaclShapes": {},
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
-  "dateOfLastChange": "2026-11-13",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/clauses/submitters/",
+  "dateOfLastChange": "2026-11-17",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/clauses/submitters/",
   "validationPassed": true,
   "description": "All questions regarding this submission should be directed to the editors or the submitters:\n\n**Table \u2014 Submitters**\n\n| Name | Affiliation |\n|---|---|\n| Panagiotis (Peter) A. Vretanos *(editor)* | CubeWerx Inc. |\n| G\u00e9rald Fenoy *(editor)* | GeoLabs |\n| Francis Charette-Migneault | Technologies Luqia, Centre de Recherche Informatique de Montr\u00e9al (CRIM) |\n| Pedro Gon\u00e7alves | Terradue Srl. |\n",
   "annotatedSchema": null,
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/clauses/submitters"
 }

@@ -30,32 +30,32 @@ paths:
       tags:
       - Deploy
       parameters:
-      - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/parameters/w/openapi.yaml
+      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/parameters/w/openapi.yaml
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.yaml
+              $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.yaml
           application/cwl+json:
             schema:
-              $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
+              $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
           application/cwl+yaml:
             schema:
-              $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
+              $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
       responses:
         201:
           description: Process successfully deployed
           content:
             application/json:
               schema:
-                $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/responses/deploySuccess/schema.yaml
+                $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/responses/deploySuccess/schema.yaml
         400:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/InvalidParameter/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/InvalidParameter/openapi.yaml
         409:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/responses/duplicateProcess/schema.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/responses/duplicateProcess/schema.yaml
         500:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/ServerError/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/ServerError/openapi.yaml
   /processes/{processId}:
     get:
       summary: Retrieve the deployment package of a process
@@ -68,27 +68,27 @@ paths:
       tags:
       - Package
       parameters:
-      - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/parameters/processIdPathParam/openapi.yaml
+      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/parameters/processIdPathParam/openapi.yaml
       responses:
         200:
           description: The deployment package of the process
           content:
             application/json:
               schema:
-                $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.yaml
+                $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.yaml
             application/cwl:
               schema:
-                $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
+                $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
             application/cwl+json:
               schema:
-                $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
+                $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
             application/cwl+yaml:
               schema:
-                $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
+                $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
         404:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/NotFound/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/NotFound/openapi.yaml
         500:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/ServerError/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/ServerError/openapi.yaml
     put:
       summary: Replace an existing process
       description: 'Replace an existing process with a new version using an OGC Application
@@ -101,35 +101,35 @@ paths:
       tags:
       - Replace
       parameters:
-      - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/parameters/processIdPathParam/openapi.yaml
-      - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/parameters/w/openapi.yaml
+      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/parameters/processIdPathParam/openapi.yaml
+      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/parameters/w/openapi.yaml
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.yaml
+              $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.yaml
           application/cwl+json:
             schema:
-              $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
+              $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
           application/cwl+yaml:
             schema:
-              $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
+              $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg-cwl/schema.yaml
       responses:
         200:
           description: Process successfully replaced
           content:
             application/json:
               schema:
-                $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/responses/replaceSuccess/schema.yaml
+                $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/responses/replaceSuccess/schema.yaml
         404:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/NotFound/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/NotFound/openapi.yaml
         400:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/InvalidParameter/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/InvalidParameter/openapi.yaml
         403:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/responses/immutableProcess/schema.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/responses/immutableProcess/schema.yaml
         500:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/ServerError/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/ServerError/openapi.yaml
     delete:
       summary: Undeploy a process
       description: 'Remove a deployed process from the server. The process will no
@@ -141,17 +141,17 @@ paths:
       tags:
       - Undeploy
       parameters:
-      - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/parameters/processIdPathParam/openapi.yaml
+      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/parameters/processIdPathParam/openapi.yaml
       responses:
         200:
           description: Process successfully undeployed
           content:
             application/json:
               schema:
-                $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/responses/undeploySuccess/schema.yaml
+                $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/responses/undeploySuccess/schema.yaml
         404:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/NotFound/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/NotFound/openapi.yaml
         403:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/responses/immutableProcess/schema.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/responses/immutableProcess/schema.yaml
         500:
-          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/responses/ServerError/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/responses/ServerError/openapi.yaml

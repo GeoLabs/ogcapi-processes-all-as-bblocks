@@ -6,7 +6,7 @@
   "abstract": "How a process output is retrieved from a Docker execution unit (Requirement /req/docker/output-binding).",
   "status": "under-development",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
-  "dateOfLastChange": "2026-11-13",
+  "dateOfLastChange": "2026-11-17",
   "itemClass": "schema",
   "version": "1.0.0",
   "sources": [
@@ -22,17 +22,17 @@
   ],
   "shaclShapes": {},
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
   "schema": {
-    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml",
-    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.json"
+    "application/yaml": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml",
+    "application/json": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.json"
   },
-  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/outputBinding/schema.yaml",
-  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/resolvedProperties.json",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/outputBinding/",
+  "sourceSchema": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/outputBinding/schema.yaml",
+  "resolvedSchemaProperties": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/outputBinding/",
   "validationPassed": true,
-  "testOutputs": "https://github.com/JFarduino/ogcapi-processes-bblocks/blob/main/build/tests/api/processes/part2/v1/schemas/outputBinding/",
+  "testOutputs": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks/blob/main/build/tests/api/processes/part2/v1/schemas/outputBinding/",
   "description": "How a process output is retrieved from a Docker execution unit (Requirement /req/docker/output-binding).\n\nThe schema is the fragment quoted in the OGC 20-044 draft, with its references replaced by building block references.\n\nGlob values may be strings or arrays of strings. Validation does not evaluate\nglob patterns or the expressions described by the draft.",
   "examples": [
     {
@@ -40,8 +40,8 @@
       "snippets": [
         {
           "language": "json",
-          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/outputBinding/tests/glob-string.json",
-          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/outputBinding/example_1_1.json",
+          "ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/outputBinding/tests/glob-string.json",
+          "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part2/v1/schemas/outputBinding/example_1_1.json",
           "sizeBytes": 31,
           "code": "{\n  \"glob\": \"/outputs/*.tif\"\n}\n"
         }
@@ -52,15 +52,15 @@
       "snippets": [
         {
           "language": "json",
-          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/outputBinding/tests/glob-array.json",
-          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/outputBinding/example_2_1.json",
+          "ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/outputBinding/tests/glob-array.json",
+          "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part2/v1/schemas/outputBinding/example_2_1.json",
           "sizeBytes": 64,
           "code": "{\n  \"glob\": [\n    \"/outputs/*.tif\",\n    \"/outputs/*.json\"\n  ]\n}\n"
         }
       ]
     }
   ],
-  "annotatedSchema": "type: object\ndescription: Defines how to retrieve the output result from the command.\nproperties:\n  glob:\n    description: \". Wildcard pattern to find the output on disk or mounted volume.\\n.\n      Uses UNIX \\\"glob\\\" wildcard patterns (see: \\\"man 7 glob\\\").\\n. See inputBinding.yaml\n      for referencing input values in an output\\n  binding \\\"glob\\\" expression.\"\n    oneOf:\n    - type: string\n    - type: array\n      items:\n        type: string\nadditionalProperties: true\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.outputBinding\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: 1.0.0\n  dateOfLastChange: '2026-11-13'\n",
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "annotatedSchema": "type: object\ndescription: Defines how to retrieve the output result from the command.\nproperties:\n  glob:\n    description: \". Wildcard pattern to find the output on disk or mounted volume.\\n.\n      Uses UNIX \\\"glob\\\" wildcard patterns (see: \\\"man 7 glob\\\").\\n. See inputBinding.yaml\n      for referencing input values in an output\\n  binding \\\"glob\\\" expression.\"\n    oneOf:\n    - type: string\n    - type: array\n      items:\n        type: string\nadditionalProperties: true\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.outputBinding\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: 1.0.0\n  dateOfLastChange: '2026-11-17'\n",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/schemas/outputBinding"
 }

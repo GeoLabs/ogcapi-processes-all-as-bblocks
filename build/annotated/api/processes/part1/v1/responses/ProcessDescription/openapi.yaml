@@ -2,7 +2,7 @@ description: A process description.
 content:
   application/json:
     schema:
-      $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/process/schema.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/process/schema.yaml
     examples:
       processDecription:
         summary: A Process Description example

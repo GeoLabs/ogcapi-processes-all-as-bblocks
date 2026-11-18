@@ -55,7 +55,7 @@ binding schemas remain documented on those blocks.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
+  "@context": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
   "executionUnit": {
     "href": "https://github.com/Terradue/ogc-eo-application-package-hands-on/releases/download/1.5.0/app-water-bodies-cloud-native.1.5.0.cwl",
     "type": "application/cwl"
@@ -112,7 +112,7 @@ binding schemas remain documented on those blocks.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
+  "@context": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
   "title": "NDVI application package",
   "executionUnit": {
     "type": "docker",
@@ -170,7 +170,7 @@ binding schemas remain documented on those blocks.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
+  "@context": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
   "executionUnit": [
     {
       "type": "docker",
@@ -206,7 +206,7 @@ binding schemas remain documented on those blocks.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
+  "@context": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
   "executionUnit": {
     "type": "docker",
     "image": "example/echo:1"
@@ -238,15 +238,15 @@ properties:
     properties:
       process:
         allOf:
-        - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/process/schema.yaml
-        - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.yaml
+        - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/process/schema.yaml
+        - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.yaml
     x-jsonld-id: https://w3id.org/ogc/api/processes/processDescription
     x-jsonld-type: '@json'
   executionUnit:
     anyOf:
-    - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitValue/schema.yaml
+    - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitValue/schema.yaml
     - allOf:
-      - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnit/schema.yaml
+      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnit/schema.yaml
       - not:
           required:
           - value
@@ -256,16 +256,16 @@ x-jsonld-prefixes:
   proc: https://w3id.org/ogc/api/processes/
 x-bblocks-metadata:
   itemIdentifier: ogc.api.processes.part2.v1.schemas.ogcapppkg
-  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json
+  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json
   version: '0.2'
-  dateOfLastChange: '2026-11-13'
+  dateOfLastChange: '2026-11-17'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.json)
-* JSON version: [schema.json](https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.yaml)
+* YAML version: [schema.yaml](https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.json)
+* JSON version: [schema.json](https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/schema.yaml)
 
 
 # JSON-LD Context
@@ -308,7 +308,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld)
+[context.jsonld](https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld)
 
 ## Sources
 
@@ -318,6 +318,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/JFarduino/ogcapi-processes-bblocks](https://github.com/JFarduino/ogcapi-processes-bblocks)
+* URL: [https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks](https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks)
 * Path: `_sources/part2/v1/schemas/ogcapppkg`
 

@@ -1,5 +1,5 @@
 Validation report for ogc.api.processes.part2.v1.schemas.executionUnitContainer - Docker execution unit value
-Generated 2026-11-17T16:03:13.628264+00:00
+Generated 2026-11-18T14:13:55.695152+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -112,13 +112,13 @@ Failed validating 'required' in schema:
                                                              'type': 'number'}},
                                'additionalProperties': True},
                     'bindings': {'type': 'object',
-                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},
-                                                'outputBindings': {'additionalProperties': {'$ref': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},
+                                 'properties': {'inputBindings': {'additionalProperties': {'$ref': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/inputBinding/schema.yaml'}},
+                                                'outputBindings': {'additionalProperties': {'$ref': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/outputBinding/schema.yaml'}}}}},
      'additionalProperties': True,
      'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part2.v1.schemas.executionUnitContainer',
-                            'register': 'https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json',
+                            'register': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json',
                             'version': '1.0.0',
-                            'dateOfLastChange': '2026-11-13'},
+                            'dateOfLastChange': '2026-11-17'},
      '$id': 'file:///github/workspace/build/annotated/api/processes/part2/v1/schemas/executionUnitContainer/schema.yaml'}
 
 On instance:

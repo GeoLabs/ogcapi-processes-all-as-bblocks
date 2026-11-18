@@ -13,21 +13,21 @@ None
 type: object
 properties:
   format:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/format/schema.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/format/schema.yaml
   transmissionMode:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/transmissionMode/schema.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/transmissionMode/schema.yaml
 x-bblocks-metadata:
   itemIdentifier: ogc.api.processes.part1.v1.schemas.output
-  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json
+  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-13'
+  dateOfLastChange: '2026-11-17'
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/output/schema.json)
-* JSON version: [schema.json](https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/output/schema.yaml)
+* YAML version: [schema.yaml](https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/output/schema.json)
+* JSON version: [schema.json](https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/output/schema.yaml)
 
 ## Sources
 
@@ -37,6 +37,6 @@ Links to the schema:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/JFarduino/ogcapi-processes-bblocks](https://github.com/JFarduino/ogcapi-processes-bblocks)
+* URL: [https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks](https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks)
 * Path: `_sources/part1/v1/schemas/output`
 

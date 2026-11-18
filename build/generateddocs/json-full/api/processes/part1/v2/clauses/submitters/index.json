@@ -23,13 +23,13 @@
   ],
   "shaclShapes": {},
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
-  "dateOfLastChange": "2026-11-13",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/clauses/submitters/",
+  "dateOfLastChange": "2026-11-17",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/clauses/submitters/",
   "validationPassed": true,
   "description": "All questions regarding this submission should be directed to the editor or the submitters:\n\n**Table \u2014 Table of submitters**\n\n<table>\n<tbody><tr><td><strong>Name</strong></td><td><strong>Affiliation</strong></td></tr><tr><td>Benjamin Pross <em>(editor)</em></td><td>52\u00b0North GmbH</td></tr><tr><td>Stan Tillman</td><td>Hexagon</td></tr><tr><td>Panagiotis (Peter) A. Vretanos <em>(editor)</em></td><td>CubeWerx Inc.</td></tr><tr><td>J\u00e9r\u00f4me Jacovella-St-Louis</td><td>Ecere Corporation</td></tr><tr><td>Pedro Gon\u00e7alves</td><td>Terradue Srl</td></tr><tr><td>G\u00e9rald Fenoy</td><td>G\u00e9rald Fenoy (Individual Member)</td></tr><tr><td>Francis Charette-Migneault</td><td>Technologies Luqia, Centre de Recherche Informatique de Montr\u00e9al (CRIM)</td></tr><tr><td>Cristiano Lopes</td><td>European Space Agency (ESA)</td></tr><tr><td>Christophe Noel</td><td>Spacebel</td></tr></tbody>\n</table>\n",
   "annotatedSchema": null,
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part1/v2/clauses/submitters"
 }

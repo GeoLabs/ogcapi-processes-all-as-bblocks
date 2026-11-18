@@ -6,7 +6,7 @@
   "abstract": "Base schema of a single execution unit (DRAFT): either a link to the execution unit, or an inline qualified value describing a container image, a CWL script, or another custom encoding.",
   "status": "under-development",
   "dateTimeAddition": "2026-08-04T00:00:00Z",
-  "dateOfLastChange": "2026-11-13",
+  "dateOfLastChange": "2026-11-17",
   "itemClass": "schema",
   "version": "1.1.0",
   "sources": [
@@ -27,17 +27,17 @@
     "ogc.api.processes.part2.v1.schemas.qualifiedExecutionUnitValue"
   ],
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
   "schema": {
-    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.yaml",
-    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.json"
+    "application/yaml": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.yaml",
+    "application/json": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.json"
   },
-  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/schema.yaml",
-  "resolvedSchemaProperties": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/resolvedProperties.json",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/",
+  "sourceSchema": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/executionUnitBase/schema.yaml",
+  "resolvedSchemaProperties": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/executionUnitBase/",
   "validationPassed": true,
-  "testOutputs": "https://github.com/JFarduino/ogcapi-processes-bblocks/blob/main/build/tests/api/processes/part2/v1/schemas/executionUnitBase/",
+  "testOutputs": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks/blob/main/build/tests/api/processes/part2/v1/schemas/executionUnitBase/",
   "description": "One execution unit: a link, or a qualified value holding a container image, a CWL document or a custom type.\n\nThe source is the schema fragment quoted in the OGC 20-044 draft, with its\nreferences replaced by building block references. The descriptions of container,\nCWL and custom script encodings retain the draft's intent.\n\n## Local schema composition fixes (not amendments of the official draft)\n\n- The draft refers to `../cwl/cwl.yaml`, which it does not include. This block uses the CWL v1.2 schema URL that the draft gives in a comment.\n- The draft's third `anyOf` branch accepts any `type`, allowing invalid Docker\n  values to bypass the container branch. Here an `if`/`then`/`else` discriminator\n  gives `type: docker` or `type: oci` priority and validates `value` against\n  `ogc.api.processes.part2.v1.schemas.executionUnitContainer`.\n- Otherwise `mediaType: application/cwl` selects the raw remote CWL schema,\n  including when `type` is absent. A custom type cannot bypass this check.\n- The remaining custom branch requires a string `type` excluding `docker` and\n  `oci`. Scripts such as `type: python` retain the qualified-value contract;\n  an empty object is a valid custom payload.\n- The Part 1 `qualifiedValue` `allOf` is retained; `value` is also explicitly\n  required here. Link-only units exclude `value`, so a qualified value with an\n  additional `href` cannot escape payload validation through the link branch.\n\nThese are local validation/composition fixes. They do not claim changes to the\nofficial draft or runtime support for Docker/CWL deployment. Other draft\nlimitations, including the loose deployment enum, are documented on\n`executionUnitContainer` rather than silently corrected.",
   "examples": [
     {
@@ -45,8 +45,8 @@
       "snippets": [
         {
           "language": "json",
-          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/docker.json",
-          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_1_1.json",
+          "ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/docker.json",
+          "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_1_1.json",
           "sizeBytes": 510,
           "code": "{\n  \"type\": \"docker\",\n  \"value\": {\n    \"image\": \"mydocker/ndvi:latest\",\n    \"bindings\": {\n      \"inputBindings\": {\n        \"inputImage\": {\n          \"prefix\": \"inputsImages=\",\n          \"inputSeparator\": \",\"\n        }\n      },\n      \"outputBindings\": {\n        \"outputImage\": {\n          \"glob\": \"$(\\\"/outputs/ndvi_\\\" + inputs.inputImage.basename)\"\n        }\n      }\n    },\n    \"deployment\": \"local\",\n    \"config\": {\n      \"cpuMin\": 2,\n      \"cpuMax\": 5,\n      \"memoryMin\": 1,\n      \"memoryMax\": 3\n    }\n  }\n}\n"
         }
@@ -57,8 +57,8 @@
       "snippets": [
         {
           "language": "json",
-          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/link.json",
-          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_2_1.json",
+          "ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/link.json",
+          "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_2_1.json",
           "sizeBytes": 74,
           "code": "{\n  \"href\": \"https://example.com/ndvi.cwl\",\n  \"type\": \"application/cwl\"\n}\n"
         }
@@ -69,15 +69,15 @@
       "snippets": [
         {
           "language": "json",
-          "ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/custom-empty-object.json",
-          "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_3_1.json",
+          "ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/executionUnitBase/tests/custom-empty-object.json",
+          "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part2/v1/schemas/executionUnitBase/example_3_1.json",
           "sizeBytes": 31,
           "code": "{\"type\": \"python\", \"value\": {}}"
         }
       ]
     }
   ],
-  "annotatedSchema": "oneOf:\n- allOf:\n  - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml\n  - not:\n      required:\n      - value\n- allOf:\n  - $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/qualifiedExecutionUnitValue/schema.yaml\n  - type: object\n    required:\n    - value\n    if:\n      required:\n      - type\n      properties:\n        type:\n          enum:\n          - docker\n          - oci\n    then:\n      description: The execution unit is a container image.\n      properties:\n        value:\n          $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitContainer/schema.yaml\n    else:\n      if:\n        required:\n        - mediaType\n        properties:\n          mediaType:\n            const: application/cwl\n      then:\n        description: The execution unit is CWL script.\n        properties:\n          value:\n            $ref: https://raw.githubusercontent.com/common-workflow-language/cwl-v1.2/main/json-schema/cwl.yaml\n      else:\n        description: 'The execution unit is not Docker/OCI or CWL and cannot be properly\n          described via\n\n          the \"mediaType\" property of a qualified value using an RFC 2046 media type\n          (e.g.\n\n          an \"R\" or \"Python\" script). In this case a community-defined or custom token\n          may\n\n          be used with the \"type\" property.'\n        required:\n        - type\n        properties:\n          type:\n            type: string\n            not:\n              enum:\n              - docker\n              - oci\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.executionUnitBase\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: 1.1.0\n  dateOfLastChange: '2026-11-13'\n",
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "annotatedSchema": "oneOf:\n- allOf:\n  - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml\n  - not:\n      required:\n      - value\n- allOf:\n  - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/qualifiedExecutionUnitValue/schema.yaml\n  - type: object\n    required:\n    - value\n    if:\n      required:\n      - type\n      properties:\n        type:\n          enum:\n          - docker\n          - oci\n    then:\n      description: The execution unit is a container image.\n      properties:\n        value:\n          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitContainer/schema.yaml\n    else:\n      if:\n        required:\n        - mediaType\n        properties:\n          mediaType:\n            const: application/cwl\n      then:\n        description: The execution unit is CWL script.\n        properties:\n          value:\n            $ref: https://raw.githubusercontent.com/common-workflow-language/cwl-v1.2/main/json-schema/cwl.yaml\n      else:\n        description: 'The execution unit is not Docker/OCI or CWL and cannot be properly\n          described via\n\n          the \"mediaType\" property of a qualified value using an RFC 2046 media type\n          (e.g.\n\n          an \"R\" or \"Python\" script). In this case a community-defined or custom token\n          may\n\n          be used with the \"type\" property.'\n        required:\n        - type\n        properties:\n          type:\n            type: string\n            not:\n              enum:\n              - docker\n              - oci\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.executionUnitBase\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: 1.1.0\n  dateOfLastChange: '2026-11-17'\n",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/schemas/executionUnitBase"
 }

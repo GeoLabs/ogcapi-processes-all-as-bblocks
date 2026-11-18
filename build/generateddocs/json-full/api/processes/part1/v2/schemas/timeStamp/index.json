@@ -8,7 +8,7 @@
   "itemClass": "datatype",
   "register": "ogcapi-features",
   "version": "2.0",
-  "dateOfLastChange": "2026-11-13",
+  "dateOfLastChange": "2026-11-17",
   "sources": [
     {
       "title": "OGC API - Processes - Part 1: Core (2.0 draft, OGC 18-062r3)",
@@ -22,16 +22,16 @@
   "abstract": "This property indicates the time and date when the response was generated",
   "shaclShapes": {},
   "license": {
-    "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/LICENSE"
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
   "schema": {
-    "application/yaml": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/timeStamp/schema.yaml",
-    "application/json": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/timeStamp/schema.json"
+    "application/yaml": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/timeStamp/schema.yaml",
+    "application/json": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/timeStamp/schema.json"
   },
-  "sourceSchema": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/schemas/timeStamp/schema.yaml",
-  "sourceFiles": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part1/v2/schemas/timeStamp/",
+  "sourceSchema": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/schemas/timeStamp/schema.yaml",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/schemas/timeStamp/",
   "validationPassed": true,
-  "annotatedSchema": "title: Time stamp\ndescription: This property indicates the time and date when the response was generated\n  using RFC 3339 notation.\ntype: string\nformat: date-time\nexample: '2017-08-17T08:05:32Z'\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.timeStamp\n  register: https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-13'\n",
-  "gitRepository": "https://github.com/JFarduino/ogcapi-processes-bblocks",
+  "annotatedSchema": "title: Time stamp\ndescription: This property indicates the time and date when the response was generated\n  using RFC 3339 notation.\ntype: string\nformat: date-time\nexample: '2017-08-17T08:05:32Z'\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.timeStamp\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-17'\n",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part1/v2/schemas/timeStamp"
 }

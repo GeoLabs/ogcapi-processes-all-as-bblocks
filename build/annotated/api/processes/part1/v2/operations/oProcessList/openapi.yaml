@@ -12,4 +12,4 @@ tags:
 - Core
 responses:
   200:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/responses/ProcessList/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/ProcessList/openapi.yaml

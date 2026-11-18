@@ -10,12 +10,12 @@ operationId: getResult
 tags:
 - Jobs
 parameters:
-- $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/parameters/jobId/openapi.yaml
-- $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/parameters/processes-core/prefer-header-return/openapi.yaml
+- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/parameters/jobId/openapi.yaml
+- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/parameters/processes-core/prefer-header-return/openapi.yaml
 responses:
   200:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/responses/Results/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/Results/openapi.yaml
   404:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/responses/NotFound/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/NotFound/openapi.yaml
   500:
-    $ref: https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/responses/ServerError/openapi.yaml
+    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/ServerError/openapi.yaml

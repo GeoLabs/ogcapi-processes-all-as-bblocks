@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.part2.v1.schemas.inputBinding - Docker input binding",
   "bblockName": "Docker input binding",
   "bblockId": "ogc.api.processes.part2.v1.schemas.inputBinding",
-  "generated": "2026-11-17T16:03:13.454717+00:00",
+  "generated": "2026-11-18T14:13:55.512779+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/part2/v1/schemas/inputBinding/tests/invalid-position-fail.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/inputBinding/tests/invalid-position-fail.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/inputBinding/tests/invalid-position-fail.json",
         "language": "json"
       },
       "result": true,
@@ -58,7 +58,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/part2/v1/schemas/inputBinding/tests/invalid-shell-quote-fail.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/inputBinding/tests/invalid-shell-quote-fail.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/inputBinding/tests/invalid-shell-quote-fail.json",
         "language": "json"
       },
       "result": true,
@@ -106,7 +106,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": false,
         "filename": "_sources/part2/v1/schemas/inputBinding/tests/prefix-position.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/_sources/part2/v1/schemas/inputBinding/tests/prefix-position.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/schemas/inputBinding/tests/prefix-position.json",
         "language": "json"
       },
       "result": true,
@@ -141,7 +141,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/api/processes/part2/v1/schemas/inputBinding/example_1_1.json",
-        "url": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/tests/api/processes/part2/v1/schemas/inputBinding/example_1_1.json",
+        "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/tests/api/processes/part2/v1/schemas/inputBinding/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"

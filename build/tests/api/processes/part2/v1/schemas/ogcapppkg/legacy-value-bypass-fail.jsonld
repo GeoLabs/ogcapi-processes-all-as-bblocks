@@ -1,5 +1,5 @@
 {
-  "@context": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
+  "@context": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/ogcapppkg/context.jsonld",
   "executionUnit": {
     "type": "docker",
     "image": "example/echo:1",

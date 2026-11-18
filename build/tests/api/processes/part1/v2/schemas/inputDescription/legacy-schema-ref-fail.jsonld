@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v2/schemas/inputDescription/context.jsonld",
+    "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/inputDescription/context.jsonld",
     {
       "op": "http://test-data/cafe-walk/observables/"
     }

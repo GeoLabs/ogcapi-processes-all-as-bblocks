@@ -1,7 +1,7 @@
 {
   "allOf": [
     {
-      "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/descriptionType/schema.json"
+      "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/descriptionType/schema.json"
     },
     {
       "type": "object",
@@ -19,19 +19,19 @@
         "jobControlOptions": {
           "type": "array",
           "items": {
-            "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/jobControlOptions/schema.json"
+            "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/jobControlOptions/schema.json"
           }
         },
         "outputTransmission": {
           "type": "array",
           "items": {
-            "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/transmissionMode/schema.json"
+            "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/transmissionMode/schema.json"
           }
         },
         "links": {
           "type": "array",
           "items": {
-            "$ref": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.json"
+            "$ref": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.json"
           }
         }
       }
@@ -39,8 +39,8 @@
   ],
   "x-bblocks-metadata": {
     "itemIdentifier": "ogc.api.processes.part1.v1.schemas.processSummary",
-    "register": "https://jfarduino.github.io/ogcapi-processes-bblocks/build/register.json",
+    "register": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json",
     "version": "1.0",
-    "dateOfLastChange": "2026-11-13"
+    "dateOfLastChange": "2026-11-17"
   }
 }
