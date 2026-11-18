@@ -16,9 +16,9 @@ servers:
   url: https://hirondelle.crim.ca/ogcapi/processes
 paths:
   /:
-    $ref: bblocks://ogc.api.processes.part1.v2.paths.LandingPage
+    $ref: bblocks://ogc.api.common.part1.paths.LandingPage
   /conformance:
-    $ref: bblocks://ogc.api.processes.part1.v2.paths.Conformance
+    $ref: bblocks://ogc.api.common.part1.paths.Conformance
   /processes:
     $ref: bblocks://ogc.api.processes.part1.v2.paths.ProcessList
   /processes/{processID}:
@@ -44,9 +44,9 @@ paths:
       - $ref: bblocks://ogc.api.processes.part1.v2.parameters.unspecified.f-metadata
       responses:
         '200':
-          $ref: bblocks://ogc.api.processes.part1.v2.responses.common-core.rAPI
+          $ref: bblocks://ogc.api.processes.part1.v2.responses.API
         '406':
-          $ref: bblocks://ogc.api.processes.part1.v2.responses.common-core.rNotAcceptable
+          $ref: bblocks://ogc.api.processes.part1.v2.responses.NotAcceptable
         '500':
           $ref: bblocks://ogc.api.processes.part1.v2.responses.ServerError
 components: {}

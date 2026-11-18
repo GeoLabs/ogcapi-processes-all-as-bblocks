@@ -5,11 +5,15 @@ from urllib.parse import unquote, urldefrag, urljoin, urlsplit
 
 import yaml
 
-from audit_official_sources import load, refs
+from audit_official_sources import COMMON, COMMON_PATHS, COMMON_SOURCES, load, refs
 from official_materializer import artifact, identifier
 from schema_annotations import JSONLD_KEYS, child_context
 
 METHODS = {'get', 'put', 'post', 'delete', 'options', 'head', 'patch', 'trace'}
+# The only OGC API - Common building blocks this register may reference, and
+# the official Processes resource each one stands for (if any).
+COMMON_BLOCKS = {**{block: None for block in COMMON_PATHS.values()},
+                 **{block: source for source, block in COMMON_SOURCES.items()}}
 
 
 def expected_dialect(plan, document):
@@ -52,6 +56,12 @@ def expected_document(plan):
         # Only selected path components are retained; multipart CWL/PROV
         # components are not part of this Part 1 projection.
         value['components'] = {}
+    if plan['block'] == 'api':
+        # "/" and "/conformance" are delegated to OGC API - Common in both
+        # editions, replacing the official Processes Path Items.
+        value = {**value, 'paths': {**value['paths'],
+                                    **{path: {'$ref': common}
+                                       for path, common in COMMON_PATHS.items()}}}
     dialect = expected_dialect(plan, value)
     return {'$schema': dialect, **value} if dialect else value
 
@@ -70,7 +80,11 @@ def pointer(value, fragment):
 def source_reference(ref, plan, index):
     if ref.startswith('bblocks://'):
         block, fragment = urldefrag(ref)
-        source = index[block]['source']
+        if block.startswith(COMMON):
+            # Compared as the official resource it replaces, else as itself.
+            source = COMMON_BLOCKS.get(block) or block
+        else:
+            source = index[block]['source']
         if not fragment:
             return source
         return source + ('/' + fragment.lstrip('/') if '#' in source else '#' + fragment)
@@ -104,6 +118,9 @@ def expand_path_item(value, plan, index, documents, seen=None):
         if ref in seen:
             raise ValueError('Cyclic Path Item/Operation reference: ' + ref)
         block, fragment = urldefrag(ref)
+        if block.startswith(COMMON):
+            # Defined by the imported OGC API - Common register: opaque here.
+            return dict(value)
         if block.startswith('bblocks://'):
             target = index[block]
             child = pointer(documents[block], fragment)
@@ -143,6 +160,8 @@ def check(plans):
         try:
             for ref in refs(current):
                 block, fragment = urldefrag(ref)
+                if block in COMMON_BLOCKS and not fragment:
+                    continue
                 if block.startswith('bblocks://'):
                     if block not in index:
                         raise ValueError('Unresolved building block ' + ref)
@@ -193,8 +212,11 @@ def check(plans):
         counts = Counter(index[node]['block'].split('/')[0] for node in reached)
         direct_paths = {node for node in graph.get(api, ()) if index[node]['block'].startswith('paths/')}
         missing_paths = {identifier(version, 'paths/' + name) for name in (
-            'LandingPage', 'Conformance', 'ProcessList', 'ProcessDescription', 'Execution',
+            'ProcessList', 'ProcessDescription', 'Execution',
             'JobList', 'Job', 'DismissJob', 'JobResult')} - direct_paths
+        # The two OGC API - Common paths are referenced, not local blocks.
+        missing_paths |= {common for path, common in COMMON_PATHS.items()
+                          if documents.get(api, {}).get('paths', {}).get(path) != {'$ref': common}}
         if missing_paths or not all(counts[kind] for kind in ('parameters', 'responses', 'schemas')):
             errors.append({'block': api, 'error': 'API graph incomplete', 'missing_paths': sorted(missing_paths)})
         # Every path must lead to responses and schemas, even through an

@@ -22,8 +22,8 @@
     "ogc.api.processes.part1.v2.paths.Execution",
     "ogc.api.processes.part1.v2.paths.Job",
     "ogc.api.processes.part1.v2.paths.JobResult",
-    "ogc.api.processes.part1.v2.paths.LandingPage",
-    "ogc.api.processes.part1.v2.paths.Conformance"
+    "ogc.api.common.part1.paths.LandingPage",
+    "ogc.api.common.part1.paths.Conformance"
   ],
   "tags": [
     "ogcapi-processes",

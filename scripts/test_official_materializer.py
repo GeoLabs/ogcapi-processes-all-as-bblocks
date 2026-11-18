@@ -16,7 +16,7 @@ import jsonschema
 import yaml
 
 import check_embedded_sources as audit
-from audit_official_sources import ROOT, V1, V2, source_for
+from audit_official_sources import COMMON, COMMON_PATHS, ROOT, V1, V2, source_for
 from official_materializer import (DRAFT4, artifact, discover, document_block_dirs, embedded,
                                    canonical_index, has_boolean_exclusive_bound,
                                    inventory, mapped_reference, rendered_files, rewrite,
@@ -52,9 +52,9 @@ class MetadataTests(unittest.TestCase):
                 self.assertEqual(canonical_name(original), expected)
                 self.assertEqual(canonical_name(expected), expected)
 
-    def test_all_175_metadata_names_and_editions_without_network(self):
+    def test_all_156_metadata_names_and_editions_without_network(self):
         plans = inventory()
-        self.assertEqual(Counter(p['version'] for p in plans), {'v1': 73, 'v2': 102})
+        self.assertEqual(Counter(p['version'] for p in plans), {'v1': 64, 'v2': 92})
         with patch('official_materializer.embedded', return_value={}), \
                 patch('requests.get', side_effect=AssertionError('Unexpected network request')):
             files = rendered_files(plans)
@@ -96,6 +96,42 @@ class MetadataTests(unittest.TestCase):
                             actual = json.loads(rendered_files([plan])[target])
                         self.assertEqual(actual, {**original, 'name': expected, 'version': version})
                         self.assertEqual(target.read_bytes(), before)
+
+
+class CommonDelegationTests(unittest.TestCase):
+    """Landing page and conformance come from OGC API - Common, offline."""
+
+    def test_api_references_common_paths_and_defines_none_locally(self):
+        for version in ('v1', 'v2'):
+            with self.subTest(version=version):
+                root = ROOT / '_sources/part1' / version
+                paths = yaml.safe_load((root / 'api/openapi.yaml').read_text())['paths']
+                self.assertEqual(paths['/'], {'$ref': COMMON + 'paths.LandingPage'})
+                self.assertEqual(paths['/conformance'], {'$ref': COMMON + 'paths.Conformance'})
+                self.assertEqual(list(paths)[:2], list(COMMON_PATHS))
+                self.assertFalse((root / 'paths/LandingPage').exists())
+                self.assertFalse((root / 'paths/Conformance').exists())
+
+    def test_no_common_core_group_and_register_is_imported(self):
+        self.assertEqual([str(d.relative_to(ROOT)) for d in (ROOT / '_sources').rglob('common-core')], [])
+        self.assertNotIn('.common-core.', ''.join(
+            f.read_text() for f in (ROOT / '_sources').rglob('*')
+            if f.name in ('openapi.yaml', 'schema.yaml', 'bblock.json')))
+        imports = yaml.safe_load((ROOT / 'bblocks-config.yaml').read_text())['imports']
+        self.assertIn('https://geolabs.github.io/ogcapi-common-all-as-bblocks/build/register.json',
+                      imports)
+
+    def test_no_processes_core_group(self):
+        self.assertEqual([str(d.relative_to(ROOT)) for d in (ROOT / '_sources/part1').rglob('processes-core')], [])
+        self.assertNotIn('.processes-core.', ''.join(
+            f.read_text() for f in (ROOT / '_sources/part1').rglob('*')
+            if f.name in ('openapi.yaml', 'schema.yaml')))
+
+    def test_common_link_replaces_official_common_core_link(self):
+        source = V2 + 'schemas/common-core/landingPage.yaml'
+        self.assertEqual(rewrite({'items': {'$ref': 'link.yaml'}}, source,
+                                 canonical_index([], 'v2'), source),
+                         {'items': {'$ref': COMMON + 'schemas.link'}})
 
 
 class ReferenceProducerTests(unittest.TestCase):
@@ -207,7 +243,7 @@ class EmbeddedSourcesTests(unittest.TestCase):
         errors, graphs = audit.check(copy.deepcopy(self.plans))
         self.assertEqual(errors, [])
         for version in ('v1', 'v2'):
-            self.assertEqual(graphs[version]['direct_path_blocks'], 9)
+            self.assertEqual(graphs[version]['direct_path_blocks'], 7)
             for kind in ('parameters', 'responses', 'schemas'):
                 self.assertGreater(graphs[version]['reachable_by_kind'][kind], 0)
         self.assertEqual(graphs['v2']['reachable_by_kind']['operations'], 2)
@@ -221,10 +257,12 @@ class EmbeddedSourcesTests(unittest.TestCase):
     def test_new_operation_and_group_source_mapping(self):
         for block, suffix in (
                 ('operations/oJobResults', 'paths/processes-core/operations/oJobResults.yaml'),
-                ('schemas/processes-core/values', 'schemas/processes-core/values.yaml'),
-                ('schemas/common-core/link', 'schemas/common-core/link.yaml'),
+                ('schemas/values', 'schemas/processes-core/values.yaml'),
+                ('parameters/response', 'parameters/processes-core/response.yaml'),
+                ('responses/Empty', 'responses/processes-core/rEmpty.yaml'),
                 ('parameters/unspecified/f-metadata', 'parameters/unspecified/f-metadata.yaml'),
-                ('responses/common-core/rAPI', 'responses/common-core/rAPI.yaml')):
+                ('responses/API', 'responses/common-core/rAPI.yaml'),
+                ('responses/NotAcceptable', 'responses/common-core/rNotAcceptable.yaml')):
             self.assertEqual(source_for('v2', block), (V2 + suffix, 'official'))
         with self.assertRaises(ValueError):
             source_for('v3', 'api')
@@ -325,7 +363,7 @@ class EmbeddedSourcesTests(unittest.TestCase):
                                  'v1/schemas/swagger/schema/schema.yaml',
                                  'v2/schemas/swagger/schema/schema.yaml'})
         for plan in self.plans:
-            if plan['version'] == 'v2' and plan['block'] in ('schemas/schema', 'schemas/processes-core/schema'):
+            if plan['version'] == 'v2' and plan['block'] == 'schemas/schema':
                 schema = yaml.safe_load(artifact(plan).read_text())
                 self.assertNotIn('$schema', schema)
                 self.assertFalse(has_boolean_exclusive_bound(schema))
@@ -400,8 +438,20 @@ class EmbeddedSourcesTests(unittest.TestCase):
 
     def test_cross_edition_graph_edge_is_rejected(self):
         errors = self.mutated_errors('v2', 'api', lambda value:
-            value['paths']['/'].update({'$ref': 'bblocks://ogc.api.processes.part1.v1.paths.LandingPage'}))
+            value['paths']['/processes'].update({'$ref': 'bblocks://ogc.api.processes.part1.v1.paths.ProcessList'}))
         self.assertTrue(any('Cross-edition' in e['error'] for e in errors), errors)
+
+    def test_local_or_unknown_common_path_is_rejected(self):
+        for version in ('v1', 'v2'):
+            for path in COMMON_PATHS:
+                with self.subTest(version=version, path=path):
+                    errors = self.mutated_errors(version, 'api', lambda value: value['paths'].update(
+                        {path: {'get': {'responses': {'200': {'description': 'local'}}}}}))
+                    self.assertTrue(any(e['error'] == 'API graph incomplete' for e in errors), errors)
+                    self.assertTrue(any('differs from official' in e['error'] for e in errors), errors)
+        errors = self.mutated_errors('v2', 'api', lambda value: value['paths']['/'].update(
+            {'$ref': COMMON + 'paths.Unknown'}))
+        self.assertTrue(any('Unresolved building block' in e['error'] for e in errors), errors)
 
     def test_missing_api_path_is_rejected(self):
         errors = self.mutated_errors('v2', 'api', lambda value: value['paths'].pop('/processes'))

@@ -10,7 +10,8 @@ from pathlib import Path
 from urllib.parse import urldefrag, urljoin
 
 import yaml
-from audit_official_sources import PATHS, ROOT, V2, V2_PATHS, load, refs, source_for
+from audit_official_sources import (COMMON_PATHS, COMMON_SOURCES, PATHS, ROOT, V2, V2_PATHS,
+                                    load, refs, source_for)
 from schema_annotations import JSONLD_KEYS, child_context
 
 PREFIX = 'bblocks://ogc.api.processes.part1.'
@@ -80,9 +81,11 @@ def official_document(plan):
     elif plan['block'] == 'api' and plan['version'] == 'v2':
         # Retain actual upstream info, servers, definitions and components.
         # The root paths also contain Parts 2, 3 and 4: select Part 1 only.
+        # "/" and "/conformance" come first, from OGC API - Common.
         value['paths'] = {
-            PATHS[name].replace('{jobId}', '{jobID}'): {'$ref': V2 + 'paths/' + target + '.yaml'}
-            for name, target in V2_PATHS.items()}
+            **{path: {'$ref': common} for path, common in COMMON_PATHS.items()},
+            **{PATHS[name].replace('{jobId}', '{jobID}'): {'$ref': V2 + 'paths/' + target + '.yaml'}
+               for name, target in V2_PATHS.items()}}
         # No separate historical identifier: embed the official /api Path Item.
         value['paths']['/api'] = rewrite(load(V2 + 'paths/common-core/pAPI.yaml'),
                                         V2 + 'paths/common-core/pAPI.yaml', {}, None)
@@ -98,7 +101,8 @@ def official_document(plan):
 
 def canonical_index(plans, version):
     """Prefer canonical names over aliases; never use another edition."""
-    index = {}
+    # Official resources delegated to OGC API - Common have no local block.
+    index = dict(COMMON_SOURCES)
     candidates = [p for p in plans if p['version'] == version
                   and p['classification'] != 'operation-view']
     for plan in sorted(candidates, key=lambda p: (
@@ -164,6 +168,10 @@ def embedded(plan, plans):
             'get': {'$ref': identifier(plan['version'], 'paths/Job') + '#/get'},
             'delete': {'$ref': identifier(plan['version'], 'paths/DismissJob') + '#/delete'},
         }
+        # Not redefined here: the official inline (v1) or referenced (v2)
+        # Path Items are replaced by the OGC API - Common building blocks.
+        for path, common in COMMON_PATHS.items():
+            value['paths'][path] = {'$ref': common}
         for name, path in PATHS.items():
             if name in ('Job', 'DismissJob'):
                 continue
@@ -180,7 +188,7 @@ def discover(plans):
     is never regenerated; existing identifiers win over newly discovered ones.
     """
     plans = list(plans)
-    represented = {p['source'] for p in plans if p['version'] == 'v2'}
+    represented = {p['source'] for p in plans if p['version'] == 'v2'} | set(COMMON_SOURCES)
     todo = [p for p in plans if p['version'] == 'v2' and p['block'] != 'api']
     todo.append({'source': V2 + 'paths/common-core/pAPI.yaml'})
     while todo:
@@ -194,7 +202,13 @@ def discover(plans):
             if len(parts) == 4 and parts[:3] == ['paths', 'processes-core', 'operations']:
                 block = 'operations/' + Path(parts[-1]).stem
             elif (len(parts) == 3 and parts[0] in ('schemas', 'parameters', 'responses')
-                  and parts[1] in ('common-core', 'common-geodata', 'processes-core', 'unspecified')):
+                  and parts[1] == 'processes-core'):
+                # Core components are flat, like the historical blocks; the
+                # official response prefix is dropped (rEmpty -> responses/Empty).
+                stem = Path(parts[-1]).stem
+                block = parts[0] + '/' + (stem.removeprefix('r') if parts[0] == 'responses' else stem)
+            elif (len(parts) == 3 and parts[0] in ('schemas', 'parameters', 'responses')
+                  and parts[1] in ('common-core', 'common-geodata', 'unspecified')):
                 block = relative.removesuffix('.yaml')
             else:
                 continue

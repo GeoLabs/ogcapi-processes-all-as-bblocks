@@ -13,8 +13,8 @@ post:
   - Core
   parameters:
   - $ref: bblocks://ogc.api.processes.part1.v2.parameters.processIdPathParam
-  - $ref: bblocks://ogc.api.processes.part1.v2.parameters.processes-core.response
-  - $ref: bblocks://ogc.api.processes.part1.v2.parameters.processes-core.prefer-header-execution
+  - $ref: bblocks://ogc.api.processes.part1.v2.parameters.response
+  - $ref: bblocks://ogc.api.processes.part1.v2.parameters.prefer-header-execution
   requestBody:
     description: 'An execution request specifying any inputs for the process to execute, and
       optionally to select specific outputs.
@@ -34,9 +34,9 @@ post:
     201:
       $ref: bblocks://ogc.api.processes.part1.v2.responses.ExecuteAsync
     204:
-      $ref: bblocks://ogc.api.processes.part1.v2.responses.processes-core.rEmpty
+      $ref: bblocks://ogc.api.processes.part1.v2.responses.Empty
     303:
-      $ref: bblocks://ogc.api.processes.part1.v2.responses.processes-core.rExecuteCollectionRedirect
+      $ref: bblocks://ogc.api.processes.part1.v2.responses.ExecuteCollectionRedirect
     404:
       $ref: bblocks://ogc.api.processes.part1.v2.responses.NotFound
     500:

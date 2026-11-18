@@ -16,9 +16,9 @@ info:
     url: http://www.ogc.org/legal/
 paths:
   /:
-    $ref: bblocks://ogc.api.processes.part1.v1.paths.LandingPage
+    $ref: bblocks://ogc.api.common.part1.paths.LandingPage
   /conformance:
-    $ref: bblocks://ogc.api.processes.part1.v1.paths.Conformance
+    $ref: bblocks://ogc.api.common.part1.paths.Conformance
   /processes:
     $ref: bblocks://ogc.api.processes.part1.v1.paths.ProcessList
   /processes/{processID}:

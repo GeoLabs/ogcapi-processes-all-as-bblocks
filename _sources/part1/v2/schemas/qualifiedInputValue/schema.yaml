@@ -1,7 +1,7 @@
 # Official definition embedded by scripts/align_official_sources.py.
 allOf:
 - $ref: bblocks://ogc.api.processes.part1.v2.schemas.format
-- $ref: bblocks://ogc.api.processes.part1.v2.schemas.processes-core.dataClasses
+- $ref: bblocks://ogc.api.processes.part1.v2.schemas.dataClasses
 - type: object
   required:
   - value

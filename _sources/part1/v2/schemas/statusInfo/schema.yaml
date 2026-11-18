@@ -19,7 +19,7 @@ allOf:
           This includes all the data access apis listed in "apis.yaml" plus
 
           the processing APIs of OGC API Processes and OpenEO.'
-      - $ref: bblocks://ogc.api.processes.part1.v2.schemas.processes-core.processingEntityType
+      - $ref: bblocks://ogc.api.processes.part1.v2.schemas.processingEntityType
     profileEntityType:
       allOf:
       - description: 'The type of entity requesting this status information.  This may
@@ -29,7 +29,7 @@ allOf:
           processing entity may be OGC API Processes but the status
 
           information is requested via the OpenEO API.'
-      - $ref: bblocks://ogc.api.processes.part1.v2.schemas.processes-core.processingEntityType
+      - $ref: bblocks://ogc.api.processes.part1.v2.schemas.processingEntityType
     request:
       oneOf:
       - type: string

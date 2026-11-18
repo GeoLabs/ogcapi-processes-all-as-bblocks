@@ -24,7 +24,7 @@
   "dependsOn": [
     "ogc.api.processes.part1.v1.schemas.bbox",
     "ogc.api.processes.part1.v1.schemas.binaryInputValue",
-    "ogc.api.processes.part1.v1.schemas.confClasses",
+    "ogc.api.common.part1.schemas.confClasses",
     "ogc.api.processes.part1.v1.schemas.descriptionType",
     "ogc.api.processes.part1.v1.schemas.exception",
     "ogc.api.processes.part1.v1.schemas.execute",
@@ -33,7 +33,7 @@
     "ogc.api.processes.part1.v1.schemas.inputValue",
     "ogc.api.processes.part1.v1.schemas.inputValueNoObject",
     "ogc.api.processes.part1.v1.schemas.jobControlOptions",
-    "ogc.api.processes.part1.v1.schemas.landingPage",
+    "ogc.api.common.part1.schemas.landingPage",
     "ogc.api.processes.part1.v1.schemas.link",
     "ogc.api.processes.part1.v1.schemas.output",
     "ogc.api.processes.part1.v1.schemas.processList",

@@ -22,13 +22,17 @@ V1 = 'https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/'
 V2 = f'https://raw.githubusercontent.com/opengeospatial/ogcapi-processes/{PIN}/openapi/'
 FEATURES = 'https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/'
 OUT = DEFAULT_OUTPUT
-PATHS = {'LandingPage': '/', 'Conformance': '/conformance',
-         'ProcessList': '/processes', 'ProcessDescription': '/processes/{processID}',
+# The landing page and the conformance declaration are specified by OGC API -
+# Common: they are not redefined here but referenced from the imported OGC API
+# - Common register (see bblocks-config.yaml). Likewise for the Common link.
+COMMON = 'bblocks://ogc.api.common.part1.'
+COMMON_PATHS = {'/': COMMON + 'paths.LandingPage', '/conformance': COMMON + 'paths.Conformance'}
+COMMON_SOURCES = {V2 + 'schemas/common-core/link.yaml': COMMON + 'schemas.link'}
+PATHS = {'ProcessList': '/processes', 'ProcessDescription': '/processes/{processID}',
          'Execution': '/processes/{processID}/execution', 'JobList': '/jobs',
          'Job': '/jobs/{jobId}', 'DismissJob': '/jobs/{jobId}',
          'JobResult': '/jobs/{jobId}/results'}
-V2_PATHS = {'LandingPage': 'common-core/pLandingPage', 'Conformance': 'common-core/pConformance',
-            'ProcessList': 'processes-core/pProcessList',
+V2_PATHS = {'ProcessList': 'processes-core/pProcessList',
             'ProcessDescription': 'processes-core/pProcessDescription',
             'Execution': 'processes-core/pExecution', 'JobList': 'processes-core/pJobsList',
             'Job': 'processes-core/pJob', 'DismissJob': 'processes-core/pJob',
@@ -39,8 +43,7 @@ RENAMES = {'binaryInputValue': 'binaryValue', 'inlineOrRefData': 'inlineOrRefVal
 PARAMETERS = {'datetime': 'common-geodata/datetime', 'jobId': 'processes-core/jobID',
               'processIdPathParam': 'processes-core/processID-path',
               'processIdQueryParam': 'processes-core/processID-query'}
-RESPONSES = {'ConformanceDeclaration': 'common-core/rConformance',
-             'LandingPage': 'common-core/rLandingPage',
+RESPONSES = {'API': 'common-core/rAPI', 'NotAcceptable': 'common-core/rNotAcceptable',
              **{n: f'common-core/r{n}' for n in ('InvalidParameter', 'NotAllowed', 'NotFound', 'ServerError')}}
 
 
@@ -58,10 +61,6 @@ def source_for(version, relative):
             return V1 + 'ogcapi-processes-1.yaml#/paths/' + pointer, 'operation-view' if name in ('Job', 'DismissJob') else 'official'
         if relative == 'schemas/timeStamp':
             return FEATURES + 'timeStamp.yaml', 'external-common'
-        if relative in ('schemas/common-core/confClasses', 'schemas/common-core/exception'):
-            return FEATURES + name + '.yaml', 'external-common'
-        if relative.startswith('schemas/common-core/'):
-            return V1 + 'schemas/' + name + '.yaml', 'compatibility-alias'
         return V1 + relative + '.yaml', 'official'
     if kind == 'api':
         return V2 + 'ogcapi-processes.yaml', 'part1-composition'
@@ -70,7 +69,7 @@ def source_for(version, relative):
     if kind == 'operations':
         return V2 + 'paths/processes-core/operations/' + name + '.yaml', 'official'
     if (kind in ('schemas', 'parameters', 'responses') and len(parts) == 3
-            and parts[1] in ('common-core', 'common-geodata', 'processes-core', 'unspecified')):
+            and parts[1] in ('common-core', 'common-geodata', 'unspecified')):
         return V2 + relative + '.yaml', 'official'
     if kind == 'parameters':
         return V2 + 'parameters/' + PARAMETERS.get(name, 'processes-core/' + name) + '.yaml', 'official'
@@ -78,7 +77,7 @@ def source_for(version, relative):
         return V1 + relative + '.yaml', 'legacy-v1-only'
     if kind == 'responses':
         return V2 + 'responses/' + RESPONSES.get(name, 'processes-core/r' + name) + '.yaml', 'official'
-    if name in ('confClasses', 'exception', 'landingPage'):
+    if name == 'exception':
         return V2 + 'schemas/common-core/' + name + '.yaml', 'compatibility-alias' if len(parts) > 2 else 'official'
     if name == 'timeStamp':
         return V2 + 'schemas/common-geodata/timeStamp.yaml', 'external-common'

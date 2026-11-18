@@ -30,8 +30,12 @@ identifier-prefix: ogc.api.processes.
 # "default" is an alias for the main OGC Building Blocks Register.
 # Part 1, Part 2 and the standards documents are local to this register:
 # the former GeoLabs register imports are no longer needed.
+# OGC API – Common is imported for the landing page ("/") and conformance
+# ("/conformance") paths and the link schema, which are referenced from there
+# (bblocks://ogc.api.common.part1.*) instead of being redefined in this register.
 imports:
   - default
+  - https://geolabs.github.io/ogcapi-common-all-as-bblocks/build/register.json
   - https://ogcincubator.github.io/bblocks-cwl/build/register.json
 
 # Whether to enable the (highly experimental) downcompiling of JSON schemas to an

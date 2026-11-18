@@ -13,4 +13,4 @@ properties:
     items:
       type: number
   crs:
-    $ref: bblocks://ogc.api.processes.part1.v2.schemas.processes-core.bbox-def-crs
+    $ref: bblocks://ogc.api.processes.part1.v2.schemas.bbox-def-crs

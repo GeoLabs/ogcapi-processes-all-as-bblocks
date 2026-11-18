@@ -18,13 +18,21 @@ with their full Git history:
 
 | Edition | Sources | Namespace | API blocks | Document blocks |
 | --- | --- | --- | ---: | ---: |
-| [Part 1: Core 1.0, OGC 18-062r2](https://docs.ogc.org/is/18-062r2/18-062r2.html) | [_sources/part1/v1](_sources/part1/v1) | `ogc.api.processes.part1.v1.*` | 73 | 27 |
-| [Part 1: Core 2.0 draft, OGC 18-062r3](https://docs.ogc.org/DRAFTS/18-062r3.html) | [_sources/part1/v2](_sources/part1/v2) | `ogc.api.processes.part1.v2.*` | 102 | 35 |
+| [Part 1: Core 1.0, OGC 18-062r2](https://docs.ogc.org/is/18-062r2/18-062r2.html) | [_sources/part1/v1](_sources/part1/v1) | `ogc.api.processes.part1.v1.*` | 64 | 27 |
+| [Part 1: Core 2.0 draft, OGC 18-062r3](https://docs.ogc.org/DRAFTS/18-062r3.html) | [_sources/part1/v2](_sources/part1/v2) | `ogc.api.processes.part1.v2.*` | 92 | 35 |
 | [Part 2: Deploy, Replace, Undeploy 1.0 draft, OGC 20-044](https://docs.ogc.org/DRAFTS/20-044.html) | [_sources/part2/v1](_sources/part2/v1) | `ogc.api.processes.part2.v1.*` | 17 | 17 |
 
 *API blocks* are the schemas and OpenAPI components (`api`, `schemas/`, `parameters/`,
 `responses/`, `paths/`, `operations/`). *Document blocks* are the `clauses/`,
 `requirements/` and `annexes/` that make up the standards documents.
+
+The landing page (`/`) and conformance declaration (`/conformance`) paths are not
+defined here: both Part 1 APIs reference `ogc.api.common.part1.paths.LandingPage`
+and `ogc.api.common.part1.paths.Conformance` from the imported
+[OGC API – Common register](https://geolabs.github.io/ogcapi-common-all-as-bblocks/).
+Their responses and schemas (`responses.ConformanceDeclaration`, `responses.LandingPage`,
+`schemas.confClasses`, `schemas.landingPage`) are likewise only available from that register.
+There is consequently no `common-core` group in this register.
 
 Part 2 depends on Part 1 **version 1.0** (`part1.v1`), not on the 2.0 draft.
 Part 2 is a draft and has not been adopted by OGC.

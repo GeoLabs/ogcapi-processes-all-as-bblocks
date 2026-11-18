@@ -1,6 +1,6 @@
 # Embedded official Part 1 sources
 
-The source register has **175 blocks: 73 v1 and 102 v2**. Every block has one
+The source register has **156 blocks: 64 v1 and 92 v2**. Every block has one
 readable block-style YAML artifact, with space indentation. Schemas are embedded
 locally instead of bypassed by a metadata URL. Existing contexts, examples,
 test fixtures and JSON-LD annotations remain local assets.
@@ -20,7 +20,10 @@ test fixtures and JSON-LD annotations remain local assets.
 3. Make every relative OpenAPI `externalValue` an absolute official URL,
    without converting it into a building block reference. Missing upstream
    examples are not fabricated; their availability is not a source-equality test.
-4. Project the multipart v2 root onto the Part 1 paths, including `/api`, while
+4. Reference `/` and `/conformance` from the imported OGC API – Common register
+   (`COMMON_PATHS` in [audit_official_sources.py](audit_official_sources.py))
+   instead of embedding the official Processes Path Items, in both editions.
+   Project the multipart v2 root onto the remaining Part 1 paths, including `/api`, while
    preserving upstream API information, license notices, servers and definitions.
    Drop unused multipart components. Keep the Job GET and DELETE views separate
    and expose both operations from the API without JSON Schema `allOf` on paths.
@@ -119,7 +122,9 @@ run, but byte preservation cannot be asserted. `--closure` on the audit optional
 checks all transitive official references/pointers; it does not fetch external
 example payloads. HTTP cache and audit reports may be written outside source files.
 
-Each API must directly reach all nine historical path blocks, then reach
+Each API must reference the two OGC API – Common paths (the only accepted
+`ogc.api.common` references, with the Common link schema) and directly reach all
+seven local path blocks, then reach
 responses and schemas from each path and parameters at API level. Both Job
 methods and the newly discovered operation blocks are covered. Cross-edition,
 unresolved and invalid-pointer building block edges fail validation.

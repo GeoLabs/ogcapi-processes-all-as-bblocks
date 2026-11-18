@@ -10,7 +10,7 @@ tags:
 - Jobs
 parameters:
 - $ref: bblocks://ogc.api.processes.part1.v2.parameters.jobId
-- $ref: bblocks://ogc.api.processes.part1.v2.parameters.processes-core.prefer-header-return
+- $ref: bblocks://ogc.api.processes.part1.v2.parameters.prefer-header-return
 responses:
   200:
     $ref: bblocks://ogc.api.processes.part1.v2.responses.Results

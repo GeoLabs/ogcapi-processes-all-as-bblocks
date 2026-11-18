@@ -11,8 +11,8 @@ Part 1: Core, in one GeoLabs register, for reuse and contribution.
 
 | Edition | Sources | Identifier namespace | Blocks |
 | --- | --- | --- | --- |
-| [Part 1 version 1.0, OGC 18-062r2](https://docs.ogc.org/is/18-062r2/18-062r2.html) | [_sources/part1/v1](../_sources/part1/v1) | `ogc.api.processes.part1.v1.*` | 73 |
-| [Part 1 version 2.0 draft, OGC 18-062r3](https://docs.ogc.org/DRAFTS/18-062r3.html) | [_sources/part1/v2](../_sources/part1/v2) | `ogc.api.processes.part1.v2.*` | 102 |
+| [Part 1 version 1.0, OGC 18-062r2](https://docs.ogc.org/is/18-062r2/18-062r2.html) | [_sources/part1/v1](../_sources/part1/v1) | `ogc.api.processes.part1.v1.*` | 64 |
+| [Part 1 version 2.0 draft, OGC 18-062r3](https://docs.ogc.org/DRAFTS/18-062r3.html) | [_sources/part1/v2](../_sources/part1/v2) | `ogc.api.processes.part1.v2.*` | 92 |
 
 Both trees retain independent metadata, contexts and example resources. Schema
 and OpenAPI components **embed official definitions in readable, space-indented
@@ -21,7 +21,7 @@ to represented components use same-edition building block identifiers. Other
 official resources remain absolute external URLs.
 The single register at
 <https://geolabs.github.io/bblocks-ogcapi-processes/build/register.json>
-contains 175 source blocks. Its `identifier-prefix` is `ogc.api.processes.`;
+contains 156 source blocks. Its `identifier-prefix` is `ogc.api.processes.`;
 the source paths supply the independent part and edition segments.
 
 The original Part 1 version 1.0 register remains
@@ -62,7 +62,7 @@ external examples stay absolute URLs, never building block references.
 For standalone schema documents only, the producer adds the minimal root
 `$schema: http://json-schema.org/draft-04/schema#` declaration when the official
 document omits a dialect and contains an actual boolean `exclusiveMinimum` or
-`exclusiveMaximum` bound. Scanning all 175 artifacts identifies three documents:
+`exclusiveMaximum` bound. Scanning all 156 artifacts identifies three documents:
 v1 `schemas/schema`, v1 `schemas/swagger/schema`, and the legacy-v1-only v2
 `schemas/swagger/schema`. The current v2 Core schemas are not marked Draft4;
 existing official dialect declarations are never overwritten. All official
@@ -74,8 +74,8 @@ annotations; YAML formatting is not byte-identical upstream content. The
 independent audit requires exactly the eligible declaration and still rejects
 removed or changed constraints, other dialects and nested dialect additions.
 
-The 175-block inventory classifies 152 official components, four operation views
-(Job GET and DismissJob DELETE), four external common resources, seven compatibility
+The 156-block inventory classifies 136 official components, four operation views
+(Job GET and DismissJob DELETE), two external common resources, six compatibility
 aliases, one Part 1 API composition, and seven **legacy-v1-only** compatibility
 components. These seven v2-namespace blocks are `transmissionMode`, the four
 `schemas/swagger/*` components, `responses/swagger/ProcessDescription`, and
@@ -84,7 +84,22 @@ components. These seven v2-namespace blocks are `transmissionMode`, the four
 v2 compatibility schema names map as follows: `binaryInputValue` → `binaryValue`,
 `inlineOrRefData` → `inlineOrRefValue`, `inputValue` → `value`,
 `inputValueNoObject` → `valueNoObject`, `qualifiedInputValue` → `qualifiedValue`,
-and `output` → `outputSelection`. Common-core names are also mapped explicitly.
+and `output` → `outputSelection`. Common-core names are also mapped explicitly:
+official `responses/common-core/rAPI` and `rNotAcceptable` are the `responses/API`
+and `responses/NotAcceptable` blocks, like the other top-level response names.
+
+The landing page (`/`) and conformance declaration (`/conformance`) Path Items
+are **not** embedded from the official Processes sources. Both editions reference
+`bblocks://ogc.api.common.part1.paths.LandingPage` and
+`bblocks://ogc.api.common.part1.paths.Conformance` from the
+[OGC API – Common register](https://geolabs.github.io/ogcapi-common-all-as-bblocks/)
+imported in [bblocks-config.yaml](../bblocks-config.yaml), and the official
+`schemas/common-core/link.yaml` is represented by
+`bblocks://ogc.api.common.part1.schemas.link`. The landing page and conformance
+responses and schemas (`responses/LandingPage`, `responses/ConformanceDeclaration`,
+`schemas/landingPage`, `schemas/confClasses`) are not defined locally either: they
+are provided by the same register. This is a deliberate deviation from
+the official API documents; no `common-core` group remains in this register.
 Parameter aliases `jobId`, `processIdPathParam`, and `processIdQueryParam` point
 to official `jobID`, `processID-path`, and `processID-query` respectively.
 
@@ -114,7 +129,7 @@ and its original form is retained in a negative regression fixture.
 
 The source-only validation after embedding is described in
 [scripts/README.md](../scripts/README.md).
-It parses all 175 artifacts, reverses reference normalization independently of
+It parses all 156 artifacts, reverses reference normalization independently of
 the producer, and verifies API graph reachability and edition isolation.
 Regression tests include deliberately corrupted constraints, missing API paths,
 cross-edition edges, relative external example URLs and dialect mutations.
