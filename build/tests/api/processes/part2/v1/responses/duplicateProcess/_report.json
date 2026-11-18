@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.part2.v1.responses.duplicateProcess - Duplicate Process Error Response",
   "bblockName": "Duplicate Process Error Response",
   "bblockId": "ogc.api.processes.part2.v1.responses.duplicateProcess",
-  "generated": "2026-11-18T14:13:55.562275+00:00",
+  "generated": "2026-11-18T16:05:14.548519+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

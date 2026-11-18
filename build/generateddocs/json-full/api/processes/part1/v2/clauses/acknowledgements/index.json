@@ -25,7 +25,7 @@
   "license": {
     "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/clauses/acknowledgements/",
   "validationPassed": true,
   "description": "Requirements integrated within version 2.0 of this OGC API\u2009\u2014\u2009Processes Standard was sourced from Part 3: Workflows, whose development was undertaken as part of GeoConnections 2020-2021 and 2025-2027 projects GNS20-21IFP02 (Modular OGC API Workflows) and GNS25-27IFP2 (Advancing and Implementing OGC Standards for GeoDataCubes, DGGSs, Data Stores for Digital Twins and Cartographic Symbology). Financial support provided by GeoConnections, a national collaborative initiative led by Natural Resources Canada. GeoConnections supports the modernization of the Canadian Geospatial Data Infrastructure (CGDI). The CGDI is the collection of geospatial data, standards, policies, applications, and governance that facilitate its access, use, integration, and preservation.\n",

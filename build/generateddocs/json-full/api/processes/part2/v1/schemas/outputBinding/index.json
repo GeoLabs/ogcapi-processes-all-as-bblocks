@@ -6,7 +6,7 @@
   "abstract": "How a process output is retrieved from a Docker execution unit (Requirement /req/docker/output-binding).",
   "status": "under-development",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "itemClass": "schema",
   "version": "1.0.0",
   "sources": [
@@ -60,7 +60,7 @@
       ]
     }
   ],
-  "annotatedSchema": "type: object\ndescription: Defines how to retrieve the output result from the command.\nproperties:\n  glob:\n    description: \". Wildcard pattern to find the output on disk or mounted volume.\\n.\n      Uses UNIX \\\"glob\\\" wildcard patterns (see: \\\"man 7 glob\\\").\\n. See inputBinding.yaml\n      for referencing input values in an output\\n  binding \\\"glob\\\" expression.\"\n    oneOf:\n    - type: string\n    - type: array\n      items:\n        type: string\nadditionalProperties: true\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.outputBinding\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: 1.0.0\n  dateOfLastChange: '2026-11-17'\n",
+  "annotatedSchema": "type: object\ndescription: Defines how to retrieve the output result from the command.\nproperties:\n  glob:\n    description: \". Wildcard pattern to find the output on disk or mounted volume.\\n.\n      Uses UNIX \\\"glob\\\" wildcard patterns (see: \\\"man 7 glob\\\").\\n. See inputBinding.yaml\n      for referencing input values in an output\\n  binding \\\"glob\\\" expression.\"\n    oneOf:\n    - type: string\n    - type: array\n      items:\n        type: string\nadditionalProperties: true\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.outputBinding\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: 1.0.0\n  dateOfLastChange: '2026-11-18'\n",
   "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/schemas/outputBinding"
 }

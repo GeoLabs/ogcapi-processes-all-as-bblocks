@@ -12,12 +12,12 @@ None
 ```yaml
 type: object
 additionalProperties:
-  $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/values/schema.yaml
+  $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/values/schema.yaml
 x-bblocks-metadata:
   itemIdentifier: ogc.api.processes.part1.v2.schemas.results
   register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json
   version: '2.0'
-  dateOfLastChange: '2026-11-17'
+  dateOfLastChange: '2026-11-18'
 
 ```
 

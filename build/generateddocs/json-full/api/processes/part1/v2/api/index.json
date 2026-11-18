@@ -8,7 +8,7 @@
   "itemClass": "api",
   "register": "ogcapi-processes",
   "version": "2.0",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "sources": [
     {
       "title": "OGC API - Processes - Part 1: Core (2.0 draft, OGC 18-062r3)",
@@ -23,19 +23,19 @@
   "abstract": "This building block corresponds to OGC API Processes",
   "shaclShapes": {},
   "dependsOn": [
+    "ogc.api.common.part1.paths.Conformance",
+    "ogc.api.common.part1.paths.LandingPage",
     "ogc.api.processes.part1.v2.parameters.unspecified.f-metadata",
-    "ogc.api.processes.part1.v2.paths.Conformance",
     "ogc.api.processes.part1.v2.paths.DismissJob",
     "ogc.api.processes.part1.v2.paths.Execution",
     "ogc.api.processes.part1.v2.paths.Job",
     "ogc.api.processes.part1.v2.paths.JobList",
     "ogc.api.processes.part1.v2.paths.JobResult",
-    "ogc.api.processes.part1.v2.paths.LandingPage",
     "ogc.api.processes.part1.v2.paths.ProcessDescription",
     "ogc.api.processes.part1.v2.paths.ProcessList",
-    "ogc.api.processes.part1.v2.responses.ServerError",
-    "ogc.api.processes.part1.v2.responses.common-core.rAPI",
-    "ogc.api.processes.part1.v2.responses.common-core.rNotAcceptable"
+    "ogc.api.processes.part1.v2.responses.API",
+    "ogc.api.processes.part1.v2.responses.NotAcceptable",
+    "ogc.api.processes.part1.v2.responses.ServerError"
   ],
   "license": {
     "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"

@@ -33,7 +33,7 @@
   "license": {
     "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/requirements/oas31/",
   "validationPassed": true,
   "description": "Servers conforming to the OpenAPI Specification 3.2 Requirements Class define their API implementation instance as an [OpenAPI 3.1 Document](https://spec.openapis.org/oas/v3.1.0#openapi-document).\n\n<!-- requirements-class -->\n\n<!-- requirement: oas31/oas-definition -->\n",

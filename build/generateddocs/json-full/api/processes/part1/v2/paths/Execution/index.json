@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-12-02T09:00:00.000000",
   "register": "ogcapi-processes",
   "version": "2.0",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "sources": [
     {
       "title": "OGC API Processes - Part 1 - Core",
@@ -21,15 +21,15 @@
   "itemClass": "path",
   "shaclShapes": {},
   "dependsOn": [
+    "ogc.api.processes.part1.v2.parameters.prefer-header-execution",
     "ogc.api.processes.part1.v2.parameters.processIdPathParam",
-    "ogc.api.processes.part1.v2.parameters.processes-core.prefer-header-execution",
-    "ogc.api.processes.part1.v2.parameters.processes-core.response",
+    "ogc.api.processes.part1.v2.parameters.response",
+    "ogc.api.processes.part1.v2.responses.Empty",
     "ogc.api.processes.part1.v2.responses.ExecuteAsync",
+    "ogc.api.processes.part1.v2.responses.ExecuteCollectionRedirect",
     "ogc.api.processes.part1.v2.responses.ExecuteSync",
     "ogc.api.processes.part1.v2.responses.NotFound",
     "ogc.api.processes.part1.v2.responses.ServerError",
-    "ogc.api.processes.part1.v2.responses.processes-core.rEmpty",
-    "ogc.api.processes.part1.v2.responses.processes-core.rExecuteCollectionRedirect",
     "ogc.api.processes.part1.v2.schemas.execute",
     "ogc.api.processes.part1.v2.schemas.results"
   ],

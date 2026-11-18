@@ -30,7 +30,7 @@ allOf:
           This includes all the data access apis listed in "apis.yaml" plus
 
           the processing APIs of OGC API Processes and OpenEO.'
-      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/processingEntityType/schema.yaml
+      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processingEntityType/schema.yaml
     profileEntityType:
       allOf:
       - description: 'The type of entity requesting this status information.  This
@@ -41,7 +41,7 @@ allOf:
           processing entity may be OGC API Processes but the status
 
           information is requested via the OpenEO API.'
-      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/processingEntityType/schema.yaml
+      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processingEntityType/schema.yaml
     request:
       oneOf:
       - type: string
@@ -77,7 +77,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.api.processes.part1.v2.schemas.statusInfo
   register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json
   version: '2.0'
-  dateOfLastChange: '2026-11-17'
+  dateOfLastChange: '2026-11-18'
 
 ```
 

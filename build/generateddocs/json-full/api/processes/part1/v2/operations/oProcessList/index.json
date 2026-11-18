@@ -5,7 +5,7 @@
   "name": "oProcessList",
   "status": "under-development",
   "dateTimeAddition": "2026-11-10T00:00:00Z",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "itemClass": "model",
   "version": "2.0",
   "register": "ogcapi-processes",

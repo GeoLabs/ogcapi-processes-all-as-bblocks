@@ -6,7 +6,7 @@
   "abstract": "Common Workflow Language (CWL) document encoding for Deploy/Replace operations. The request body is a complete CWL document (Workflow, CommandLineTool, or ExpressionTool).",
   "status": "under-development",
   "dateTimeAddition": "2025-11-18T22:00:00Z",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "register": "ogc-api-processes-part2",
   "version": "0.1",
   "sources": [
@@ -61,7 +61,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWL/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.ogcapppkg-cwl\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-17'\n",
+  "annotatedSchema": "$ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWL/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.ogcapppkg-cwl\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-18'\n",
   "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/schemas/ogcapppkg-cwl"
 }

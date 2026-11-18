@@ -22,7 +22,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.api.processes.part2.v1.responses.duplicateProcess
   register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-17'
+  dateOfLastChange: '2026-11-18'
 
 ```
 

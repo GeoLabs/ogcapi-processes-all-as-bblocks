@@ -1,0 +1,15 @@
+{
+  "title": "Validation report for ogc.api.processes.part1.v2.schemas.responseCollection - responseCollection",
+  "bblockName": "responseCollection",
+  "bblockId": "ogc.api.processes.part1.v2.schemas.responseCollection",
+  "generated": "2026-11-18T16:05:14.438531+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "hasWarnings": false,
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

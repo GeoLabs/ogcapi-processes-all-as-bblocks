@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.processes.part2.v1.schemas.executionUnitValue - Execution unit property value (single or array)",
   "bblockName": "Execution unit property value (single or array)",
   "bblockId": "ogc.api.processes.part2.v1.schemas.executionUnitValue",
-  "generated": "2026-11-18T14:13:56.480607+00:00",
+  "generated": "2026-11-18T16:05:14.935213+00:00",
   "result": true,
   "items": [
     {
@@ -82,7 +82,7 @@
               "exception": "ValidationError",
               "errorMessage": "'href' is a required property",
               "isError": true,
-              "message": "ValidationError: 'href' is a required property\n\nFailed validating 'required' in schema[0]['allOf'][0]:\n    {'type': 'object',\n     'required': ['href'],\n     'properties': {'href': {'type': 'string'},\n                    'rel': {'type': 'string', 'example': 'service'},\n                    'type': {'type': 'string',\n                             'example': 'application/json'},\n                    'hreflang': {'type': 'string', 'example': 'en'},\n                    'title': {'type': 'string'}},\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v1.schemas.link',\n                            'register': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json',\n                            'version': '1.0',\n                            'dateOfLastChange': '2026-11-17'}}\n\nOn instance:\n    {'value': 'not a typed execution unit'}"
+              "message": "ValidationError: 'href' is a required property\n\nFailed validating 'required' in schema[0]['allOf'][0]:\n    {'type': 'object',\n     'required': ['href'],\n     'properties': {'href': {'type': 'string'},\n                    'rel': {'type': 'string', 'example': 'service'},\n                    'type': {'type': 'string',\n                             'example': 'application/json'},\n                    'hreflang': {'type': 'string', 'example': 'en'},\n                    'title': {'type': 'string'}},\n     'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v1.schemas.link',\n                            'register': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json',\n                            'version': '1.0',\n                            'dateOfLastChange': '2026-11-18'}}\n\nOn instance:\n    {'value': 'not a typed execution unit'}"
             }
           ]
         }

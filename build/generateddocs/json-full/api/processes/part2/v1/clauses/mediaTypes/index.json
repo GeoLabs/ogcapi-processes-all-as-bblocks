@@ -26,7 +26,7 @@
   "license": {
     "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/clauses/mediaTypes/",
   "validationPassed": true,
   "description": "See [OGC 18-062r2](#OAProc-1), Clause 13.\n\nAdditional JSON media types that would typically be used in a server that supports JSON are:\n\n- `application/ogcapppkg+json`\n- `application/cwl+json`\n\nAdditional CWL media types that would typically be used in a server that supports CWL are:\n\n- `application/cwl`\n- `application/cwl+yaml`\n",

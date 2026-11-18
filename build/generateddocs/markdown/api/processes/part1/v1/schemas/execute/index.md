@@ -35,7 +35,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.api.processes.part1.v1.schemas.execute
   register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-17'
+  dateOfLastChange: '2026-11-18'
 
 ```
 

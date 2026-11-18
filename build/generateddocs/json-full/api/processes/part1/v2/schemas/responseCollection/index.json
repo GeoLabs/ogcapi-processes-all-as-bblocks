@@ -1,0 +1,38 @@
+
+
+{
+  "itemIdentifier": "ogc.api.processes.part1.v2.schemas.responseCollection",
+  "name": "responseCollection",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "dateOfLastChange": "2026-11-18",
+  "itemClass": "schema",
+  "version": "2.0",
+  "register": "ogcapi-processes",
+  "sources": [
+    {
+      "title": "OGC API - Processes pinned official Core component",
+      "link": "https://raw.githubusercontent.com/opengeospatial/ogcapi-processes/0f9c3d88ccdb1802f6356fd39e7963df7b8dadae/openapi/schemas/processes-core/responseCollection.yaml"
+    }
+  ],
+  "tags": [
+    "ogcapi-processes",
+    "official",
+    "part1-v2"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
+  },
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/responseCollection/schema.yaml",
+    "application/json": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/responseCollection/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/schemas/responseCollection/schema.yaml",
+  "resolvedSchemaProperties": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/responseCollection/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/schemas/responseCollection/",
+  "validationPassed": true,
+  "annotatedSchema": "type: object\nproperties:\n  response:\n    type: string\n    enum:\n    - collection\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.responseCollection\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-18'\n",
+  "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
+  "gitPath": "_sources/part1/v2/schemas/responseCollection"
+}

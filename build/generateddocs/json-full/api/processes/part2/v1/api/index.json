@@ -6,7 +6,7 @@
   "abstract": "API definition for OGC API - Processes Part 2 extending Part 1 with process lifecycle management",
   "status": "under-development",
   "dateTimeAddition": "2025-11-18T21:00:00Z",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "itemClass": "api",
   "register": "ogc-api-processes-part2",
   "version": "0.1",

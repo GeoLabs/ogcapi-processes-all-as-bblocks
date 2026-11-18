@@ -11,9 +11,9 @@ None
 
 ```yaml
 allOf:
-- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/linkBase/schema.yaml
-- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/linkBaseExtended/schema.yaml
-- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/dataClasses/schema.yaml
+- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/linkBase/schema.yaml
+- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/linkBaseExtended/schema.yaml
+- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/dataClasses/schema.yaml
 - type: object
   required:
   - href
@@ -24,7 +24,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.api.processes.part1.v2.schemas.link
   register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json
   version: '2.0'
-  dateOfLastChange: '2026-11-17'
+  dateOfLastChange: '2026-11-18'
 
 ```
 

@@ -6,7 +6,7 @@
   "abstract": "Extension of Process Summary with mutability indicator for Deploy, Replace, Undeploy operations",
   "status": "under-development",
   "dateTimeAddition": "2025-11-18T21:00:00Z",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "register": "ogc-api-processes-part2",
   "version": "0.2",
   "sources": [
@@ -68,7 +68,7 @@
       ]
     }
   ],
-  "annotatedSchema": "allOf:\n- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/processSummary/schema.yaml\n- type: object\n  properties:\n    mutable:\n      type: boolean\n      default: true\n      description: Indicates whether the process can be modified via Deploy, Replace,\n        Undeploy operations\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.staticIndicator\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-11-17'\n",
+  "annotatedSchema": "allOf:\n- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/processSummary/schema.yaml\n- type: object\n  properties:\n    mutable:\n      type: boolean\n      default: true\n      description: Indicates whether the process can be modified via Deploy, Replace,\n        Undeploy operations\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.staticIndicator\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-11-18'\n",
   "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/schemas/staticIndicator"
 }

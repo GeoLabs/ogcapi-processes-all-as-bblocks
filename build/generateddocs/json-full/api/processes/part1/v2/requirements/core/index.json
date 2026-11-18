@@ -18,11 +18,11 @@
     }
   ],
   "dependsOn": [
-    "ogc.api.processes.part1.v2.paths.Conformance",
+    "ogc.api.common.part1.paths.Conformance",
+    "ogc.api.common.part1.paths.LandingPage",
     "ogc.api.processes.part1.v2.paths.Execution",
     "ogc.api.processes.part1.v2.paths.Job",
     "ogc.api.processes.part1.v2.paths.JobResult",
-    "ogc.api.processes.part1.v2.paths.LandingPage",
     "ogc.api.processes.part1.v2.paths.ProcessDescription",
     "ogc.api.processes.part1.v2.paths.ProcessList",
     "ogc.api.processes.part1.v2.schemas.processList",
@@ -44,7 +44,7 @@
   "license": {
     "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "schema": {
     "application/yaml": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/requirements/core/schema.yaml",
     "application/json": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/requirements/core/schema.json"

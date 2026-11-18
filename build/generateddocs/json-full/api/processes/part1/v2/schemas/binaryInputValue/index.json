@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-10-22T15:29:12.046535",
   "register": "ogcapi-processes",
   "version": "2.0",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "sources": [
     {
       "title": "OGC API - Processes - Part 1: Core (2.0 draft, OGC 18-062r3)",
@@ -30,7 +30,7 @@
   "sourceSchema": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/schemas/binaryInputValue/schema.yaml",
   "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/schemas/binaryInputValue/",
   "validationPassed": true,
-  "annotatedSchema": "type: string\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.binaryInputValue\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-17'\n",
+  "annotatedSchema": "type: string\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.binaryInputValue\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-18'\n",
   "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part1/v2/schemas/binaryInputValue"
 }

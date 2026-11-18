@@ -1,0 +1,19 @@
+type: object
+required:
+- rel
+properties:
+  rel:
+    type: string
+  type:
+    type: string
+  hreflang:
+    type: string
+  title:
+    type: string
+  length:
+    type: integer
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.processes.part1.v2.schemas.linkBase
+  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json
+  version: '2.0'
+  dateOfLastChange: '2026-11-18'

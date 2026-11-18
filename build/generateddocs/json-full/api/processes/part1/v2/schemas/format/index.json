@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-10-22T15:29:12.046535",
   "register": "ogcapi-processes",
   "version": "2.0",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "sources": [
     {
       "title": "OGC API - Processes - Part 1: Core (2.0 draft, OGC 18-062r3)",
@@ -21,7 +21,7 @@
   "itemClass": "schema",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.part1.v2.schemas.processes-core.dataClasses"
+    "ogc.api.processes.part1.v2.schemas.dataClasses"
   ],
   "license": {
     "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
@@ -34,7 +34,7 @@
   "resolvedSchemaProperties": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/format/resolvedProperties.json",
   "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v2/schemas/format/",
   "validationPassed": true,
-  "annotatedSchema": "allOf:\n- type: object\n  properties:\n    mediaType:\n      type: string\n    encoding:\n      type: string\n    schema:\n      oneOf:\n      - type: string\n        format: url\n      - type: object\n- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/processes-core/dataClasses/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.format\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-17'\n",
+  "annotatedSchema": "allOf:\n- type: object\n  properties:\n    mediaType:\n      type: string\n    encoding:\n      type: string\n    schema:\n      oneOf:\n      - type: string\n        format: url\n      - type: object\n- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/schemas/dataClasses/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v2.schemas.format\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '2.0'\n  dateOfLastChange: '2026-11-18'\n",
   "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part1/v2/schemas/format"
 }

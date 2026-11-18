@@ -6,7 +6,7 @@
   "abstract": "Canonical value of an OGC Application Package executionUnit property: one executionUnitBase or an array. Distinct from the legacy flat executionUnit container schema.",
   "status": "under-development",
   "dateTimeAddition": "2026-11-09T00:00:00Z",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "itemClass": "schema",
   "version": "1.0.0",
   "sources": [
@@ -63,7 +63,7 @@
       ]
     }
   ],
-  "annotatedSchema": "oneOf:\n- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.yaml\n- type: array\n  items:\n    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.executionUnitValue\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: 1.0.0\n  dateOfLastChange: '2026-11-17'\n",
+  "annotatedSchema": "oneOf:\n- $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.yaml\n- type: array\n  items:\n    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitBase/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.executionUnitValue\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: 1.0.0\n  dateOfLastChange: '2026-11-18'\n",
   "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/schemas/executionUnitValue"
 }

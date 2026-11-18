@@ -9,7 +9,7 @@
   "itemClass": "response",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "sources": [
     {
       "title": "OGC API - Processes - Part 2: Deploy, Replace, Undeploy (Draft)",
@@ -39,7 +39,7 @@
   "sourceSchema": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/responses/duplicateProcess/schema.yaml",
   "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/responses/duplicateProcess/",
   "validationPassed": true,
-  "annotatedSchema": "description: the process being added is already deployed (i.e. duplicate)\ncontent:\n  application/json:\n    schema:\n      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/exception/schema.yaml\n  text/html:\n    schema:\n      type: string\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.responses.duplicateProcess\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-17'\n",
+  "annotatedSchema": "description: the process being added is already deployed (i.e. duplicate)\ncontent:\n  application/json:\n    schema:\n      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/exception/schema.yaml\n  text/html:\n    schema:\n      type: string\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.responses.duplicateProcess\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-18'\n",
   "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/responses/duplicateProcess"
 }

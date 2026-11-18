@@ -26,7 +26,7 @@
   "license": {
     "url": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/LICENSE"
   },
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/clauses/openapi/",
   "validationPassed": true,
   "description": "See [OGC 18-062r2](#OAProc-1), Clause 12.\n",

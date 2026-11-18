@@ -8,7 +8,7 @@
   "itemClass": "api",
   "register": "ogcapi-processes",
   "version": "1.0",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "sources": [
     {
       "title": "OGC API Processes",
@@ -22,13 +22,13 @@
   "abstract": "This building block corresponds to OGC API Processes Part 1",
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.part1.v1.paths.Conformance",
+    "ogc.api.common.part1.paths.Conformance",
+    "ogc.api.common.part1.paths.LandingPage",
     "ogc.api.processes.part1.v1.paths.DismissJob",
     "ogc.api.processes.part1.v1.paths.Execution",
     "ogc.api.processes.part1.v1.paths.Job",
     "ogc.api.processes.part1.v1.paths.JobList",
     "ogc.api.processes.part1.v1.paths.JobResult",
-    "ogc.api.processes.part1.v1.paths.LandingPage",
     "ogc.api.processes.part1.v1.paths.ProcessDescription",
     "ogc.api.processes.part1.v1.paths.ProcessList"
   ],

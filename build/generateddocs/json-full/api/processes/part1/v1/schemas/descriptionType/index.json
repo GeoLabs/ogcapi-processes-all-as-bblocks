@@ -6,7 +6,7 @@
   "dateTimeAddition": "2025-10-22T15:29:12.046535",
   "register": "ogcapi-processes",
   "version": "1.0",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "sources": [
     {
       "title": "OGC API - Processes - Part 1: Core (version 1.0, OGC 18-062r2)",
@@ -35,7 +35,7 @@
   "resolvedSchemaProperties": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/descriptionType/resolvedProperties.json",
   "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part1/v1/schemas/descriptionType/",
   "validationPassed": true,
-  "annotatedSchema": "type: object\nproperties:\n  title:\n    type: string\n  description:\n    type: string\n  keywords:\n    type: array\n    items:\n      type: string\n  metadata:\n    type: array\n    items:\n      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/metadata/schema.yaml\n  additionalParameters:\n    allOf:\n    - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/metadata/schema.yaml\n    - type: object\n      properties:\n        parameters:\n          type: array\n          items:\n            $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/additionalParameter/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v1.schemas.descriptionType\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-17'\n",
+  "annotatedSchema": "type: object\nproperties:\n  title:\n    type: string\n  description:\n    type: string\n  keywords:\n    type: array\n    items:\n      type: string\n  metadata:\n    type: array\n    items:\n      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/metadata/schema.yaml\n  additionalParameters:\n    allOf:\n    - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/metadata/schema.yaml\n    - type: object\n      properties:\n        parameters:\n          type: array\n          items:\n            $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/additionalParameter/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part1.v1.schemas.descriptionType\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-18'\n",
   "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part1/v1/schemas/descriptionType"
 }

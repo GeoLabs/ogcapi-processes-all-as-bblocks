@@ -13,8 +13,8 @@ post:
   - Core
   parameters:
   - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/parameters/processIdPathParam/openapi.yaml
-  - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/parameters/processes-core/response/openapi.yaml
-  - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/parameters/processes-core/prefer-header-execution/openapi.yaml
+  - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/parameters/response/openapi.yaml
+  - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/parameters/prefer-header-execution/openapi.yaml
   requestBody:
     description: 'An execution request specifying any inputs for the process to execute,
       and optionally to select specific outputs.
@@ -34,9 +34,9 @@ post:
     201:
       $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/ExecuteAsync/openapi.yaml
     204:
-      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/processes-core/rEmpty/openapi.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/Empty/openapi.yaml
     303:
-      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/processes-core/rExecuteCollectionRedirect/openapi.yaml
+      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/ExecuteCollectionRedirect/openapi.yaml
     404:
       $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/NotFound/openapi.yaml
     500:

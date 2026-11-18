@@ -1,5 +1,5 @@
 Validation report for ogc.api.processes.part1.v2.requirements.core - Core
-Generated 2026-11-18T14:13:56.865236+00:00
+Generated 2026-11-18T16:05:15.213155+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -23,7 +23,7 @@ Failed validating 'required' in schema:
      'x-bblocks-metadata': {'itemIdentifier': 'ogc.api.processes.part1.v2.schemas.processList',
                             'register': 'https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json',
                             'version': '2.0',
-                            'dateOfLastChange': '2026-11-17'}}
+                            'dateOfLastChange': '2026-11-18'}}
 
 On instance:
     {'processes': [{'id': 'EchoProcess',

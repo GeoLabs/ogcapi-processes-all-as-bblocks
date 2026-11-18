@@ -179,10 +179,6 @@ Complete published section of OGC 18-062r2, 1.0.0; modified BB rendition, not an
 
 **Type:** schema
 
-### `ogc.api.processes.part1.v1.schemas.confClasses` — confClasses
-
-**Type:** schema
-
 ### `ogc.api.processes.part1.v1.schemas.exception` — exception
 
 **Type:** schema
@@ -210,18 +206,6 @@ Complete published section of OGC 18-062r2, 1.0.0; modified BB rendition, not an
 ### `ogc.api.processes.part1.v1.schemas.additionalParameter` — additionalParameter
 
 **Type:** schema
-
-### `ogc.api.processes.part1.v1.schemas.common-core.confClasses` — confClasses
-
-**Type:** schema
-
-This building block corresponds to the schema for an OGC API Features confClasses
-
-### `ogc.api.processes.part1.v1.schemas.common-core.exception` — exception
-
-**Type:** schema
-
-This building block corresponds to the schema for an OGC API Features exception
 
 ### `ogc.api.processes.part1.v1.schemas.metadata` — metadata
 
@@ -263,7 +247,7 @@ Annex B (informative) of OGC API — Processes — Part 1: Core (DRAFT, OGC 18-0
 
 **Type:** parameter
 
-### `ogc.api.processes.part1.v2.responses.common-core.rAPI` — rAPI
+### `ogc.api.processes.part1.v2.responses.API` — API
 
 **Type:** response
 
@@ -367,7 +351,7 @@ Terms, definitions and abbreviated terms for OGC API — Processes Part 1: Core.
 
 **Type:** parameter
 
-### `ogc.api.processes.part1.v2.parameters.processes-core.prefer-header-return` — prefer-header-return
+### `ogc.api.processes.part1.v2.parameters.prefer-header-return` — prefer-header-return
 
 **Type:** parameter
 
@@ -387,6 +371,10 @@ Terms, definitions and abbreviated terms for OGC API — Processes Part 1: Core.
 
 **Type:** parameter
 
+### `ogc.api.processes.part1.v2.parameters.prefer-header-execution` — prefer-header-execution
+
+**Type:** parameter
+
 ### `ogc.api.processes.part1.v2.parameters.processIdPathParam` — processIdPathParam
 
 **Type:** parameter
@@ -395,11 +383,7 @@ Terms, definitions and abbreviated terms for OGC API — Processes Part 1: Core.
 
 **Type:** parameter
 
-### `ogc.api.processes.part1.v2.parameters.processes-core.prefer-header-execution` — prefer-header-execution
-
-**Type:** parameter
-
-### `ogc.api.processes.part1.v2.parameters.processes-core.response` — response
+### `ogc.api.processes.part1.v2.parameters.response` — response
 
 **Type:** parameter
 
@@ -411,11 +395,11 @@ Terms, definitions and abbreviated terms for OGC API — Processes Part 1: Core.
 
 **Type:** parameter
 
-### `ogc.api.processes.part1.v2.responses.processes-core.rEmpty` — rEmpty
+### `ogc.api.processes.part1.v2.responses.Empty` — Empty
 
 **Type:** response
 
-### `ogc.api.processes.part1.v2.responses.processes-core.rExecuteCollectionRedirect` — rExecuteCollectionRedirect
+### `ogc.api.processes.part1.v2.responses.ExecuteCollectionRedirect` — ExecuteCollectionRedirect
 
 **Type:** response
 
@@ -503,10 +487,6 @@ Requirements class “Profile query parameter” of OGC API — Processes — Pa
 
 Requirements class “Remote Collections” of OGC API — Processes — Part 1: Core (DRAFT, OGC 18-062r3): collections of other OGC API deployments as process inputs.
 
-### `ogc.api.processes.part1.v2.schemas.confClasses` — confClasses
-
-**Type:** schema
-
 ### `ogc.api.processes.part1.v2.responses.ExecuteSyncRawRef` — ExecuteSyncRawRef
 
 **Type:** response
@@ -523,7 +503,11 @@ Requirements class “Remote Collections” of OGC API — Processes — Part 1:
 
 **Type:** schema
 
-### `ogc.api.processes.part1.v2.schemas.processes-core.bbox-def-crs` — bbox-def-crs
+### `ogc.api.processes.part1.v2.schemas.apis` — apis
+
+**Type:** schema
+
+### `ogc.api.processes.part1.v2.schemas.bbox-def-crs` — bbox-def-crs
 
 **Type:** schema
 
@@ -535,47 +519,11 @@ Requirements class “Remote Collections” of OGC API — Processes — Part 1:
 
 **Type:** schema
 
-### `ogc.api.processes.part1.v2.schemas.common-core.confClasses` — confClasses
+### `ogc.api.processes.part1.v2.schemas.safeCurie` — safeCurie
 
 **Type:** schema
 
-Compatibility identifier for the official Processes master Common Core confClasses schema.
-
-### `ogc.api.processes.part1.v2.schemas.common-core.exception` — exception
-
-**Type:** schema
-
-This building block corresponds to the schema for an OGC API Features exception
-
-### `ogc.api.processes.part1.v2.schemas.common-core.link` — link
-
-**Type:** schema
-
-### `ogc.api.processes.part1.v2.schemas.processes-core.responseCollection` — responseCollection
-
-**Type:** schema
-
-### `ogc.api.processes.part1.v2.schemas.processes-core.executionUnitRequirements` — executionUnitRequirements
-
-**Type:** schema
-
-### `ogc.api.processes.part1.v2.schemas.jobControlOptions` — jobControlOptions
-
-**Type:** schema
-
-### `ogc.api.processes.part1.v2.schemas.processes-core.linkBase` — linkBase
-
-**Type:** schema
-
-### `ogc.api.processes.part1.v2.schemas.processes-core.linkBaseExtended` — linkBaseExtended
-
-**Type:** schema
-
-### `ogc.api.processes.part1.v2.schemas.processes-core.apis` — apis
-
-**Type:** schema
-
-### `ogc.api.processes.part1.v2.schemas.processes-core.safeCurie` — safeCurie
+### `ogc.api.processes.part1.v2.schemas.responseCollection` — responseCollection
 
 **Type:** schema
 
@@ -583,11 +531,27 @@ This building block corresponds to the schema for an OGC API Features exception
 
 **Type:** schema
 
-### `ogc.api.processes.part1.v2.schemas.schema` — schema
+### `ogc.api.processes.part1.v2.schemas.executionUnitRequirements` — executionUnitRequirements
+
+**Type:** schema
+
+### `ogc.api.processes.part1.v2.schemas.jobControlOptions` — jobControlOptions
+
+**Type:** schema
+
+### `ogc.api.processes.part1.v2.schemas.linkBase` — linkBase
+
+**Type:** schema
+
+### `ogc.api.processes.part1.v2.schemas.linkBaseExtended` — linkBaseExtended
 
 **Type:** schema
 
 ### `ogc.api.processes.part1.v2.schemas.reference` — reference
+
+**Type:** schema
+
+### `ogc.api.processes.part1.v2.schemas.schema` — schema
 
 **Type:** schema
 
@@ -721,10 +685,6 @@ Schema for execution units (Docker, OCI containers) for process deployment
 
 **Type:** schema
 
-### `ogc.api.processes.part1.v1.responses.ConformanceDeclaration` — ConformanceDeclaration
-
-**Type:** response
-
 ### `ogc.api.processes.part1.v1.responses.InvalidParameter` — InvalidParameter
 
 **Type:** response
@@ -763,16 +723,6 @@ Error response when attempting to replace or undeploy an immutable process
 
 Part 2 support schema for a qualified execution payload of any JSON type. This is not the Part 1 qualifiedInputValue contract.
 
-### `ogc.api.processes.part1.v1.schemas.common-core.landingPage` — landingPage
-
-**Type:** schema
-
-This building block corresponds to the schema for an OGC API Features landingPage
-
-### `ogc.api.processes.part1.v1.schemas.landingPage` — landingPage
-
-**Type:** schema
-
 ### `ogc.api.processes.part1.v1.schemas.statusInfo` — statusInfo
 
 **Type:** schema
@@ -797,11 +747,11 @@ This building block corresponds to the schema for an OGC API Features landingPag
 
 **Type:** parameter
 
-### `ogc.api.processes.part1.v2.responses.ConformanceDeclaration` — ConformanceDeclaration
+### `ogc.api.processes.part1.v2.responses.InvalidParameter` — InvalidParameter
 
 **Type:** response
 
-### `ogc.api.processes.part1.v2.responses.InvalidParameter` — InvalidParameter
+### `ogc.api.processes.part1.v2.responses.NotAcceptable` — NotAcceptable
 
 **Type:** response
 
@@ -817,37 +767,23 @@ This building block corresponds to the schema for an OGC API Features landingPag
 
 **Type:** response
 
-### `ogc.api.processes.part1.v2.responses.common-core.rNotAcceptable` — rNotAcceptable
+### `ogc.api.processes.part1.v2.schemas.dataAccessAPIs` — dataAccessAPIs
 
-**Type:** response
+**Type:** schema
+
+### `ogc.api.processes.part1.v2.schemas.processingEntityType` — processingEntityType
+
+**Type:** schema
 
 ### `ogc.api.processes.part1.v2.schemas.bbox` — bbox
 
 **Type:** schema
 
-### `ogc.api.processes.part1.v2.schemas.common-core.landingPage` — landingPage
+### `ogc.api.processes.part1.v2.schemas.dataClasses` — dataClasses
 
 **Type:** schema
 
-This building block corresponds to the schema for an OGC API Features landingPage
-
-### `ogc.api.processes.part1.v2.schemas.landingPage` — landingPage
-
-**Type:** schema
-
-### `ogc.api.processes.part1.v2.schemas.processes-core.dataAccessAPIs` — dataAccessAPIs
-
-**Type:** schema
-
-### `ogc.api.processes.part1.v2.schemas.processes-core.processingEntityType` — processingEntityType
-
-**Type:** schema
-
-### `ogc.api.processes.part1.v2.schemas.processes-core.dataClasses` — dataClasses
-
-**Type:** schema
-
-### `ogc.api.processes.part1.v2.schemas.processes-core.schemaAndOccurrences` — schemaAndOccurrences
+### `ogc.api.processes.part1.v2.schemas.schemaAndOccurrences` — schemaAndOccurrences
 
 **Type:** schema
 
@@ -868,14 +804,6 @@ Value of the value field of a Docker execution unit (Requirement /req/docker/sch
 ### `ogc.api.processes.part1.v1.schemas.inputValue` — inputValue
 
 **Type:** schema
-
-### `ogc.api.processes.part1.v1.paths.Conformance` — Conformance
-
-**Type:** path
-
-### `ogc.api.processes.part1.v1.responses.LandingPage` — LandingPage
-
-**Type:** response
 
 ### `ogc.api.processes.part1.v1.responses.ExecuteAsync` — ExecuteAsync
 
@@ -909,14 +837,6 @@ Value of the value field of a Docker execution unit (Requirement /req/docker/sch
 
 **Type:** schema
 
-### `ogc.api.processes.part1.v2.paths.Conformance` — Conformance
-
-**Type:** path
-
-### `ogc.api.processes.part1.v2.responses.LandingPage` — LandingPage
-
-**Type:** response
-
 ### `ogc.api.processes.part1.v2.schemas.format` — format
 
 **Type:** schema
@@ -938,10 +858,6 @@ Base schema of a single execution unit (DRAFT): either a link to the execution u
 ### `ogc.api.processes.part1.v1.schemas.qualifiedInputValue` — qualifiedInputValue
 
 **Type:** schema
-
-### `ogc.api.processes.part1.v1.paths.LandingPage` — LandingPage
-
-**Type:** path
 
 ### `ogc.api.processes.part1.v1.paths.DismissJob` — Dismiss Job
 
@@ -972,10 +888,6 @@ Extension of Process Summary with mutability indicator for Deploy, Replace, Unde
 ### `ogc.api.processes.part1.v1.schemas.swagger.process` — process
 
 **Type:** schema
-
-### `ogc.api.processes.part1.v2.paths.LandingPage` — LandingPage
-
-**Type:** path
 
 ### `ogc.api.processes.part1.v2.schemas.collectionValue` — collectionValue
 
@@ -1235,7 +1147,7 @@ Complete published section of OGC 18-062r2, 1.0.0; modified BB rendition, not an
 
 This building block corresponds to OGC API Processes Part 1
 
-### `ogc.api.processes.part1.v2.schemas.processes-core.values` — values
+### `ogc.api.processes.part1.v2.schemas.values` — values
 
 **Type:** schema
 
@@ -1251,7 +1163,7 @@ This building block corresponds to OGC API Processes Part 1
 
 **Type:** path
 
-### `ogc.api.processes.part1.v2.schemas.processes-core.executeBase` — executeBase
+### `ogc.api.processes.part1.v2.schemas.executeBase` — executeBase
 
 **Type:** schema
 

@@ -6,7 +6,7 @@
   "abstract": "Response schema for successful process deployment operations",
   "status": "under-development",
   "dateTimeAddition": "2025-11-18T21:00:00Z",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "register": "ogc-api-processes-part2",
   "version": "0.1",
   "sources": [
@@ -40,7 +40,7 @@
   "resolvedSchemaProperties": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/responses/deploySuccess/resolvedProperties.json",
   "sourceFiles": "https://geolabs.github.io/ogcapi-processes-all-as-bblocks/_sources/part2/v1/responses/deploySuccess/",
   "validationPassed": true,
-  "annotatedSchema": "type: object\ndescription: Successful process deployment response\nproperties:\n  status:\n    type: string\n    enum:\n    - success\n  message:\n    type: string\n    description: Success message\n  processId:\n    type: string\n    description: ID of the deployed process\n  processSummary:\n    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.yaml\n  links:\n    type: array\n    items:\n      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml\nrequired:\n- status\n- processId\n- processSummary\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.responses.deploySuccess\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-17'\n",
+  "annotatedSchema": "type: object\ndescription: Successful process deployment response\nproperties:\n  status:\n    type: string\n    enum:\n    - success\n  message:\n    type: string\n    description: Success message\n  processId:\n    type: string\n    description: ID of the deployed process\n  processSummary:\n    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.yaml\n  links:\n    type: array\n    items:\n      $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/link/schema.yaml\nrequired:\n- status\n- processId\n- processSummary\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.responses.deploySuccess\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-18'\n",
   "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/responses/deploySuccess"
 }

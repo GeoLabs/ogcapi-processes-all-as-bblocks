@@ -6,7 +6,7 @@
   "abstract": "OGC Application Package with canonical single-or-array executionUnitValue or a backwards-compatible legacy flat executionUnit",
   "status": "under-development",
   "dateTimeAddition": "2025-11-18T21:00:00Z",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "register": "ogc-api-processes-part2",
   "version": "0.2",
   "sources": [
@@ -145,7 +145,7 @@
       ]
     }
   ],
-  "annotatedSchema": "type: object\nrequired:\n- executionUnit\nproperties:\n  processDescription:\n    type: object\n    required:\n    - process\n    properties:\n      process:\n        allOf:\n        - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/process/schema.yaml\n        - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.yaml\n    x-jsonld-id: https://w3id.org/ogc/api/processes/processDescription\n    x-jsonld-type: '@json'\n  executionUnit:\n    anyOf:\n    - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitValue/schema.yaml\n    - allOf:\n      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnit/schema.yaml\n      - not:\n          required:\n          - value\n    x-jsonld-id: https://w3id.org/ogc/api/processes/executionUnit\n    x-jsonld-type: '@json'\nx-jsonld-prefixes:\n  proc: https://w3id.org/ogc/api/processes/\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.ogcapppkg\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-11-17'\n",
+  "annotatedSchema": "type: object\nrequired:\n- executionUnit\nproperties:\n  processDescription:\n    type: object\n    required:\n    - process\n    properties:\n      process:\n        allOf:\n        - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v1/schemas/process/schema.yaml\n        - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/staticIndicator/schema.yaml\n    x-jsonld-id: https://w3id.org/ogc/api/processes/processDescription\n    x-jsonld-type: '@json'\n  executionUnit:\n    anyOf:\n    - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnitValue/schema.yaml\n    - allOf:\n      - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part2/v1/schemas/executionUnit/schema.yaml\n      - not:\n          required:\n          - value\n    x-jsonld-id: https://w3id.org/ogc/api/processes/executionUnit\n    x-jsonld-type: '@json'\nx-jsonld-prefixes:\n  proc: https://w3id.org/ogc/api/processes/\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.processes.part2.v1.schemas.ogcapppkg\n  register: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/register.json\n  version: '0.2'\n  dateOfLastChange: '2026-11-18'\n",
   "gitRepository": "https://github.com/GeoLabs/ogcapi-processes-all-as-bblocks",
   "gitPath": "_sources/part2/v1/schemas/ogcapppkg"
 }

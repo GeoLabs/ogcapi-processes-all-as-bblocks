@@ -6,7 +6,7 @@
   "abstract": "Query parameter to specify the workflow identifier when deploying a CWL document containing multiple workflow definitions",
   "status": "under-development",
   "dateTimeAddition": "2025-11-19T00:00:00Z",
-  "dateOfLastChange": "2026-11-17",
+  "dateOfLastChange": "2026-11-18",
   "register": "ogc-api-processes-part2",
   "version": "0.1",
   "sources": [

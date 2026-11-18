@@ -17,9 +17,9 @@ servers:
   url: https://hirondelle.crim.ca/ogcapi/processes
 paths:
   /:
-    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/LandingPage/openapi.yaml
+    $ref: https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/paths/LandingPage/openapi.yaml
   /conformance:
-    $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/Conformance/openapi.yaml
+    $ref: https://ogcincubator.github.io/bblocks-ogcapi-common/build/annotated/api/common/part1/paths/Conformance/openapi.yaml
   /processes:
     $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/paths/ProcessList/openapi.yaml
   /processes/{processID}:
@@ -45,9 +45,9 @@ paths:
       - $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/parameters/unspecified/f-metadata/openapi.yaml
       responses:
         '200':
-          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/common-core/rAPI/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/API/openapi.yaml
         '406':
-          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/common-core/rNotAcceptable/openapi.yaml
+          $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/NotAcceptable/openapi.yaml
         '500':
           $ref: https://geolabs.github.io/ogcapi-processes-all-as-bblocks/build/annotated/api/processes/part1/v2/responses/ServerError/openapi.yaml
 components: {}
